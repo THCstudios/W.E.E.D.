@@ -1,0 +1,27 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="SharedMemory\SharedMemoryBasic\FeMoReader.cs">
+    <Files>
+      <File FileName="SharedMemory\SharedMemoryBasic\BasicExceptions.cs" Line="1" Column="1" />
+      <File FileName="SharedMemory\SharedMemoryBasic\VirtualMemory.cs" Line="1" Column="1" />
+      <File FileName="SharedMemory\SharedMemoryBasic\FeMoObject.cs" Line="19" Column="4" />
+      <File FileName="SharedMemory\SharedMemoryBasic\FeMoReader.cs" Line="38" Column="33" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="SharedMemory" expanded="True">
+            <Node name="References" expanded="True" />
+            <Node name="SharedMemoryBasic" expanded="True">
+              <Node name="FeMoReader.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

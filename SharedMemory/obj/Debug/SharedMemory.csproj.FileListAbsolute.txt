@@ -1,0 +1,4 @@
+F:\SYNC\Git\W.E.E.D\SharedMemory\bin\Debug\SharedMemory.dll
+F:\SYNC\Git\W.E.E.D\SharedMemory\bin\Debug\SharedMemory.pdb
+F:\SYNC\Git\W.E.E.D\SharedMemory\obj\Debug\SharedMemory.dll
+F:\SYNC\Git\W.E.E.D\SharedMemory\obj\Debug\SharedMemory.pdb
