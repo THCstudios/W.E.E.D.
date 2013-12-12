@@ -743,6 +743,20 @@ Execution time: 0.09ms</Message>
 
 Execution time: 0.08ms</Message>
     </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2013-12-12T14:54:00</TestDate>
+      <Passed>2</Passed>
+      <Errors>0</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>Test successful
+
+Execution time: 0.07ms</Message>
+    </UnitTestResult>
   </Results>
   <Tests>
     <TestRecord Name="SharedMemory">
@@ -1489,6 +1503,20 @@ Execution time: 0.08ms</Message>
 
 Execution time: 0.07ms</Message>
         </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2013-12-12T14:54:00</TestDate>
+          <Passed>2</Passed>
+          <Errors>0</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>Test successful
+
+Execution time: 0.06ms</Message>
+        </UnitTestResult>
       </Results>
       <Tests>
         <TestRecord Name="FeMoObjectTest">
@@ -2234,6 +2262,20 @@ Execution time: 0.08ms</Message>
               <Message>Test successful
 
 Execution time: 0.07ms</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2013-12-12T14:54:00</TestDate>
+              <Passed>2</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 0.06ms</Message>
             </UnitTestResult>
           </Results>
           <Tests>
@@ -4455,6 +4497,50 @@ Z : 96150 - 100000
 </ConsoleOutput>
                   <ConsoleError />
                 </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-12-12T14:54:00</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.01ms</Message>
+                  <ConsoleOutput>Memory Table:
+A : 0 - 3845
+B : 3846 - 7691
+C : 7692 - 11537
+D : 11538 - 15383
+E : 15384 - 19229
+F : 19230 - 23075
+G : 23076 - 26921
+H : 26922 - 30767
+I : 30768 - 34613
+J : 34614 - 38459
+K : 38460 - 42305
+L : 42306 - 46151
+M : 46152 - 49997
+N : 49998 - 53843
+O : 53844 - 57689
+P : 57690 - 61535
+Q : 61536 - 65381
+R : 65382 - 69227
+S : 69228 - 73073
+T : 73074 - 76919
+U : 76920 - 80765
+V : 80766 - 84611
+W : 84612 - 88457
+X : 88458 - 92303
+Y : 92304 - 96149
+Z : 96150 - 100000
+
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
               </Results>
             </TestRecord>
             <TestRecord Name="VirtualMemoryTest">
@@ -6374,6 +6460,33 @@ fmo:=[head:=[name:=TestContainer||vers:=0.1||id=13]||body:=[o_lol:=mem_err]]
                 </UnitTestResult>
                 <UnitTestResult>
                   <TestDate>2013-12-12T14:37:49</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.01ms</Message>
+                  <ConsoleOutput>Used Space: 1
+Free Space: 9999
+fmo:=[head:=[name:=Test||vers:=0.1||id=12]||body:=[s_test:=test]]
+Used Space: 2
+Free Space: 9998
+fmo:=[head:=[name:=Test||vers:=0.1||id=12]||body:=[s_test:=test]]
+fmo:=[head:=[name:=TestContainer||vers:=0.1||id=13]||body:=[]]
+Used Space: 2
+Free Space: 9998
+fmo:=[head:=[name:=Test||vers:=0.1||id=12]||body:=[s_test:=test]]
+fmo:=[head:=[name:=TestContainer||vers:=0.1||id=13]||body:=[o_lol:=fmo_12]]
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-12-12T14:54:00</TestDate>
                   <Passed>1</Passed>
                   <Errors>0</Errors>
                   <Failures>0</Failures>
