@@ -5,8 +5,13 @@ namespace SharedMemory
 {
 	public class VirtualMemory : Dictionary<long, FeMoObject>
 	{
+		/*
+		 * Current Memory instance
+		 */
 		private static VirtualMemory instance;
-
+		/*
+		 * 
+		 */
 		private MemorySpan[] memoryTable = new MemorySpan[26];
 
 		private long amount;
@@ -57,6 +62,15 @@ namespace SharedMemory
 				throw new MemoryAddressException("Memory already in use");
 			if(!InMemory(fmo.ID))
 				instance.Add(fmo.ID, fmo);
+		}
+
+		public static FeMoObject Pull (long id)
+		{
+			if(!InMemory(id))
+				throw new MemoryWrongIdException("No Element at this id found");
+			if(InMemory(id))
+				return instance[id];
+			throw new Exception("Illegal Point of Operation");
 		}
 
 		private void allocMem() {

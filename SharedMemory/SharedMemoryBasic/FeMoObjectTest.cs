@@ -34,6 +34,9 @@ namespace SharedMemory
 			VirtualMemory.VarDump();
 			fmo_.AddObject("lol", fmo);
 			VirtualMemory.VarDump();
+			FeMoObject f_ = fmo_.GetObject("lol");
+			Console.WriteLine(f_.ToString());
+			Console.WriteLine(f_.GetString("test"));
 		}
 
 		private void throw_1 () {
