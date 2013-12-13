@@ -3,7 +3,6 @@ using System;
 
 namespace SharedMemory {
 	public class MemoryAllocationError : System.Exception {
-
 		public MemoryAllocationError(String msg) : base(msg) {
 
 		}
@@ -27,6 +26,19 @@ namespace SharedMemory {
 		public MemoryWrongIdException (String msg) : base(msg)
 		{
 
+		}
+	}
+
+	public class MemoryWrongFormatException : System.Exception {
+		public MemoryWrongFormatException (String msg):base(msg)
+		{
+
+		}
+	}
+
+	public class MemoryIllegalKeyException : System.Exception {
+		public MemoryIllegalKeyException (String msg):base(msg)
+		{
 		}
 	}
 }
