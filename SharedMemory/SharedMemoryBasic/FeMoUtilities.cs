@@ -1,11 +1,14 @@
 using System;
 using System.Collections.Generic;
 using System.Xml.Linq;
+using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace SharedMemory {
 	public class FeMoUtilities {
 		public static List<FeMoObject> ReadObject(String femo) {
-			String[] lines = femo.Split("\n");
+			String[] lines = Regex.Split(femo, "\n");
+			//String[] lines = femo.Split("\n".ToCharArray());
 			List<FeMoObject> list = new List<FeMoObject>();
 			foreach (String str in lines) {
 				int i = str.IndexOf("body:=[");
@@ -21,27 +24,24 @@ namespace SharedMemory {
 
 				FeMoObject feMoOb = new FeMoObject();
 
-				String[] headS = head.Split("||");
+				//String[] headS = head.Split("||".ToCharArray());
+				String[] headS = Regex.Split(head, "||");
 				foreach (String s in headS) {
-					switch (s) {
-						case s.StartsWith("name"):
+						if(s.StartsWith("name"))
 							feMoOb.Name = s.Substring(s.IndexOf(":=") + 2);
-							break;
-						case s.StartsWith("vers"):
-							feMoOb.Version = s.Substring(s.IndexOf(":=") + 2);
-							break;
-						case s.StartsWith("id"):
-							feMoOb.ID = s.Substring(s.IndexOf(":=") + 2);
-							break;
-					}
+						else if( s.StartsWith("vers"))
+							feMoOb.Version = float.Parse(s.Substring(s.IndexOf(":=") + 2));
+						else if( s.StartsWith("id"))
+							feMoOb.ID = long.Parse(s.Substring(s.IndexOf(":=") + 2));
+
 				}
 
 				//Body splitting
 				body = head.Substring(i);
 
-				String[] bodyS = head.Split("||");
+				String[] bodyS = Regex.Split(body, "||");
 				foreach (String s in bodyS) {
-					String[] forsplit = s.Split(":=");
+					String[] forsplit = Regex.Split(s, ":=");
 					feMoOb.Add(forsplit[0], forsplit[1]);
 				}
 				list.Add(feMoOb);
@@ -49,7 +49,7 @@ namespace SharedMemory {
 			return list;
 		}
 
-		public XElement XMLDumper(List<FeMoObject> femo) {
+		public static XElement XMLDump(List<FeMoObject> femo) {
 			XElement xe = new XElement("FeMoObjects",
 				              from a in femo
 				          select
@@ -62,6 +62,7 @@ namespace SharedMemory {
 						              select new XElement("Object",
 							                  new XElement("Key", b.Key),
 							                  new XElement("Value", b.Value)))));
+			return xe;
 		}
 	}
 }

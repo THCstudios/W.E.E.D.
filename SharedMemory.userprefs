@@ -1,37 +1,22 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workbench ActiveDocument="SharedMemory\SharedMemoryBasic\FeMoUtilities.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SharedMemory/SharedMemoryBasic/FeMoObjectTest.cs">
     <Files>
-      <File FileName="SharedMemory\SharedMemoryBasic\BasicExceptions.cs" Line="1" Column="1" />
-      <File FileName="SharedMemory\SharedMemoryBasic\VirtualMemory.cs" Line="1" Column="1" />
-      <File FileName="SharedMemory\SharedMemoryBasic\FeMoObject.cs" Line="1" Column="1" />
-      <File FileName="SharedMemory\SharedMemoryBasic\FeMoUtilities.cs" Line="1" Column="1" />
-=======
-  <MonoDevelop.Ide.Workbench ActiveDocument="SharedMemory/SharedMemoryBasic/VirtualMemory.cs">
-    <Files>
-      <File FileName="SharedMemory/SharedMemoryBasic/FeMoObjectTest.cs" Line="18" Column="20" />
-      <File FileName="SharedMemory/SharedMemoryBasic/FeMoObject.cs" Line="185" Column="48" />
-      <File FileName="SharedMemory/SharedMemoryBasic/VirtualMemory.cs" Line="13" Column="6" />
+      <File FileName="SharedMemory/SharedMemoryBasic/FeMoObjectTest.cs" Line="80" Column="4" />
+      <File FileName="SharedMemory/SharedMemoryBasic/FeMoObject.cs" Line="36" Column="16" />
+      <File FileName="SharedMemory/SharedMemoryBasic/VirtualMemory.cs" Line="109" Column="5" />
       <File FileName="SharedMemory/SharedMemoryBasic/BasicExceptions.cs" Line="42" Column="4" />
->>>>>>> e1ab3218b281cf2674b72592bacbd62d6f84ae10
+      <File FileName="SharedMemory/SharedMemoryBasic/FeMoUtilities.cs" Line="36" Column="6" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="SharedMemory" expanded="True">
-            <Node name="SharedMemoryBasic" expanded="True">
-<<<<<<< HEAD
-              <Node name="FeMoUtilities.cs" selected="True" />
-=======
-              <Node name="VirtualMemory.cs" selected="True" />
->>>>>>> e1ab3218b281cf2674b72592bacbd62d6f84ae10
-            </Node>
+            <Node name="References" expanded="True" />
+            <Node name="SharedMemoryBasic" expanded="True" selected="True" />
           </Node>
         </State>
       </Pad>
-<<<<<<< HEAD
-=======
       <Pad Id="ClassPad">
         <State expanded="True" selected="True" />
       </Pad>
@@ -39,13 +24,8 @@
         <State />
       </Pad>
       <Pad Id="MonoDevelop.NUnit.TestPad">
-        <State expanded="True" selected="True">
-          <Node name="SharedMemory" expanded="True">
-            <Node name="SharedMemory" expanded="True" />
-          </Node>
-        </State>
+        <State expanded="True" selected="True" />
       </Pad>
->>>>>>> e1ab3218b281cf2674b72592bacbd62d6f84ae10
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

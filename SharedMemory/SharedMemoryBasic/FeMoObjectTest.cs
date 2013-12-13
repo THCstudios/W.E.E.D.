@@ -1,5 +1,6 @@
 using System;
-using 
+using nunit.framework;
+using SharedMemory;
 
 namespace SharedMemory
 {
