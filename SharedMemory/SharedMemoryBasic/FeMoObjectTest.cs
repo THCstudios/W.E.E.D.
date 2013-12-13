@@ -14,7 +14,7 @@ namespace SharedMemory
 			Assert.Throws<MemoryAllocationError>(throw_2);
 			Assert.Throws<MemoryAllocationError>(throw_3);
 			Assert.DoesNotThrow(throw_4);
-			VirtualMemory.Initialize(100000);
+			VirtualMemory.Initialize(100000, 25);
 			VirtualMemory.Dump();
 		}
 
@@ -24,9 +24,9 @@ namespace SharedMemory
 			fmo.ID = 12;
 			fmo.Add("test", "test");
 			fmo.Name = "Test";
-			VirtualMemory.Initialize(10000);
+			VirtualMemory.Initialize(10000, 2);
 			VirtualMemory.Push(fmo);
-			VirtualMemory.VarDump();
+			VirtualMemory.WholeDump();
 			FeMoObject fmo_ = new FeMoObject();
 			fmo_.ID = 13;
 			fmo_.Name = "TestContainer";

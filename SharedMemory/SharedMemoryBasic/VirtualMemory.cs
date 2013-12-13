@@ -10,26 +10,35 @@ namespace SharedMemory
 		 */
 		private static VirtualMemory instance;
 		/*
-		 * 
+		 * List of Memoryspans
 		 */
-		private MemorySpan[] memoryTable = new MemorySpan[26];
+		private MemorySpan[] memoryTable;
 
+		/*
+		 * The amount of reserved objects
+		 */
 		private long amount;
-
-		public static void Initialize (long amount)
+		/*
+		 * Method to allocate the needed objects
+		 */
+		public static void Initialize (long amount, int parts)
 		{
 			instance = new VirtualMemory();
 			instance.amount = amount;
-			instance.allocMem();
+			instance.allocMem(parts);
 		}
-
+		/*
+		 * Dumps the MemorySpan list to the Console
+		 */
 		public static void Dump ()
 		{
 			if(instance == null)
 				throw new MemoryNotInitializedException("Dump not possible, no memory!");
 			Console.WriteLine(instance.ToString());
 		}
-
+		/*
+		 * Dumps the whole memory to the Console
+		 */
 		public static void VarDump ()
 		{
 			Console.WriteLine("Used Space: " + instance.Keys.Count);
@@ -38,13 +47,17 @@ namespace SharedMemory
 				Console.WriteLine(fmo.ToString());
 			}
 		}
-
+		/*
+		 * Performs a WholeDump to the Console
+		 */
 		public static void WholeDump ()
 		{
 			Dump ();
 			VarDump();
 		}
-
+		/*
+		 * Checks if an object is currently in memory
+		 */
 		public static bool InMemory (long id)
 		{
 			try {
@@ -53,7 +66,9 @@ namespace SharedMemory
 				return false;
 			}
 		}
-
+		/*
+		 * Pushes an object into the Memory
+		 */
 		public static void Push (FeMoObject fmo)
 		{
 			if(fmo.ID > instance.amount)
@@ -63,7 +78,9 @@ namespace SharedMemory
 			if(!InMemory(fmo.ID))
 				instance.Add(fmo.ID, fmo);
 		}
-
+		/*
+		 * Retrieves an object from the Memory
+		 */
 		public static FeMoObject Pull (long id)
 		{
 			if(!InMemory(id))
@@ -72,13 +89,16 @@ namespace SharedMemory
 				return instance[id];
 			throw new Exception("Illegal Point of Operation");
 		}
-
-		private void allocMem() {
-			long objs = (long)Math.Floor((double)(amount / 26));
-			for(int i = 0; i < 25; ++i) {
+		/*
+		 * Creates the Memory Table
+		 */
+		private void allocMem(int parts) {
+			memoryTable = new MemorySpan[parts + 1];
+			long objs = (long)Math.Floor((double)((double)amount / (double)(parts + 1)));
+			for(int i = 0; i < parts; ++i) {
 				memoryTable[i] = new MemorySpan(objs * i, objs * (i + 1) - 1, (char)(i + 65));
 			}
-			memoryTable[25] = new MemorySpan(objs * 25, amount, 'Z');
+			memoryTable[parts] = new MemorySpan(objs * parts, amount, 'Z');
 		}
 
 		public override string ToString ()
@@ -92,9 +112,17 @@ namespace SharedMemory
 	}
 
 	public class MemorySpan {
-
+		/*
+		 * The begin of the memory span
+		 */
 		private long begin;
+		/*
+		 * The end of the memory span
+		 */
 		private long end;
+		/*
+		 * The id of the memory span
+		 */
 		private char id;
 
 		public char ID {
@@ -114,7 +142,6 @@ namespace SharedMemory
 				return end;
 			}
 		}
-
 		public MemorySpan(long begin, long end, char id) {
 			if(begin > end)
 				throw new MemoryAllocationError("Illegal Memory Range (begin > end)");
