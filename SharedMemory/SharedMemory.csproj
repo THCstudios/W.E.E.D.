@@ -34,13 +34,14 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="SharedMemoryBasic\FeMoObject.cs" />
-    <Compile Include="SharedMemoryBasic\FeMoObjectTest.cs" />
     <Compile Include="SharedMemoryBasic\VirtualMemory.cs" />
     <Compile Include="SharedMemoryBasic\BasicExceptions.cs" />
+    <Compile Include="SharedMemoryBasic\FeMoUtilities.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
