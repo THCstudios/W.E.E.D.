@@ -16,6 +16,7 @@ namespace SharedMemory
 			Assert.DoesNotThrow(throw_4);
 			VirtualMemory.Initialize(100000, 25);
 			VirtualMemory.Dump();
+			VirtualMemory.Destroy();
 		}
 
 		[Test()]
@@ -37,6 +38,26 @@ namespace SharedMemory
 			FeMoObject f_ = fmo_.GetObject("lol");
 			Console.WriteLine(f_.ToString());
 			Console.WriteLine(f_.GetString("test"));
+			VirtualMemory.Destroy();
+		}
+
+		[Test()]
+		public void MemorySpanTest ()
+		{
+			VirtualMemory.Initialize(10000, 5);
+			VirtualMemory.Dump();
+			FeMoObject fmo = new FeMoObject();
+			fmo.ID = VirtualMemory.GetFirstIdOf(VirtualMemory.GetMemorySpan('B'));
+			fmo.Name = "Test";
+			fmo.AddString("test", "test");
+			VirtualMemory.Push(fmo);
+			FeMoObject fmo_ = new FeMoObject();
+			fmo_.ID = VirtualMemory.GetFirstIdOf(VirtualMemory.GetMemorySpan('C'));
+			fmo_.Name = "ContainerTest";
+			fmo_.AddObject("lol", fmo);
+			VirtualMemory.Push(fmo_);
+			VirtualMemory.VarDump();
+			VirtualMemory.Destroy();
 		}
 
 		private void throw_1 () {

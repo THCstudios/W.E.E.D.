@@ -1,5 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.Collections;
+using System.Data;
+using System.Data.Linq;
+using System.Linq;
 
 namespace SharedMemory
 {
@@ -26,6 +30,42 @@ namespace SharedMemory
 			instance = new VirtualMemory();
 			instance.amount = amount;
 			instance.allocMem(parts);
+		}
+		/*
+		 * Destroys the Virtual Memory
+		 */
+		public static void Destroy ()
+		{
+			instance = null;
+		}
+		/*
+		 * Returns a list containing the memory table
+		 */
+		public static List<MemorySpan> GetMemoryList ()
+		{
+			return instance.memoryTable.ToList<MemorySpan>();
+		}
+		/*
+		 * Returns the fitting Memory Span
+		 */
+		public static MemorySpan GetMemorySpan (char id)
+		{
+			var x = from m in instance.memoryTable where m.ID == id select m;
+			foreach (var y in x) {
+				return (MemorySpan) y;
+			}
+			throw new MemoryAddressException ("Invalid Key");
+		}
+		/*
+		 * Returns first free id of the given MemorySpan
+		 */
+		public static long GetFirstIdOf (MemorySpan span)
+		{
+			for (long i = span.Begin; i <= span.End; ++i) {
+				if(!InMemory(i))
+					return i;
+			}
+			throw new MemoryAddressException("Out of Range");
 		}
 		/*
 		 * Dumps the MemorySpan list to the Console
