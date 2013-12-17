@@ -43,11 +43,13 @@
     <Compile Include="SharedMemoryBasic\VirtualMemory.cs" />
     <Compile Include="SharedMemoryBasic\BasicExceptions.cs" />
     <Compile Include="SharedMemoryBasic\FeMoUtilities.cs" />
-    <Compile Include="Test\MomoTest.cs" />
+    <Compile Include="SharedMemoryUtils\Console\ConsoleBuffer.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Folder Include="SharedMemoryBasic\" />
     <Folder Include="Test\" />
+    <Folder Include="SharedMemoryUtils\" />
+    <Folder Include="SharedMemoryUtils\Console\" />
   </ItemGroup>
 </Project>

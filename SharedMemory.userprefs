@@ -1,19 +1,24 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="SharedMemory/SharedMemoryBasic/FeMoObjectTest.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SharedMemory/SharedMemoryUtils/Console/ConsoleBuffer.cs">
     <Files>
-      <File FileName="SharedMemory/SharedMemoryBasic/FeMoObjectTest.cs" Line="80" Column="4" />
+      <File FileName="SharedMemory/SharedMemoryBasic/FeMoObjectTest.cs" Line="79" Column="28" />
       <File FileName="SharedMemory/SharedMemoryBasic/FeMoObject.cs" Line="36" Column="16" />
       <File FileName="SharedMemory/SharedMemoryBasic/VirtualMemory.cs" Line="109" Column="5" />
       <File FileName="SharedMemory/SharedMemoryBasic/BasicExceptions.cs" Line="42" Column="4" />
       <File FileName="SharedMemory/SharedMemoryBasic/FeMoUtilities.cs" Line="36" Column="6" />
+      <File FileName="SharedMemory/SharedMemoryUtils/Console/ConsoleBuffer.cs" Line="21" Column="3" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="SharedMemory" expanded="True">
             <Node name="References" expanded="True" />
-            <Node name="SharedMemoryBasic" expanded="True" selected="True" />
+            <Node name="SharedMemoryBasic" expanded="True" />
+            <Node name="SharedMemoryUtils" expanded="True">
+              <Node name="Console" selected="True" />
+            </Node>
+            <Node name="Test" expanded="True" />
           </Node>
         </State>
       </Pad>
@@ -24,7 +29,15 @@
         <State />
       </Pad>
       <Pad Id="MonoDevelop.NUnit.TestPad">
-        <State expanded="True" selected="True" />
+        <State expanded="True">
+          <Node name="SharedMemory" expanded="True">
+            <Node name="SharedMemory" expanded="True">
+              <Node name="MomoTest" expanded="True">
+                <Node name="TestCase" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
