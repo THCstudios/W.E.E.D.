@@ -43,7 +43,12 @@
     <Compile Include="SharedMemoryBasic\VirtualMemory.cs" />
     <Compile Include="SharedMemoryBasic\BasicExceptions.cs" />
     <Compile Include="SharedMemoryBasic\FeMoUtilities.cs" />
+<<<<<<< HEAD
     <Compile Include="SharedMemoryUtils\Console\ConsoleBuffer.cs" />
+=======
+    <Compile Include="Test\MomoTest.cs" />
+    <Compile Include="Test\Test.cs" />
+>>>>>>> Stash
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
