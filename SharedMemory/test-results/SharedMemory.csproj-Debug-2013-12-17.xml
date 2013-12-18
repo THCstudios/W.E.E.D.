@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestRecord xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <UnitTestResult>
+      <TestDate>2013-12-17T10:26:14</TestDate>
+      <Passed>1</Passed>
+      <Errors>0</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>Test successful
+
+Execution time: 0.05ms</Message>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2013-12-17T10:27:35</TestDate>
+      <Passed>1</Passed>
+      <Errors>0</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>Test successful
+
+Execution time: 0.06ms</Message>
+    </UnitTestResult>
+  </Results>
+  <Tests>
+    <TestRecord Name="SharedMemory">
+      <Results>
+        <UnitTestResult>
+          <TestDate>2013-12-17T10:26:14</TestDate>
+          <Passed>1</Passed>
+          <Errors>0</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>Test successful
+
+Execution time: 0.05ms</Message>
+        </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2013-12-17T10:27:35</TestDate>
+          <Passed>1</Passed>
+          <Errors>0</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>Test successful
+
+Execution time: 0.06ms</Message>
+        </UnitTestResult>
+      </Results>
+      <Tests>
+        <TestRecord Name="MomoTest">
+          <Results>
+            <UnitTestResult>
+              <TestDate>2013-12-17T10:26:14</TestDate>
+              <Passed>1</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 0.04ms</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2013-12-17T10:27:35</TestDate>
+              <Passed>1</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 0.05ms</Message>
+            </UnitTestResult>
+          </Results>
+          <Tests>
+            <TestRecord Name="TestCase">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2013-12-17T10:26:14</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.04ms</Message>
+                  <ConsoleOutput>Memory Table:
+A : 0 - 1665
+B : 1666 - 3331
+C : 3332 - 4997
+D : 4998 - 6663
+E : 6664 - 8329
+Z : 8330 - 10000
+
+Used Space: 2
+Free Space: 9998
+fmo:=[head:=[name:=Test||vers:=0.1||id=1666]||body:=[s_test:=test||f_testfloat:=34.54]]
+fmo:=[head:=[name:=TestContainer||vers:=0.1||id=1667]||body:=[o_lol:=fmo_1666]]
+&lt;FeMoObjects&gt;
+  &lt;FeMo Name="Test" Version="0.1" ID="1666"&gt;
+    &lt;Body&gt;
+      &lt;Object&gt;
+        &lt;Key&gt;s_test&lt;/Key&gt;
+        &lt;Value&gt;test&lt;/Value&gt;
+      &lt;/Object&gt;
+      &lt;Object&gt;
+        &lt;Key&gt;f_testfloat&lt;/Key&gt;
+        &lt;Value&gt;34.54&lt;/Value&gt;
+      &lt;/Object&gt;
+    &lt;/Body&gt;
+  &lt;/FeMo&gt;
+  &lt;FeMo Name="TestContainer" Version="0.1" ID="1667"&gt;
+    &lt;Body&gt;
+      &lt;Object&gt;
+        &lt;Key&gt;o_lol&lt;/Key&gt;
+        &lt;Value&gt;fmo_1666&lt;/Value&gt;
+      &lt;/Object&gt;
+    &lt;/Body&gt;
+  &lt;/FeMo&gt;
+&lt;/FeMoObjects&gt;
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2013-12-17T10:27:35</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.05ms</Message>
+                  <ConsoleOutput>Memory Table:
+A : 0 - 1665
+B : 1666 - 3331
+C : 3332 - 4997
+D : 4998 - 6663
+E : 6664 - 8329
+Z : 8330 - 10000
+
+Used Space: 2
+Free Space: 9998
+fmo:=[head:=[name:=Test||vers:=0.1||id=1666]||body:=[s_test:=test||f_testfloat:=34.54]]
+fmo:=[head:=[name:=TestContainer||vers:=0.1||id=1667]||body:=[o_lol:=fmo_1666]]
+&lt;FeMoObjects&gt;
+  &lt;FeMo Name="Test" Version="0.1" ID="1666"&gt;
+    &lt;Body&gt;
+      &lt;Object&gt;
+        &lt;Key&gt;s_test&lt;/Key&gt;
+        &lt;Value&gt;test&lt;/Value&gt;
+      &lt;/Object&gt;
+      &lt;Object&gt;
+        &lt;Key&gt;f_testfloat&lt;/Key&gt;
+        &lt;Value&gt;34.54&lt;/Value&gt;
+      &lt;/Object&gt;
+    &lt;/Body&gt;
+  &lt;/FeMo&gt;
+  &lt;FeMo Name="TestContainer" Version="0.1" ID="1667"&gt;
+    &lt;Body&gt;
+      &lt;Object&gt;
+        &lt;Key&gt;o_lol&lt;/Key&gt;
+        &lt;Value&gt;fmo_1666&lt;/Value&gt;
+      &lt;/Object&gt;
+    &lt;/Body&gt;
+  &lt;/FeMo&gt;
+&lt;/FeMoObjects&gt;
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+          </Tests>
+        </TestRecord>
+      </Tests>
+    </TestRecord>
+  </Tests>
+</TestRecord>
