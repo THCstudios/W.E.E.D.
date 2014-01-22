@@ -1,7 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedMemory", "SharedMemory\SharedMemory.csproj", "{4786FAAA-187D-4C51-8F6C-6619BED57B2B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedMemory", "SharedMemory\SharedMemory.csproj", "{E3CAC295-80E3-4D3A-8933-A1CD315F8ADE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{3ACB9C86-BFB5-4A87-A657-D25F83FB5D60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{22EBF94B-9115-4B56-B98D-1E286BCE2EDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Server", "Server\Server.csproj", "{CD866F8B-C0EE-4359-A768-57F35396657D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,10 +15,22 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{4786FAAA-187D-4C51-8F6C-6619BED57B2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4786FAAA-187D-4C51-8F6C-6619BED57B2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4786FAAA-187D-4C51-8F6C-6619BED57B2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4786FAAA-187D-4C51-8F6C-6619BED57B2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22EBF94B-9115-4B56-B98D-1E286BCE2EDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22EBF94B-9115-4B56-B98D-1E286BCE2EDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22EBF94B-9115-4B56-B98D-1E286BCE2EDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22EBF94B-9115-4B56-B98D-1E286BCE2EDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3ACB9C86-BFB5-4A87-A657-D25F83FB5D60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3ACB9C86-BFB5-4A87-A657-D25F83FB5D60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3ACB9C86-BFB5-4A87-A657-D25F83FB5D60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3ACB9C86-BFB5-4A87-A657-D25F83FB5D60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD866F8B-C0EE-4359-A768-57F35396657D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD866F8B-C0EE-4359-A768-57F35396657D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD866F8B-C0EE-4359-A768-57F35396657D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD866F8B-C0EE-4359-A768-57F35396657D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3CAC295-80E3-4D3A-8933-A1CD315F8ADE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3CAC295-80E3-4D3A-8933-A1CD315F8ADE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3CAC295-80E3-4D3A-8933-A1CD315F8ADE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3CAC295-80E3-4D3A-8933-A1CD315F8ADE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = SharedMemory\SharedMemory.csproj

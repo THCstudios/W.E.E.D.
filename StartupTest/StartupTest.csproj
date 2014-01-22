@@ -5,10 +5,10 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{E3CAC295-80E3-4D3A-8933-A1CD315F8ADE}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>SharedMemory</RootNamespace>
-    <AssemblyName>SharedMemory</AssemblyName>
+    <ProjectGuid>{FC2DA8C7-DE35-433C-BAFE-6FF73B7DCA60}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>StartupTest</RootNamespace>
+    <AssemblyName>StartupTest</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>
@@ -18,7 +18,7 @@
     <DefineConstants>DEBUG;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <ConsolePause>False</ConsolePause>
+    <Externalconsole>True</Externalconsole>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
@@ -26,31 +26,20 @@
     <OutputPath>bin\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <ConsolePause>False</ConsolePause>
+    <Externalconsole>True</Externalconsole>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Data.Linq" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
-    <Reference Include="nunit.framework" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MyClass.cs" />
+    <Compile Include="Main.cs" />
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="FeMoEntry.cs" />
-    <Compile Include="FeMoObject.cs" />
-    <Compile Include="FeMoUpdateStringFormatter.cs" />
-    <Compile Include="ConsoleFormatter.cs" />
-    <Compile Include="JSONFormatter.cs" />
-    <Compile Include="FeMoManager.cs" />
-    <Compile Include="ConnectionHandle.cs" />
-    <Compile Include="FeMoPeer.cs" />
-    <Compile Include="FeMoCreator.cs" />
-    <Compile Include="Global.cs" />
-    <Compile Include="XMLFormatter.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\SharedMemory\SharedMemory.csproj">
+      <Project>{4786FAAA-187D-4C51-8F6C-6619BED57B2B}</Project>
+      <Name>SharedMemory</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

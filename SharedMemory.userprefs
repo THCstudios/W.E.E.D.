@@ -1,72 +1,22 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workbench ActiveDocument="SharedMemory/SharedMemoryUtils/Console/ConsoleBuffer.cs">
-=======
-  <MonoDevelop.Ide.Workbench ActiveDocument="SharedMemory/SharedMemoryBasic/FeMoObject.cs">
->>>>>>> Stash
+  <MonoDevelop.Ide.Workbench ActiveDocument="SharedMemory/FeMoPeer.cs">
     <Files>
-<<<<<<< HEAD
-      <File FileName="SharedMemory/SharedMemoryBasic/FeMoObjectTest.cs" Line="79" Column="28" />
-      <File FileName="SharedMemory/SharedMemoryBasic/FeMoObject.cs" Line="36" Column="16" />
-      <File FileName="SharedMemory/SharedMemoryBasic/VirtualMemory.cs" Line="109" Column="5" />
-=======
-      <File FileName="SharedMemory/SharedMemoryBasic/FeMoObjectTest.cs" Line="57" Column="21" />
-      <File FileName="SharedMemory/SharedMemoryBasic/FeMoObject.cs" Line="194" Column="36" />
-      <File FileName="SharedMemory/SharedMemoryBasic/VirtualMemory.cs" Line="11" Column="44" />
->>>>>>> Stash
-      <File FileName="SharedMemory/SharedMemoryBasic/BasicExceptions.cs" Line="42" Column="4" />
-<<<<<<< HEAD
-      <File FileName="SharedMemory/SharedMemoryBasic/FeMoUtilities.cs" Line="36" Column="6" />
-      <File FileName="SharedMemory/SharedMemoryUtils/Console/ConsoleBuffer.cs" Line="21" Column="3" />
-=======
-      <File FileName="SharedMemory/SharedMemoryBasic/FeMoUtilities.cs" Line="52" Column="33" />
-      <File FileName="SharedMemory/Test/Test.cs" Line="16" Column="1" />
->>>>>>> Stash
+      <File FileName="Test/Main.cs" Line="33" Column="1" />
+      <File FileName="SharedMemory/FeMoEntry.cs" Line="26" Column="4" />
+      <File FileName="SharedMemory/FeMoUpdateStringFormatter.cs" Line="23" Column="43" />
+      <File FileName="SharedMemory/ConnectionHandle.cs" Line="16" Column="3" />
+      <File FileName="Client/Main.cs" Line="26" Column="47" />
+      <File FileName="Server/Main.cs" Line="13" Column="38" />
+      <File FileName="SharedMemory/FeMoPeer.cs" Line="22" Column="4" />
+      <File FileName="SharedMemory/FeMoCreator.cs" Line="72" Column="1" />
+      <File FileName="SharedMemory/Global.cs" Line="10" Column="4" />
+      <File FileName="SharedMemory/FeMoObject.cs" Line="293" Column="29" />
+      <File FileName="SharedMemory/JSONFormatter.cs" Line="108" Column="49" />
+      <File FileName="SharedMemory/FeMoManager.cs" Line="47" Column="23" />
+      <File FileName="SharedMemory/ConsoleFormatter.cs" Line="29" Column="50" />
+      <File FileName="SharedMemory/XMLFormatter.cs" Line="38" Column="26" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="SharedMemory" expanded="True">
-            <Node name="References" expanded="True" />
-<<<<<<< HEAD
-            <Node name="SharedMemoryBasic" expanded="True" />
-            <Node name="SharedMemoryUtils" expanded="True">
-              <Node name="Console" selected="True" />
-=======
-            <Node name="SharedMemoryBasic" expanded="True">
-              <Node name="FeMoObject.cs" selected="True" />
->>>>>>> Stash
-            </Node>
-            <Node name="Test" expanded="True" />
-          </Node>
-        </State>
-      </Pad>
-      <Pad Id="ClassPad">
-        <State expanded="True" selected="True" />
-      </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
-      </Pad>
-      <Pad Id="MonoDevelop.NUnit.TestPad">
-<<<<<<< HEAD
-        <State expanded="True">
-          <Node name="SharedMemory" expanded="True">
-            <Node name="SharedMemory" expanded="True">
-              <Node name="MomoTest" expanded="True">
-                <Node name="TestCase" selected="True" />
-              </Node>
-=======
-        <State expanded="True" selected="True">
-          <Node name="SharedMemory" expanded="True">
-            <Node name="SharedMemory" expanded="True">
-              <Node name="MomoTest" expanded="True" />
->>>>>>> Stash
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
