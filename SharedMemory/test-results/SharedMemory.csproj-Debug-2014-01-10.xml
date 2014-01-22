@@ -1,0 +1,1257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestRecord xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <UnitTestResult>
+      <TestDate>2014-01-10T08:02:17</TestDate>
+      <Passed>1</Passed>
+      <Errors>0</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>Test successful
+
+Execution time: 8.99ms</Message>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2014-01-10T08:03:09</TestDate>
+      <Passed>1</Passed>
+      <Errors>0</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>Test successful
+
+Execution time: 9.33ms</Message>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2014-01-10T08:03:37</TestDate>
+      <Passed>1</Passed>
+      <Errors>0</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>Test successful
+
+Execution time: 9.68ms</Message>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2014-01-10T08:04:39</TestDate>
+      <Passed>1</Passed>
+      <Errors>0</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>Test successful
+
+Execution time: 8.56ms</Message>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2014-01-10T08:07:01</TestDate>
+      <Passed>1</Passed>
+      <Errors>0</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>Test successful
+
+Execution time: 0.02ms</Message>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2014-01-10T08:07:48</TestDate>
+      <Passed>1</Passed>
+      <Errors>0</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>Test successful
+
+Execution time: 4.00ms</Message>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2014-01-10T08:08:09</TestDate>
+      <Passed>1</Passed>
+      <Errors>0</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>Test successful
+
+Execution time: 2.16ms</Message>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2014-01-10T08:18:34</TestDate>
+      <Passed>0</Passed>
+      <Errors>1</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>One or more child tests had errors</Message>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2014-01-10T08:19:34</TestDate>
+      <Passed>1</Passed>
+      <Errors>0</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>Test successful
+
+Execution time: 1.32ms</Message>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2014-01-10T08:20:14</TestDate>
+      <Passed>1</Passed>
+      <Errors>0</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>Test successful
+
+Execution time: 2.46ms</Message>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2014-01-10T08:21:19</TestDate>
+      <Passed>1</Passed>
+      <Errors>0</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>Test successful
+
+Execution time: 2.49ms</Message>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2014-01-10T08:22:04</TestDate>
+      <Passed>1</Passed>
+      <Errors>0</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>Test successful
+
+Execution time: 1.97ms</Message>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2014-01-10T08:22:41</TestDate>
+      <Passed>1</Passed>
+      <Errors>0</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>Test successful
+
+Execution time: 1.98ms</Message>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2014-01-10T08:23:12</TestDate>
+      <Passed>1</Passed>
+      <Errors>0</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>Test successful
+
+Execution time: 1.97ms</Message>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2014-01-10T08:23:57</TestDate>
+      <Passed>1</Passed>
+      <Errors>0</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>Test successful
+
+Execution time: 1.97ms</Message>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2014-01-10T08:26:38</TestDate>
+      <Passed>0</Passed>
+      <Errors>0</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>Connection refused</Message>
+      <StackTrace>  at Mono.Remoting.Channels.Unix.HostConnectionPool.CreateConnection () [0x0002a] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/Mono.Posix/Mono.Remoting.Channels.Unix/UnixConnectionPool.cs:265 
+  at Mono.Remoting.Channels.Unix.HostConnectionPool.GetConnection () [0x000bb] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/Mono.Posix/Mono.Remoting.Channels.Unix/UnixConnectionPool.cs:249 
+  at Mono.Remoting.Channels.Unix.UnixConnectionPool.GetConnection (System.String path) [0x00049] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/Mono.Posix/Mono.Remoting.Channels.Unix/UnixConnectionPool.cs:104 
+  at Mono.Remoting.Channels.Unix.UnixClientTransportSink.ProcessMessage (IMessage msg, ITransportHeaders requestHeaders, System.IO.Stream requestStream, ITransportHeaders&amp; responseHeaders, System.IO.Stream&amp; responseStream) [0x00025] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/Mono.Posix/Mono.Remoting.Channels.Unix/UnixClientTransportSink.cs:171 
+  at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage (IMessage msg) [0x0006c] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/System.Runtime.Remoting/System.Runtime.Remoting.Channels/BinaryClientFormatterSink.cs:157 </StackTrace>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2014-01-10T08:26:58</TestDate>
+      <Passed>1</Passed>
+      <Errors>0</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>Test successful
+
+Execution time: 1.93ms</Message>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2014-01-10T08:27:16</TestDate>
+      <Passed>1</Passed>
+      <Errors>0</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>Test successful
+
+Execution time: 492.63ms</Message>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2014-01-10T08:47:10</TestDate>
+      <Passed>0</Passed>
+      <Errors>0</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>Connection refused</Message>
+      <StackTrace>  at Mono.Remoting.Channels.Unix.HostConnectionPool.CreateConnection () [0x0002a] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/Mono.Posix/Mono.Remoting.Channels.Unix/UnixConnectionPool.cs:265 
+  at Mono.Remoting.Channels.Unix.HostConnectionPool.GetConnection () [0x000bb] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/Mono.Posix/Mono.Remoting.Channels.Unix/UnixConnectionPool.cs:249 
+  at Mono.Remoting.Channels.Unix.UnixConnectionPool.GetConnection (System.String path) [0x00049] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/Mono.Posix/Mono.Remoting.Channels.Unix/UnixConnectionPool.cs:104 
+  at Mono.Remoting.Channels.Unix.UnixClientTransportSink.ProcessMessage (IMessage msg, ITransportHeaders requestHeaders, System.IO.Stream requestStream, ITransportHeaders&amp; responseHeaders, System.IO.Stream&amp; responseStream) [0x00025] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/Mono.Posix/Mono.Remoting.Channels.Unix/UnixClientTransportSink.cs:171 
+  at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage (IMessage msg) [0x0006c] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/System.Runtime.Remoting/System.Runtime.Remoting.Channels/BinaryClientFormatterSink.cs:157 </StackTrace>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2014-01-10T09:02:41</TestDate>
+      <Passed>0</Passed>
+      <Errors>0</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>Connection refused</Message>
+      <StackTrace>  at Mono.Remoting.Channels.Unix.HostConnectionPool.CreateConnection () [0x0002a] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/Mono.Posix/Mono.Remoting.Channels.Unix/UnixConnectionPool.cs:265 
+  at Mono.Remoting.Channels.Unix.HostConnectionPool.GetConnection () [0x000bb] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/Mono.Posix/Mono.Remoting.Channels.Unix/UnixConnectionPool.cs:249 
+  at Mono.Remoting.Channels.Unix.UnixConnectionPool.GetConnection (System.String path) [0x00049] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/Mono.Posix/Mono.Remoting.Channels.Unix/UnixConnectionPool.cs:104 
+  at Mono.Remoting.Channels.Unix.UnixClientTransportSink.ProcessMessage (IMessage msg, ITransportHeaders requestHeaders, System.IO.Stream requestStream, ITransportHeaders&amp; responseHeaders, System.IO.Stream&amp; responseStream) [0x00025] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/Mono.Posix/Mono.Remoting.Channels.Unix/UnixClientTransportSink.cs:171 
+  at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage (IMessage msg) [0x0006c] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/System.Runtime.Remoting/System.Runtime.Remoting.Channels/BinaryClientFormatterSink.cs:157 </StackTrace>
+    </UnitTestResult>
+  </Results>
+  <Tests>
+    <TestRecord Name="SharedMemory">
+      <Results>
+        <UnitTestResult>
+          <TestDate>2014-01-10T08:02:17</TestDate>
+          <Passed>1</Passed>
+          <Errors>0</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>Test successful
+
+Execution time: 8.98ms</Message>
+        </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2014-01-10T08:03:09</TestDate>
+          <Passed>1</Passed>
+          <Errors>0</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>Test successful
+
+Execution time: 9.32ms</Message>
+        </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2014-01-10T08:03:37</TestDate>
+          <Passed>1</Passed>
+          <Errors>0</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>Test successful
+
+Execution time: 9.68ms</Message>
+        </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2014-01-10T08:04:39</TestDate>
+          <Passed>1</Passed>
+          <Errors>0</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>Test successful
+
+Execution time: 8.55ms</Message>
+        </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2014-01-10T08:07:01</TestDate>
+          <Passed>1</Passed>
+          <Errors>0</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>Test successful
+
+Execution time: 0.02ms</Message>
+        </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2014-01-10T08:07:48</TestDate>
+          <Passed>1</Passed>
+          <Errors>0</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>Test successful
+
+Execution time: 3.99ms</Message>
+        </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2014-01-10T08:08:09</TestDate>
+          <Passed>1</Passed>
+          <Errors>0</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>Test successful
+
+Execution time: 2.16ms</Message>
+        </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2014-01-10T08:18:34</TestDate>
+          <Passed>0</Passed>
+          <Errors>1</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>One or more child tests had errors</Message>
+        </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2014-01-10T08:19:34</TestDate>
+          <Passed>1</Passed>
+          <Errors>0</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>Test successful
+
+Execution time: 1.32ms</Message>
+        </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2014-01-10T08:20:14</TestDate>
+          <Passed>1</Passed>
+          <Errors>0</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>Test successful
+
+Execution time: 2.45ms</Message>
+        </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2014-01-10T08:21:19</TestDate>
+          <Passed>1</Passed>
+          <Errors>0</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>Test successful
+
+Execution time: 2.49ms</Message>
+        </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2014-01-10T08:22:04</TestDate>
+          <Passed>1</Passed>
+          <Errors>0</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>Test successful
+
+Execution time: 1.97ms</Message>
+        </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2014-01-10T08:22:41</TestDate>
+          <Passed>1</Passed>
+          <Errors>0</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>Test successful
+
+Execution time: 1.97ms</Message>
+        </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2014-01-10T08:23:12</TestDate>
+          <Passed>1</Passed>
+          <Errors>0</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>Test successful
+
+Execution time: 1.96ms</Message>
+        </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2014-01-10T08:23:57</TestDate>
+          <Passed>1</Passed>
+          <Errors>0</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>Test successful
+
+Execution time: 1.96ms</Message>
+        </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2014-01-10T08:26:58</TestDate>
+          <Passed>1</Passed>
+          <Errors>0</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>Test successful
+
+Execution time: 1.92ms</Message>
+        </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2014-01-10T08:27:16</TestDate>
+          <Passed>1</Passed>
+          <Errors>0</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>Test successful
+
+Execution time: 492.63ms</Message>
+        </UnitTestResult>
+      </Results>
+      <Tests>
+        <TestRecord Name="Test">
+          <Results>
+            <UnitTestResult>
+              <TestDate>2014-01-10T08:02:17</TestDate>
+              <Passed>1</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 8.98ms</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2014-01-10T08:03:09</TestDate>
+              <Passed>1</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 9.32ms</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2014-01-10T08:03:37</TestDate>
+              <Passed>1</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 9.68ms</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2014-01-10T08:04:39</TestDate>
+              <Passed>1</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 8.55ms</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2014-01-10T08:07:01</TestDate>
+              <Passed>1</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 0.02ms</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2014-01-10T08:07:48</TestDate>
+              <Passed>1</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 3.99ms</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2014-01-10T08:08:09</TestDate>
+              <Passed>1</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 2.16ms</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2014-01-10T08:18:34</TestDate>
+              <Passed>0</Passed>
+              <Errors>1</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>One or more child tests had errors</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2014-01-10T08:19:34</TestDate>
+              <Passed>1</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 1.31ms</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2014-01-10T08:20:14</TestDate>
+              <Passed>1</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 2.45ms</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2014-01-10T08:21:19</TestDate>
+              <Passed>1</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 2.48ms</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2014-01-10T08:22:04</TestDate>
+              <Passed>1</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 1.96ms</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2014-01-10T08:22:41</TestDate>
+              <Passed>1</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 1.97ms</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2014-01-10T08:23:12</TestDate>
+              <Passed>1</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 1.96ms</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2014-01-10T08:23:57</TestDate>
+              <Passed>1</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 1.96ms</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2014-01-10T08:26:58</TestDate>
+              <Passed>1</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 1.92ms</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2014-01-10T08:27:16</TestDate>
+              <Passed>1</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 492.63ms</Message>
+            </UnitTestResult>
+          </Results>
+          <Tests>
+            <TestRecord Name="TargetTest">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-01-10T08:02:17</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 8.97ms</Message>
+                  <ConsoleOutput>       Starting Task Init Task (0)
+[DONE] Finished Target Init Task (0)
+       Starting Task Some Task (100)
+[DONE] Finished Target Some Task (100)
+       Starting Task Download Job for http://www.google.com/index.html (301)
+[DONE] Finished Target Download Job for http://www.google.com/index.html (301)
+       Starting Task Some Other Task (200)
+[DONE] Finished Target Some Other Task (200)
+DONE: 4 WAIT: 0 FAIL: 0
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-01-10T08:03:09</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 9.31ms</Message>
+                  <ConsoleOutput>       Starting Task Init Task (0)
+[DONE] Finished Target Init Task (0)
+       Starting Task Some Task (100)
+[FAIL] Finished Target Some Task (100)
+       Starting Task Download Job for http://www.google.com/index.html (301)
+[DONE] Finished Target Download Job for http://www.google.com/index.html (301)
+       Starting Task Some Other Task (200)
+[DONE] Finished Target Some Other Task (200)
+DONE: 3 WAIT: 0 FAIL: 1
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-01-10T08:03:37</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 9.67ms</Message>
+                  <ConsoleOutput>       Starting Task Init Task (0)
+[DONE] Finished Target Init Task (0)
+       Starting Task Some Task (100)
+[FAIL] Finished Target Some Task (100)
+       Starting Task Download Job for http://www.google.com/index.html (301)
+[DONE] Finished Target Download Job for http://www.google.com/index.html (301)
+       Starting Task Some Other Task (200)
+[DONE] Finished Target Some Other Task (200)
+DONE: 3 WAIT: 0 FAIL: 1
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-01-10T08:04:39</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 8.55ms</Message>
+                  <ConsoleOutput>       Starting Task Init Task (0)
+[DONE] Finished Target Init Task (0)
+       Starting Task Some Task (100)
+[FAIL] Finished Target Some Task (100)
+       Starting Task Download Job for http://www.google.com/index.html (301)
+[DONE] Finished Target Download Job for http://www.google.com/index.html (301)
+DONE: 2 WAIT: 0 FAIL: 2
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-01-10T08:07:01</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.01ms</Message>
+                  <ConsoleOutput>DONE: 0 WAIT: 0 FAIL: 0
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-01-10T08:07:48</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 3.98ms</Message>
+                  <ConsoleOutput>       Starting Task Init Task (0)
+[DONE] Finished Target Init Task (0)
+       Starting Task Some Task (100)
+[DONE] Finished Target Some Task (100)
+       Starting Task Download Job for http://www.google.com/index.html (301)
+[DONE] Finished Target Download Job for http://www.google.com/index.html (301)
+       Starting Task Some Other Task (200)
+[DONE] Finished Target Some Other Task (200)
+DONE: 4 WAIT: 0 FAIL: 0
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-01-10T08:08:09</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 2.15ms</Message>
+                  <ConsoleOutput>       Starting Task Init Task (0)
+[DONE] Finished Target Init Task (0)
+       Starting Task Some Task (100)
+[DONE] Finished Target Some Task (100)
+       Starting Task Download Job for http://www.google.com/index.html (301)
+[DONE] Finished Target Download Job for http://www.google.com/index.html (301)
+       Starting Task Some Other Task (200)
+[DONE] Finished Target Some Other Task (200)
+DONE: 4 WAIT: 0 FAIL: 0
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-01-10T08:18:34</TestDate>
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.Net.WebException : Error getting response stream (Write: The authentication or decryption has failed.): SendFailure
+  ----&gt; System.IO.IOException : The authentication or decryption has failed.
+  ----&gt; Mono.Security.Protocol.Tls.TlsException : Invalid certificate received from server. Error code: 0xffffffff800b010a</Message>
+                  <StackTrace>  at System.Net.HttpWebRequest.EndGetResponse (IAsyncResult asyncResult) [0x00065] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/System/System.Net/HttpWebRequest.cs:926 
+  at System.Net.HttpWebRequest.GetResponse () [0x0000e] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/System/System.Net/HttpWebRequest.cs:932 
+  at System.Net.WebClient.GetWebResponse (System.Net.WebRequest request) [0x00000] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/System/System.Net/WebClient.cs:1508 
+  at System.Net.WebClient.DownloadFileCore (System.Uri address, System.String fileName, System.Object userToken) [0x00012] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/System/System.Net/WebClient.cs:320 
+  at System.Net.WebClient.DownloadFile (System.Uri address, System.String fileName) [0x00035] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/System/System.Net/WebClient.cs:302 
+--IOException
+  at Mono.Security.Protocol.Tls.SslStreamBase.AsyncHandshakeCallback (IAsyncResult asyncResult) [0x0002a] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/Mono.Security/Mono.Security.Protocol.Tls/SslStreamBase.cs:100 
+--TlsException
+  at Mono.Security.Protocol.Tls.Handshake.Client.TlsServerCertificate.validateCertificates (Mono.Security.X509.X509CertificateCollection certificates) [0x0009b] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/Mono.Security/Mono.Security.Protocol.Tls.Handshake.Client/TlsServerCertificate.cs:218 
+  at Mono.Security.Protocol.Tls.Handshake.Client.TlsServerCertificate.ProcessAsTls1 () [0x00054] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/Mono.Security/Mono.Security.Protocol.Tls.Handshake.Client/TlsServerCertificate.cs:105 
+  at Mono.Security.Protocol.Tls.Handshake.HandshakeMessage.Process () [0x00037] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/Mono.Security/Mono.Security.Protocol.Tls.Handshake/HandshakeMessage.cs:105 
+  at (wrapper remoting-invoke-with-check) Mono.Security.Protocol.Tls.Handshake.HandshakeMessage:Process ()
+  at Mono.Security.Protocol.Tls.ClientRecordProtocol.ProcessHandshakeMessage (Mono.Security.Protocol.Tls.TlsStream handMsg) [0x00039] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/Mono.Security/Mono.Security.Protocol.Tls/ClientRecordProtocol.cs:81 
+  at Mono.Security.Protocol.Tls.RecordProtocol.InternalReceiveRecordCallback (IAsyncResult asyncResult) [0x00123] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/Mono.Security/Mono.Security.Protocol.Tls/RecordProtocol.cs:397 </StackTrace>
+                  <ConsoleOutput>       Starting Task Init Task (0)
+[DONE] Finished Target Init Task (0)
+       Starting Task Some Task (100)
+[DONE] Finished Target Some Task (100)
+       Starting Task Download Job for http://www.google.com/index.html (301)
+[DONE] Finished Target Download Job for http://www.google.com/index.html (301)
+       Starting Task Download Job for https://github.com/Freschmushroom/Jump-n-Jan/blob/master/res.zip?raw=true (302)
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-01-10T08:19:34</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 1.31ms</Message>
+                  <ConsoleOutput>       Starting Task Init Task (0)
+[DONE] Finished Target Init Task (0)
+       Starting Task Some Task (100)
+[DONE] Finished Target Some Task (100)
+       Starting Task Download Job for http://www.google.com/index.html (301)
+[DONE] Finished Target Download Job for http://www.google.com/index.html (301)
+       Starting Task Some Other Task (200)
+[DONE] Finished Target Some Other Task (200)
+DONE: 4 WAIT: 0 FAIL: 0
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-01-10T08:20:14</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 2.45ms</Message>
+                  <ConsoleOutput>       Starting Task Init Task (0)
+[DONE] Finished Target Init Task (0)
+       Starting Task Some Task (100)
+[DONE] Finished Target Some Task (100)
+       Starting Task Download Job for http://www.google.com/index.html (301)
+[DONE] Finished Target Download Job for http://www.google.com/index.html (301)
+       Starting Task Download Job for https://github.com/Freschmushroom/Jump-n-Jan/blob/master/res.zip?raw=true (302)
+[FAIL] Finished Target Download Job for https://github.com/Freschmushroom/Jump-n-Jan/blob/master/res.zip?raw=true (302)
+DONE: 3 WAIT: 0 FAIL: 2
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-01-10T08:21:19</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 2.48ms</Message>
+                  <ConsoleOutput>       Starting Task Init Task (0)
+[DONE] Finished Target Init Task (0)
+       Starting Task Some Task (100)
+[DONE] Finished Target Some Task (100)
+       Starting Task Download Job for http://www.google.com/index.html (301)
+[DONE] Finished Target Download Job for http://www.google.com/index.html (301)
+       Starting Task Download Job for https://github.com/Freschmushroom/Jump-n-Jan/blob/master/res.zip?raw=true (302)
+[FAIL] Finished Target Download Job for https://github.com/Freschmushroom/Jump-n-Jan/blob/master/res.zip?raw=true (302)
+DONE: 3 WAIT: 0 FAIL: 2
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-01-10T08:22:04</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 1.96ms</Message>
+                  <ConsoleOutput>       Starting Task Init Task (0)
+[DONE] Finished Target Init Task (0)
+       Starting Task Some Task (100)
+[DONE] Finished Target Some Task (100)
+       Starting Task Download Job for http://www.google.com/index.html (301)
+[DONE] Finished Target Download Job for http://www.google.com/index.html (301)
+       Starting Task Download Job for https://github.com/Freschmushroom/Jump-n-Jan/raw/master/res.zip (302)
+[FAIL] Finished Target Download Job for https://github.com/Freschmushroom/Jump-n-Jan/raw/master/res.zip (302)
+DONE: 3 WAIT: 0 FAIL: 2
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-01-10T08:22:41</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 1.96ms</Message>
+                  <ConsoleOutput>       Starting Task Init Task (0)
+[DONE] Finished Target Init Task (0)
+       Starting Task Some Task (100)
+[DONE] Finished Target Some Task (100)
+       Starting Task Download Job for http://www.google.com/index.html (301)
+[DONE] Finished Target Download Job for http://www.google.com/index.html (301)
+       Starting Task Download Job for https://github.com/Freschmushroom/Jump-n-Jan/raw/master/res.zip (302)
+[FAIL] Finished Target Download Job for https://github.com/Freschmushroom/Jump-n-Jan/raw/master/res.zip (302)
+DONE: 3 WAIT: 0 FAIL: 2
+</ConsoleOutput>
+                  <ConsoleError>System.Net.WebException: Error getting response stream (Write: The authentication or decryption has failed.): SendFailure ---&gt; System.IO.IOException: The authentication or decryption has failed. ---&gt; Mono.Security.Protocol.Tls.TlsException: Invalid certificate received from server. Error code: 0xffffffff800b010a
+  at Mono.Security.Protocol.Tls.Handshake.Client.TlsServerCertificate.validateCertificates (Mono.Security.X509.X509CertificateCollection certificates) [0x0009b] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/Mono.Security/Mono.Security.Protocol.Tls.Handshake.Client/TlsServerCertificate.cs:218 
+  at Mono.Security.Protocol.Tls.Handshake.Client.TlsServerCertificate.ProcessAsTls1 () [0x00054] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/Mono.Security/Mono.Security.Protocol.Tls.Handshake.Client/TlsServerCertificate.cs:105 
+  at Mono.Security.Protocol.Tls.Handshake.HandshakeMessage.Process () [0x00037] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/Mono.Security/Mono.Security.Protocol.Tls.Handshake/HandshakeMessage.cs:105 
+  at (wrapper remoting-invoke-with-check) Mono.Security.Protocol.Tls.Handshake.HandshakeMessage:Process ()
+  at Mono.Security.Protocol.Tls.ClientRecordProtocol.ProcessHandshakeMessage (Mono.Security.Protocol.Tls.TlsStream handMsg) [0x00039] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/Mono.Security/Mono.Security.Protocol.Tls/ClientRecordProtocol.cs:81 
+  at Mono.Security.Protocol.Tls.RecordProtocol.InternalReceiveRecordCallback (IAsyncResult asyncResult) [0x00123] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/Mono.Security/Mono.Security.Protocol.Tls/RecordProtocol.cs:397 
+  --- End of inner exception stack trace ---
+  at Mono.Security.Protocol.Tls.SslStreamBase.AsyncHandshakeCallback (IAsyncResult asyncResult) [0x0002a] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/Mono.Security/Mono.Security.Protocol.Tls/SslStreamBase.cs:100 
+  --- End of inner exception stack trace ---
+  at System.Net.HttpWebRequest.EndGetResponse (IAsyncResult asyncResult) [0x00065] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/System/System.Net/HttpWebRequest.cs:926 
+  at System.Net.HttpWebRequest.GetResponse () [0x0000e] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/System/System.Net/HttpWebRequest.cs:932 
+  at System.Net.WebClient.GetWebResponse (System.Net.WebRequest request) [0x00000] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/System/System.Net/WebClient.cs:1508 
+  at System.Net.WebClient.DownloadFileCore (System.Uri address, System.String fileName, System.Object userToken) [0x00012] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/System/System.Net/WebClient.cs:320 
+  at System.Net.WebClient.DownloadFile (System.Uri address, System.String fileName) [0x00035] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/System/System.Net/WebClient.cs:302 
+</ConsoleError>
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-01-10T08:23:12</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 1.95ms</Message>
+                  <ConsoleOutput>       Starting Task Init Task (0)
+[DONE] Finished Target Init Task (0)
+       Starting Task Some Task (100)
+[DONE] Finished Target Some Task (100)
+       Starting Task Download Job for http://www.google.com/index.html (301)
+[DONE] Finished Target Download Job for http://www.google.com/index.html (301)
+       Starting Task Download Job for http://github.com/Freschmushroom/Jump-n-Jan/raw/master/res.zip (302)
+[FAIL] Finished Target Download Job for http://github.com/Freschmushroom/Jump-n-Jan/raw/master/res.zip (302)
+DONE: 3 WAIT: 0 FAIL: 2
+</ConsoleOutput>
+                  <ConsoleError>System.Net.WebException: Error getting response stream (Write: The authentication or decryption has failed.): SendFailure ---&gt; System.IO.IOException: The authentication or decryption has failed. ---&gt; Mono.Security.Protocol.Tls.TlsException: Invalid certificate received from server. Error code: 0xffffffff800b010a
+  at Mono.Security.Protocol.Tls.Handshake.Client.TlsServerCertificate.validateCertificates (Mono.Security.X509.X509CertificateCollection certificates) [0x0009b] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/Mono.Security/Mono.Security.Protocol.Tls.Handshake.Client/TlsServerCertificate.cs:218 
+  at Mono.Security.Protocol.Tls.Handshake.Client.TlsServerCertificate.ProcessAsTls1 () [0x00054] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/Mono.Security/Mono.Security.Protocol.Tls.Handshake.Client/TlsServerCertificate.cs:105 
+  at Mono.Security.Protocol.Tls.Handshake.HandshakeMessage.Process () [0x00037] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/Mono.Security/Mono.Security.Protocol.Tls.Handshake/HandshakeMessage.cs:105 
+  at (wrapper remoting-invoke-with-check) Mono.Security.Protocol.Tls.Handshake.HandshakeMessage:Process ()
+  at Mono.Security.Protocol.Tls.ClientRecordProtocol.ProcessHandshakeMessage (Mono.Security.Protocol.Tls.TlsStream handMsg) [0x00039] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/Mono.Security/Mono.Security.Protocol.Tls/ClientRecordProtocol.cs:81 
+  at Mono.Security.Protocol.Tls.RecordProtocol.InternalReceiveRecordCallback (IAsyncResult asyncResult) [0x00123] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/Mono.Security/Mono.Security.Protocol.Tls/RecordProtocol.cs:397 
+  --- End of inner exception stack trace ---
+  at Mono.Security.Protocol.Tls.SslStreamBase.AsyncHandshakeCallback (IAsyncResult asyncResult) [0x0002a] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/Mono.Security/Mono.Security.Protocol.Tls/SslStreamBase.cs:100 
+  --- End of inner exception stack trace ---
+  at System.Net.HttpWebRequest.EndGetResponse (IAsyncResult asyncResult) [0x00065] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/System/System.Net/HttpWebRequest.cs:926 
+  at System.Net.HttpWebRequest.GetResponse () [0x0000e] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/System/System.Net/HttpWebRequest.cs:932 
+  at System.Net.WebClient.GetWebResponse (System.Net.WebRequest request) [0x00000] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/System/System.Net/WebClient.cs:1508 
+  at System.Net.WebClient.DownloadFileCore (System.Uri address, System.String fileName, System.Object userToken) [0x00012] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/System/System.Net/WebClient.cs:320 
+  at System.Net.WebClient.DownloadFile (System.Uri address, System.String fileName) [0x00035] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/System/System.Net/WebClient.cs:302 
+</ConsoleError>
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-01-10T08:23:57</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 1.95ms</Message>
+                  <ConsoleOutput>       Starting Task Init Task (0)
+[DONE] Finished Target Init Task (0)
+       Starting Task Some Task (100)
+[DONE] Finished Target Some Task (100)
+       Starting Task Download Job for http://www.google.com/index.html (301)
+[DONE] Finished Target Download Job for http://www.google.com/index.html (301)
+       Starting Task Download Job for http://github.com/Freschmushroom/Jump-n-Jan/raw/master/res.zip (302)
+[FAIL] Finished Target Download Job for http://github.com/Freschmushroom/Jump-n-Jan/raw/master/res.zip (302)
+DONE: 3 WAIT: 0 FAIL: 2
+</ConsoleOutput>
+                  <ConsoleError>System.Net.WebException: Error getting response stream (Write: The authentication or decryption has failed.): SendFailure ---&gt; System.IO.IOException: The authentication or decryption has failed. ---&gt; Mono.Security.Protocol.Tls.TlsException: Invalid certificate received from server. Error code: 0xffffffff800b010a
+  at Mono.Security.Protocol.Tls.Handshake.Client.TlsServerCertificate.validateCertificates (Mono.Security.X509.X509CertificateCollection certificates) [0x0009b] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/Mono.Security/Mono.Security.Protocol.Tls.Handshake.Client/TlsServerCertificate.cs:218 
+  at Mono.Security.Protocol.Tls.Handshake.Client.TlsServerCertificate.ProcessAsTls1 () [0x00054] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/Mono.Security/Mono.Security.Protocol.Tls.Handshake.Client/TlsServerCertificate.cs:105 
+  at Mono.Security.Protocol.Tls.Handshake.HandshakeMessage.Process () [0x00037] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/Mono.Security/Mono.Security.Protocol.Tls.Handshake/HandshakeMessage.cs:105 
+  at (wrapper remoting-invoke-with-check) Mono.Security.Protocol.Tls.Handshake.HandshakeMessage:Process ()
+  at Mono.Security.Protocol.Tls.ClientRecordProtocol.ProcessHandshakeMessage (Mono.Security.Protocol.Tls.TlsStream handMsg) [0x00039] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/Mono.Security/Mono.Security.Protocol.Tls/ClientRecordProtocol.cs:81 
+  at Mono.Security.Protocol.Tls.RecordProtocol.InternalReceiveRecordCallback (IAsyncResult asyncResult) [0x00123] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/Mono.Security/Mono.Security.Protocol.Tls/RecordProtocol.cs:397 
+  --- End of inner exception stack trace ---
+  at Mono.Security.Protocol.Tls.SslStreamBase.AsyncHandshakeCallback (IAsyncResult asyncResult) [0x0002a] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/Mono.Security/Mono.Security.Protocol.Tls/SslStreamBase.cs:100 
+  --- End of inner exception stack trace ---
+  at System.Net.HttpWebRequest.EndGetResponse (IAsyncResult asyncResult) [0x00065] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/System/System.Net/HttpWebRequest.cs:926 
+  at System.Net.HttpWebRequest.GetResponse () [0x0000e] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/System/System.Net/HttpWebRequest.cs:932 
+  at System.Net.WebClient.GetWebResponse (System.Net.WebRequest request) [0x00000] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/System/System.Net/WebClient.cs:1508 
+  at System.Net.WebClient.DownloadFileCore (System.Uri address, System.String fileName, System.Object userToken) [0x00012] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/System/System.Net/WebClient.cs:320 
+  at System.Net.WebClient.DownloadFile (System.Uri address, System.String fileName) [0x00035] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/System/System.Net/WebClient.cs:302 
+</ConsoleError>
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-01-10T08:26:58</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 1.91ms</Message>
+                  <ConsoleOutput>       Starting Task Init Task (0)
+[DONE] Finished Target Init Task (0)
+       Starting Task Some Task (100)
+[DONE] Finished Target Some Task (100)
+       Starting Task Download Job for http://www.google.com/index.html (301)
+[DONE] Finished Target Download Job for http://www.google.com/index.html (301)
+       Starting Task Some Other Task (200)
+[DONE] Finished Target Some Other Task (200)
+DONE: 4 WAIT: 0 FAIL: 0
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-01-10T08:27:16</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 492.62ms</Message>
+                  <ConsoleOutput>       Starting Task Init Task (0)
+[DONE] Finished Target Init Task (0)
+       Starting Task Some Task (100)
+[DONE] Finished Target Some Task (100)
+       Starting Task Download Job for http://www.google.com/index.html (301)
+[DONE] Finished Target Download Job for http://www.google.com/index.html (301)
+       Starting Task Download Job for http://dl.bukkit.org/latest-beta/craftbukkit-beta.jar (302)
+[DONE] Finished Target Download Job for http://dl.bukkit.org/latest-beta/craftbukkit-beta.jar (302)
+       Starting Task Some Other Task (200)
+[DONE] Finished Target Some Other Task (200)
+DONE: 5 WAIT: 0 FAIL: 0
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+              <Tests />
+            </TestRecord>
+          </Tests>
+        </TestRecord>
+      </Tests>
+    </TestRecord>
+  </Tests>
+</TestRecord>

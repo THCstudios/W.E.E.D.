@@ -1,0 +1,815 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TestRecord xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <UnitTestResult>
+      <TestDate>2014-01-09T09:46:29</TestDate>
+      <Passed>1</Passed>
+      <Errors>0</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>Test successful
+
+Execution time: 0.02ms</Message>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2014-01-09T14:44:00</TestDate>
+      <Passed>1</Passed>
+      <Errors>0</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>Test successful
+
+Execution time: 5.02ms</Message>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2014-01-09T14:48:14</TestDate>
+      <Passed>1</Passed>
+      <Errors>0</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>Test successful
+
+Execution time: 5.03ms</Message>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2014-01-09T14:50:48</TestDate>
+      <Passed>1</Passed>
+      <Errors>0</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>Test successful
+
+Execution time: 5.03ms</Message>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2014-01-09T14:53:57</TestDate>
+      <Passed>0</Passed>
+      <Errors>1</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>One or more child tests had errors</Message>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2014-01-09T14:54:17</TestDate>
+      <Passed>1</Passed>
+      <Errors>0</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>Test successful
+
+Execution time: 5.03ms</Message>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2014-01-09T14:54:48</TestDate>
+      <Passed>1</Passed>
+      <Errors>0</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>Test successful
+
+Execution time: 8.03ms</Message>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2014-01-09T15:05:02</TestDate>
+      <Passed>1</Passed>
+      <Errors>0</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>Test successful
+
+Execution time: 8.03ms</Message>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2014-01-09T15:08:42</TestDate>
+      <Passed>0</Passed>
+      <Errors>0</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>Connection refused</Message>
+      <StackTrace>  at Mono.Remoting.Channels.Unix.HostConnectionPool.CreateConnection () [0x0002a] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/Mono.Posix/Mono.Remoting.Channels.Unix/UnixConnectionPool.cs:265 
+  at Mono.Remoting.Channels.Unix.HostConnectionPool.GetConnection () [0x000bb] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/Mono.Posix/Mono.Remoting.Channels.Unix/UnixConnectionPool.cs:249 
+  at Mono.Remoting.Channels.Unix.UnixConnectionPool.GetConnection (System.String path) [0x00049] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/Mono.Posix/Mono.Remoting.Channels.Unix/UnixConnectionPool.cs:104 
+  at Mono.Remoting.Channels.Unix.UnixClientTransportSink.ProcessMessage (IMessage msg, ITransportHeaders requestHeaders, System.IO.Stream requestStream, ITransportHeaders&amp; responseHeaders, System.IO.Stream&amp; responseStream) [0x00025] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/Mono.Posix/Mono.Remoting.Channels.Unix/UnixClientTransportSink.cs:171 
+  at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage (IMessage msg) [0x0006c] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/System.Runtime.Remoting/System.Runtime.Remoting.Channels/BinaryClientFormatterSink.cs:157 </StackTrace>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2014-01-09T15:10:54</TestDate>
+      <Passed>0</Passed>
+      <Errors>0</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>Connection refused</Message>
+      <StackTrace>  at Mono.Remoting.Channels.Unix.HostConnectionPool.CreateConnection () [0x0002a] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/Mono.Posix/Mono.Remoting.Channels.Unix/UnixConnectionPool.cs:265 
+  at Mono.Remoting.Channels.Unix.HostConnectionPool.GetConnection () [0x000bb] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/Mono.Posix/Mono.Remoting.Channels.Unix/UnixConnectionPool.cs:249 
+  at Mono.Remoting.Channels.Unix.UnixConnectionPool.GetConnection (System.String path) [0x00049] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/Mono.Posix/Mono.Remoting.Channels.Unix/UnixConnectionPool.cs:104 
+  at Mono.Remoting.Channels.Unix.UnixClientTransportSink.ProcessMessage (IMessage msg, ITransportHeaders requestHeaders, System.IO.Stream requestStream, ITransportHeaders&amp; responseHeaders, System.IO.Stream&amp; responseStream) [0x00025] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/Mono.Posix/Mono.Remoting.Channels.Unix/UnixClientTransportSink.cs:171 
+  at System.Runtime.Remoting.Channels.BinaryClientFormatterSink.SyncProcessMessage (IMessage msg) [0x0006c] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/System.Runtime.Remoting/System.Runtime.Remoting.Channels/BinaryClientFormatterSink.cs:157 </StackTrace>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2014-01-09T15:11:43</TestDate>
+      <Passed>1</Passed>
+      <Errors>0</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>Test successful
+
+Execution time: 8.53ms</Message>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2014-01-09T15:25:18</TestDate>
+      <Passed>1</Passed>
+      <Errors>0</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>Test successful
+
+Execution time: 8.93ms</Message>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2014-01-09T15:25:30</TestDate>
+      <Passed>1</Passed>
+      <Errors>0</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>Test successful
+
+Execution time: 8.87ms</Message>
+    </UnitTestResult>
+    <UnitTestResult>
+      <TestDate>2014-01-09T15:30:42</TestDate>
+      <Passed>1</Passed>
+      <Errors>0</Errors>
+      <Failures>0</Failures>
+      <Inconclusive>0</Inconclusive>
+      <NotRunnable>0</NotRunnable>
+      <Skipped>0</Skipped>
+      <Ignored>0</Ignored>
+      <Time />
+      <Message>Test successful
+
+Execution time: 8.91ms</Message>
+    </UnitTestResult>
+  </Results>
+  <Tests>
+    <TestRecord Name="SharedMemory">
+      <Results>
+        <UnitTestResult>
+          <TestDate>2014-01-09T09:46:29</TestDate>
+          <Passed>1</Passed>
+          <Errors>0</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>Test successful
+
+Execution time: 0.01ms</Message>
+        </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2014-01-09T14:44:00</TestDate>
+          <Passed>1</Passed>
+          <Errors>0</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>Test successful
+
+Execution time: 5.02ms</Message>
+        </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2014-01-09T14:48:14</TestDate>
+          <Passed>1</Passed>
+          <Errors>0</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>Test successful
+
+Execution time: 5.02ms</Message>
+        </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2014-01-09T14:50:48</TestDate>
+          <Passed>1</Passed>
+          <Errors>0</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>Test successful
+
+Execution time: 5.02ms</Message>
+        </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2014-01-09T14:53:57</TestDate>
+          <Passed>0</Passed>
+          <Errors>1</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>One or more child tests had errors</Message>
+        </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2014-01-09T14:54:17</TestDate>
+          <Passed>1</Passed>
+          <Errors>0</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>Test successful
+
+Execution time: 5.02ms</Message>
+        </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2014-01-09T14:54:48</TestDate>
+          <Passed>1</Passed>
+          <Errors>0</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>Test successful
+
+Execution time: 8.03ms</Message>
+        </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2014-01-09T15:05:02</TestDate>
+          <Passed>1</Passed>
+          <Errors>0</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>Test successful
+
+Execution time: 8.03ms</Message>
+        </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2014-01-09T15:11:43</TestDate>
+          <Passed>1</Passed>
+          <Errors>0</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>Test successful
+
+Execution time: 8.52ms</Message>
+        </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2014-01-09T15:25:18</TestDate>
+          <Passed>1</Passed>
+          <Errors>0</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>Test successful
+
+Execution time: 8.93ms</Message>
+        </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2014-01-09T15:25:30</TestDate>
+          <Passed>1</Passed>
+          <Errors>0</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>Test successful
+
+Execution time: 8.86ms</Message>
+        </UnitTestResult>
+        <UnitTestResult>
+          <TestDate>2014-01-09T15:30:42</TestDate>
+          <Passed>1</Passed>
+          <Errors>0</Errors>
+          <Failures>0</Failures>
+          <Inconclusive>0</Inconclusive>
+          <NotRunnable>0</NotRunnable>
+          <Skipped>0</Skipped>
+          <Ignored>0</Ignored>
+          <Time />
+          <Message>Test successful
+
+Execution time: 8.90ms</Message>
+        </UnitTestResult>
+      </Results>
+      <Tests>
+        <TestRecord Name="Test">
+          <Results>
+            <UnitTestResult>
+              <TestDate>2014-01-09T09:46:29</TestDate>
+              <Passed>1</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 0.01ms</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2014-01-09T14:44:00</TestDate>
+              <Passed>1</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 5.02ms</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2014-01-09T14:48:14</TestDate>
+              <Passed>1</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 5.02ms</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2014-01-09T14:50:48</TestDate>
+              <Passed>1</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 5.02ms</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2014-01-09T14:53:57</TestDate>
+              <Passed>0</Passed>
+              <Errors>1</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>One or more child tests had errors</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2014-01-09T14:54:17</TestDate>
+              <Passed>1</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 5.02ms</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2014-01-09T14:54:48</TestDate>
+              <Passed>1</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 8.02ms</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2014-01-09T15:05:02</TestDate>
+              <Passed>1</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 8.02ms</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2014-01-09T15:11:43</TestDate>
+              <Passed>1</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 8.52ms</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2014-01-09T15:25:18</TestDate>
+              <Passed>1</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 8.93ms</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2014-01-09T15:25:30</TestDate>
+              <Passed>1</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 8.86ms</Message>
+            </UnitTestResult>
+            <UnitTestResult>
+              <TestDate>2014-01-09T15:30:42</TestDate>
+              <Passed>1</Passed>
+              <Errors>0</Errors>
+              <Failures>0</Failures>
+              <Inconclusive>0</Inconclusive>
+              <NotRunnable>0</NotRunnable>
+              <Skipped>0</Skipped>
+              <Ignored>0</Ignored>
+              <Time />
+              <Message>Test successful
+
+Execution time: 8.90ms</Message>
+            </UnitTestResult>
+          </Results>
+          <Tests>
+            <TestRecord Name="TestCase">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-01-09T09:46:29</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 0.01ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+            <TestRecord Name="TargetTest">
+              <Results>
+                <UnitTestResult>
+                  <TestDate>2014-01-09T14:42:34</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 5.01ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-01-09T14:44:00</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 5.01ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-01-09T14:48:14</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 5.01ms</Message>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-01-09T14:50:48</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 5.01ms</Message>
+                  <ConsoleOutput>       Starting Task Init Task (0)
+[DONE] Finished Target Init Task (0)
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-01-09T14:53:57</TestDate>
+                  <Passed>0</Passed>
+                  <Errors>1</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>System.NullReferenceException : Object reference not set to an instance of an object</Message>
+                  <StackTrace>  at SharedMemory.Test.TargetTest () [0x00013] in /home/felix/home/felix/projects/SharedMemory/SharedMemory/Test/Test.cs:15 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (System.Reflection.MonoMethod,object,object[],System.Exception&amp;)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00064] in /home/abuild/rpmbuild/BUILD/mono-3.0.6/mcs/class/corlib/System.Reflection/MonoMethod.cs:231 </StackTrace>
+                  <ConsoleOutput />
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-01-09T14:54:17</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 5.01ms</Message>
+                  <ConsoleOutput>       Starting Task Init Task (0)
+[DONE] Finished Target Init Task (0)
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-01-09T14:54:48</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 8.02ms</Message>
+                  <ConsoleOutput>       Starting Task Init Task (0)
+[DONE] Finished Target Init Task (0)
+       Starting Task Some Task (100)
+[DONE] Finished Target Some Task (100)
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-01-09T15:05:02</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 8.02ms</Message>
+                  <ConsoleOutput>       Starting Task Init Task (0)
+[DONE] Finished Target Init Task (0)
+       Starting Task Some Task (100)
+[DONE] Finished Target Some Task (100)
+DONE: 2 WAIT: 0 FAIL: 0
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-01-09T15:11:43</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 8.52ms</Message>
+                  <ConsoleOutput>       Starting Task Init Task (0)
+[DONE] Finished Target Init Task (0)
+       Starting Task Some Task (100)
+[DONE] Finished Target Some Task (100)
+       Starting Task Some Other Task (200)
+[DONE] Finished Target Some Other Task (200)
+DONE: 3 WAIT: 0 FAIL: 0
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-01-09T15:25:18</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 8.92ms</Message>
+                  <ConsoleOutput>       Starting Task Init Task (0)
+[DONE] Finished Target Init Task (0)
+       Starting Task Some Task (100)
+[DONE] Finished Target Some Task (100)
+       Starting Task Download Job for http://www.google.com/index.html (301)
+[DONE] Finished Target Download Job for http://www.google.com/index.html (301)
+       Starting Task Some Other Task (200)
+[DONE] Finished Target Some Other Task (200)
+DONE: 4 WAIT: 0 FAIL: 0
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-01-09T15:25:30</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 8.85ms</Message>
+                  <ConsoleOutput>       Starting Task Init Task (0)
+[DONE] Finished Target Init Task (0)
+       Starting Task Some Task (100)
+[DONE] Finished Target Some Task (100)
+       Starting Task Download Job for http://www.google.com/index.html (301)
+[DONE] Finished Target Download Job for http://www.google.com/index.html (301)
+       Starting Task Some Other Task (200)
+[DONE] Finished Target Some Other Task (200)
+DONE: 4 WAIT: 0 FAIL: 0
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+                <UnitTestResult>
+                  <TestDate>2014-01-09T15:30:42</TestDate>
+                  <Passed>1</Passed>
+                  <Errors>0</Errors>
+                  <Failures>0</Failures>
+                  <Inconclusive>0</Inconclusive>
+                  <NotRunnable>0</NotRunnable>
+                  <Skipped>0</Skipped>
+                  <Ignored>0</Ignored>
+                  <Time />
+                  <Message>Test successful
+
+Execution time: 8.89ms</Message>
+                  <ConsoleOutput>       Starting Task Init Task (0)
+[DONE] Finished Target Init Task (0)
+       Starting Task Some Task (100)
+[DONE] Finished Target Some Task (100)
+       Starting Task Download Job for http://www.google.com/index.html (301)
+[DONE] Finished Target Download Job for http://www.google.com/index.html (301)
+       Starting Task Some Other Task (200)
+[DONE] Finished Target Some Other Task (200)
+DONE: 4 WAIT: 0 FAIL: 0
+</ConsoleOutput>
+                  <ConsoleError />
+                </UnitTestResult>
+              </Results>
+            </TestRecord>
+          </Tests>
+        </TestRecord>
+      </Tests>
+    </TestRecord>
+  </Tests>
+</TestRecord>
