@@ -102,7 +102,13 @@ namespace SharedMemory
 			socket.Send(tmp);
 		}
 
-		public static ConnectionHandle Connect (ConnectionType type, String ip)
+		public String RemoteIP {
+			get {
+				return socket.
+			}
+		}
+
+		public static ConnectionHandle Connect (ConnectionType type, String ip, int portNo)
 		{
 
 		try {

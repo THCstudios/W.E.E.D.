@@ -51,6 +51,7 @@
     <Compile Include="FeMoCreator.cs" />
     <Compile Include="Global.cs" />
     <Compile Include="XMLFormatter.cs" />
+    <Compile Include="SharedMemory.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

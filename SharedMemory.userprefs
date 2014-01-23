@@ -1,14 +1,14 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="SharedMemory/FeMoPeer.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SharedMemory/ConnectionHandle.cs">
     <Files>
       <File FileName="Test/Main.cs" Line="33" Column="1" />
       <File FileName="SharedMemory/FeMoEntry.cs" Line="26" Column="4" />
       <File FileName="SharedMemory/FeMoUpdateStringFormatter.cs" Line="23" Column="43" />
-      <File FileName="SharedMemory/ConnectionHandle.cs" Line="16" Column="3" />
+      <File FileName="SharedMemory/ConnectionHandle.cs" Line="106" Column="9" />
       <File FileName="Client/Main.cs" Line="26" Column="47" />
       <File FileName="Server/Main.cs" Line="13" Column="38" />
-      <File FileName="SharedMemory/FeMoPeer.cs" Line="22" Column="4" />
+      <File FileName="SharedMemory/FeMoPeer.cs" Line="24" Column="31" />
       <File FileName="SharedMemory/FeMoCreator.cs" Line="72" Column="1" />
       <File FileName="SharedMemory/Global.cs" Line="10" Column="4" />
       <File FileName="SharedMemory/FeMoObject.cs" Line="293" Column="29" />
@@ -16,6 +16,7 @@
       <File FileName="SharedMemory/FeMoManager.cs" Line="47" Column="23" />
       <File FileName="SharedMemory/ConsoleFormatter.cs" Line="29" Column="50" />
       <File FileName="SharedMemory/XMLFormatter.cs" Line="38" Column="26" />
+      <File FileName="SharedMemory/SharedMemory.cs" Line="20" Column="85" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
