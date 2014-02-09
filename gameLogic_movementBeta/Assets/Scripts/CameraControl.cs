@@ -1,15 +1,22 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/*
+ * Changes: 
+ * 	-	removed boundary and cameraSpeed initialization from Start() to allow changes per editor
+ * 	+	added ZoomSpeed field for Camera zoom
+ *	+	Implemented zoom per mouse wheel
+ */
 public class CameraControl : MonoBehaviour {
 
-	public float cameraSpeed;
-	public float boundary;
+	public float cameraSpeed = 30;
+	public float ZoomSpeed = 200;
+	public float boundary = 20;
 
 	// Use this for initialization
 	void Start () {
-		boundary = 5;
-		cameraSpeed = 20;
+		// boundary = 5;
+		// cameraSpeed = 20;
 	}
 	
 	// Update is called once per frame
@@ -26,5 +33,6 @@ public class CameraControl : MonoBehaviour {
 		if(Input.mousePosition.y > (Screen.height - boundary)) {
 			transform.Translate(Vector3.forward*cameraSpeed*Time.deltaTime,Space.World);
 		}
+		transform.Translate (Vector3.forward * ZoomSpeed * Time.deltaTime * Input.GetAxis ("Mouse ScrollWheel"));
 	}
 }

@@ -1,6 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/*
+ * Changes:
+ * 	#	Changed property IsSelected: now automatically adapts color on set
+ */
 public class GameUnit :  TopLevelUnits{
 
 	[SerializeField]
@@ -29,7 +33,7 @@ public class GameUnit :  TopLevelUnits{
 		if(!isAtTarget) {
 			MoveUnit();
 		}
-		RaycastHit hit = new RaycastHit ();
+		RaycastHit hit;
 		if(Physics.Raycast(transform.position,-Vector3.up,out hit)) {
 			Vector3 forwd = Vector3.Cross(transform.right,hit.normal);
 			transform.rotation = Quaternion.Slerp(transform.rotation,Quaternion.LookRotation(forwd, hit.normal), 3*Time.deltaTime);
@@ -117,6 +121,11 @@ public class GameUnit :  TopLevelUnits{
 		}
 		set {
 			isSelected = value;
+			if (isSelected) {
+				renderer.material.color = Color.blue;
+			} else {
+				renderer.material.color = Color.red;
+			}
 		}
 	}
 	public bool IsAtTarget {
