@@ -8,7 +8,7 @@ public class CameraControl : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		boundary = 10;
+		boundary = 5;
 		cameraSpeed = 20;
 	}
 	

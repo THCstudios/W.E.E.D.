@@ -12,16 +12,19 @@ public class Controller : MonoBehaviour {
 	void Update () {
 		if(Input.GetMouseButtonDown(1)){
 			Debug.Log("Pressed.");
+
 			Ray ray= Camera.main.ScreenPointToRay(Input.mousePosition);
 			RaycastHit hit = new RaycastHit();
-			if(Physics.Raycast(ray, out hit, Mathf.Infinity)){
+
+			if(Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << 8)){
 				GameObject[] units = GameObject.FindGameObjectsWithTag("Unit");
-				Debug.Log(units.Length);
+
 				foreach(GameObject unit in units) {
 					if(unit.GetComponent<GameUnit>().IsSelected == true){
-						Debug.Log("blub1");
 						unit.GetComponent<GameUnit>().IsAtTarget = false;
+						//hit.point = new Vector3(hit.point.x, 0 , hit.point.z);
 						unit.GetComponent<GameUnit>().DestinationPoint = hit.point;
+
 						Debug.Log (hit.point);
 					}
 				}
