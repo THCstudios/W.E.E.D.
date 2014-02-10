@@ -1,4 +1,5 @@
 using System;
+using System.Text;
 
 namespace SharedMemory
 {
@@ -32,19 +33,20 @@ namespace SharedMemory
 
 		private void OnReceiveMessage (String msgString)
 		{
-			switch (msgString.Substring (0, 5)) {
-			case "obj:=": {
-				OnReceivedObject(msgString.Substring(5));
-				break;
-			}
-			case "cmd:=": {
-				OnReceivedCommand(msgString.Substring(5));
-				break;
-			}
-			default:
+			msgString = msgString.Trim();
+			String val = substring_workaround(msgString, msgString.IndexOf(":") + 2);
+			if (msgString.StartsWith("obj:=")) {
+				OnReceivedObject(val);
+			} else if (msgString.StartsWith("cmd:=")) {
+				OnReceivedCommand(val);
+			} else {
 				Console.WriteLine("Unknown Message Type, make sure you are using compatible Versions\n\tType: \"" + msgString.Substring(0, 5) + "\"");
-				break;
 			}
+		}
+
+		public void Close ()
+		{
+			handle.Close();
 		}
 
 		public void SendObject(String objString) {
@@ -53,6 +55,17 @@ namespace SharedMemory
 
 		public void SendCommand(String cmdString) {
 			handle.Send("cmd:=" + cmdString);
+		}
+
+		private String substring_workaround (String str, int offset)
+		{
+			String ret = "";
+			for (int i = 0; i < str.Length; i++) {
+				if(i >= offset) {
+					ret += str[i];
+				}
+			}
+			return ret;
 		}
 	}
 }

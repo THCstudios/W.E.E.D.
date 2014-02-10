@@ -7,7 +7,7 @@ using System.Xml.Linq;
 namespace SharedMemory {
 	class XMLFormatter : FeMoUpdateStringFormatter{
 		public override string FormatEntry(FeMoEntry entry) {
-			return "\t\t\t<Entry name=\""+entry.Name + "\" value=\"" + entry.Value + "\" type=\"\" ></Entry>";
+			return "\t\t\t<Entry name=\""+entry.Name + "\" value=\"" + entry.Value + "\" type=\"" + entry.Type +"\" ></Entry>";
 		}
 
 		public override string CloseEntryList() {

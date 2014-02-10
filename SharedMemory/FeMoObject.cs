@@ -289,6 +289,17 @@ namespace SharedMemory {
 			Revalidate();
 			return ret;
 		}
+
+		public override string ToString ()
+		{
+			FeMoUpdateStringFormatter formatter = Global.GetDefaultOutputFormatter();
+			String ret = formatter.FormatObject (this);
+			foreach (FeMoEntry e in Current) {
+				ret += formatter.EntrySeparator();
+				ret += formatter.FormatEntry(e);
+			}
+			return ret;
+		}
 			
 		public void Invalidate() {
 			valid = false;

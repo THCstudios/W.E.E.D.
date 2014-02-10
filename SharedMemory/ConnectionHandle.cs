@@ -18,6 +18,7 @@ namespace SharedMemory
 	public class ConnectionHandle
 	{
 		const int portNo = 12345;
+		private int port;
 		char localAddr;
 		char remoteAddr;
 
@@ -43,8 +44,13 @@ namespace SharedMemory
 
 		protected virtual void OnReceivedMessage (String msg)
 		{
-			if(ReceivedMessage != null)
-				ReceivedMessage(msg);
+			Console.WriteLine("[FEMO] " + msg);
+			if (msg.StartsWith ("port")) {
+				String tmp = msg.Split('t')[1];
+				port = Int32.Parse(tmp);
+			} else
+				if(ReceivedMessage != null)
+					ReceivedMessage(msg);
 		}
 
 		private Socket socket;
@@ -55,6 +61,7 @@ namespace SharedMemory
 		private ConnectionHandle (Socket s)
 		{
 			this.socket = s;
+			ForwardingPort = RemotePort;
 			receive = new Thread(Receive);
 			receive.Start();
 		}
@@ -77,7 +84,7 @@ namespace SharedMemory
 					buffer = new byte[1024];
 					socket.Receive(buffer);
 					String tmp = Encoding.Unicode.GetString(buffer);
-					if(tmp == ":::end")
+					if(tmp.Contains(":::end"))
 						Close();
 					if(tmp == "") {
 					} else if(tmp.Contains(";:;")) {
@@ -98,20 +105,40 @@ namespace SharedMemory
 		{
 			String t = msg + ";:;";
 			byte[] tmp = Encoding.Unicode.GetBytes(t);
-			//Console.WriteLine(t);
+			Console.WriteLine(msg);
 			socket.Send(tmp);
 		}
 
 		public String RemoteIP {
 			get {
-				return socket.
+				return (socket.RemoteEndPoint as IPEndPoint).Address.ToString();
 			}
+		}
+
+		public int RemotePort {
+			get {
+				return (socket.RemoteEndPoint as IPEndPoint).Port;
+			}
+		}
+
+		public int ForwardingPort {
+			get {
+				return port;
+			}
+			set {
+				port = value;
+				Send("port" + value);
+			}
+		}
+
+		public static void Reset ()
+		{
+			s = null;
 		}
 
 		public static ConnectionHandle Connect (ConnectionType type, String ip, int portNo)
 		{
-
-		try {
+			try {
 				switch (type) {
 				case ConnectionType.WAIT:
 					{

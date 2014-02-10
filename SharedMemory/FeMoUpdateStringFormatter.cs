@@ -8,6 +8,7 @@ namespace SharedMemory
 	{
 		public static FeMoUpdateStringFormatter CONSOLE = new ConsoleFormatter();
 		public static FeMoUpdateStringFormatter JSON = new JSONFormatter();
+		public static FeMoUpdateStringFormatter XML = new XMLFormatter();
 
 
 		public abstract String FormatObject(FeMoObject obj);

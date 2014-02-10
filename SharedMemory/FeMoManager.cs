@@ -109,6 +109,24 @@ namespace SharedMemory
 			}
 		}
 
+		public void BroadcastCommand (String msg)
+		{
+			foreach (FeMoPeer p in peers) {
+				p.SendCommand(msg);
+			}
+		}
+
+		public void Close ()
+		{
+			foreach (FeMoPeer p in peers) {
+				try {
+					p.Close();
+				} catch {
+					Console.WriteLine("[FEMO] Connection already shutdown");
+				}
+			}
+		}
+
 		public void FileDump (String file, FeMoUpdateStringFormatter formatter)
 		{
 			File.WriteAllText(file, Dump(formatter));
@@ -116,6 +134,13 @@ namespace SharedMemory
 
 		public void ReadFromFile (String file, FeMoUpdateStringFormatter formatter) {
 			FeMoObject[] objs = formatter.Parse(File.ReadAllText(file));
+			foreach (FeMoObject obj in objs) {
+				CacheObject(obj);
+			}
+		}
+
+		public void ReadFromString (String value, FeMoUpdateStringFormatter formatter) {
+			FeMoObject[] objs = formatter.Parse(value);
 			foreach (FeMoObject obj in objs) {
 				CacheObject(obj);
 			}
