@@ -32,7 +32,7 @@ namespace Client
 //			Environment.Exit(0);
 			SharedMemoryControl connection = new SharedMemoryControl();
 			ConnectionInformation info = new ConnectionInformation();
-			info.address = "10.91.52.125";
+			info.address = "10.23.11.158";
 			info.port = 12345;
 			info.noOfClients = 0;
 			connection.Info = info;

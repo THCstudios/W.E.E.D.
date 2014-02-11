@@ -22,6 +22,7 @@ namespace SharedMemory
 			try {
 				WebClient client = new WebClient ();
 				Console.WriteLine();
+				bool fail = false;
 				client.DownloadProgressChanged += (object sender, DownloadProgressChangedEventArgs e) => {
 					Console.SetCursorPosition(0, Console.CursorTop);
 					Console.Write(new String(' ', Console.WindowWidth - 1));
@@ -37,12 +38,36 @@ namespace SharedMemory
 					}
 					Console.Write("]");
 				};
-				client.DownloadFileCompleted += (object sender, System.ComponentModel.AsyncCompletedEventArgs e) => dl = false;
+
+				client.DownloadFileCompleted += (object sender, System.ComponentModel.AsyncCompletedEventArgs e) => { 
+					dl = false; 
+					fail = e.Error != null;
+					if(e.Error != null) {
+						Global.fail(e.Error.ToString());
+						File.Delete(dest);
+					} else {
+						Console.SetCursorPosition(0, Console.CursorTop);
+						Console.Write(new String(' ', Console.WindowWidth - 1));
+						Console.SetCursorPosition(0, Console.CursorTop - 1);
+						String s = String.Format("{0,3}", 100);
+						Console.Write(s + "%[");
+						int perc = (int)((Console.WindowWidth - 6));
+						for(int i = 0; i < perc; i++) {
+							Console.Write("=");
+						}
+						for(int i = 0; i < Console.WindowWidth - perc - 6; i++) {
+							Console.Write(".");
+						}
+						Console.Write("]");
+					}
+				};
 				client.DownloadFileAsync(new Uri(url), dest);
 				while(dl) {
 					System.Threading.Thread.Sleep(200);
 				}
 				Console.WriteLine();
+				if(fail) 
+					return SharedMemory.TargetState.FAIL;
 				return TargetState.DONE;
 			} catch (Exception e) {
 				Console.Error.WriteLine(e);
