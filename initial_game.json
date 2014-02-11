@@ -1,0 +1,75 @@
+{
+	"updates": [
+		{"Id":"0","Name":"Game","update":
+			[
+				{"Name":"GameInfo", "Value":"1", "Type":"OBJECT"},
+				{"Name":"SharedMemoryInfo", "Value":"2", "Type":"OBJECT"}
+			]
+		}, {"Id":"1", "Name":"GameInfo", "update":
+			[
+				{"Name":"Name", "Value":"Test", "Type":"STRING"},
+				{"Name":"Host", "Value":"THC", "Type":"STRING"},
+				{"Name":"Level", "Value":"3", "Type":"OBJECT"}
+			]
+		}, {"Id":"2", "Name":"SharedMemoryInfo", "update": 
+			[
+				{"Name":"Vendor", "Value":"InfiniteReality", "Type":"STRING"},
+				{"Name":"Version", "Value":"0.1 beta", "Type":"STRING"},
+				{"Name":"ConnectionFormatter", "Value":"JSON", "Type":"STRING"}
+			]
+		}, {"Id":"3", "Name":"Level", "update":
+			[
+				{"Name":"Map", "Value":"4", "Type":"OBJECT"},
+				{"Name":"Entities", "Value":"6", "Type":"OBJECT"}
+			]
+		}, {"Id":"4", "Name":"Map", "update":
+			[
+				{"Name":"Tiles", "Value":"5", "Type":"OBJECT"},
+				{"Name":"Name", "Value":"TestMap", "Type":"STRING"},
+				{"Name":"File", "Value":"test_map.map", "Type":"STRING"}
+			]
+		}, {"Id":"5", "Name":"Tiles", "update":
+			[
+				{"Name":"TileCount", "Value":"2", "Type":"INT"},
+				{"Name":"Tile_0", "Value":"100", "Type":"OBJECT"},
+				{"Name":"Tile_1", "Value":"101", "Type":"OBJECT"}
+			]
+		}, {"Id":"100", "Name":"Tile_0", "update":
+			[
+				{"Name":"Terrain", "Value":"0", "Type":"INT"}
+				{"Name":"X", "Value":"0", "Type":"INT"},
+				{"Name":"Y", "Value":"0", "Type":"INT"},
+				{"Name":"Levitation", "Value":"0", "Type":"INT"}
+			]
+		}, {"Id":"101", "Name":"Tile_1", "update":
+			[
+				{"Name":"Terrain", "Value":"0", "Type":"INT"},
+				{"Name":"X", "Value":"1", "Type":"INT"},
+				{"Name":"Y", "Value":"0", "Type":"INT"},
+				{"Name":"Levitation", "Value":"0", "Type":"INT"}
+			]
+		}, {"Id":"6", "Name":"Entities", "update":
+			[
+				{"Name":"EntityCount", "Value":"2", "Type":"INT"},
+				{"Name":"Entity_0", "Value":"1000", "Type":"OBJECT"},
+				{"Name":"Entity_1", "Value":"1001", "Tyoe":"OBJECT"}
+			]
+		}, {"Id":"1000", "Name":"Entity_0", "update":
+			[
+				{"Name":"EntityType", "Value":"100", "Type":"INT"},
+				{"Name":"HP", "Value":"1500", "Type":"INT"},
+				{"Name":"AP", "Value":"20", "Type":"INT"},
+				{"Name":"Tile", "Value":"100", "Type":"OBJECT"},
+				{"Name":"Name", "Value":"Townhall", "Type":"STRING"}
+			]
+		}, {"Id":"1001", "Name":"Entity_1", "update":
+			[
+				{"Name":"EntityType", "Value":"1000", "Type":"INT"},
+				{"Name":"HP", "Value":"150", "Type":"INT"},
+				{"Name":"AP", "Value":"10", "Type":"INT"},
+				{"Name":"Tile", "Value":"101", "Type":"OBJECT"},
+				{"Name":"Name", "Value":"Crossbow", "Type":"STRING"}
+			]
+		}
+	]
+}

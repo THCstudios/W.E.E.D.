@@ -44,7 +44,7 @@ namespace SharedMemory
 
 		protected virtual void OnReceivedMessage (String msg)
 		{
-			Console.WriteLine("[FEMO] " + msg);
+			Global.femo(msg);
 			if (msg.StartsWith ("port")) {
 				String tmp = msg.Split('t')[1];
 				port = Int32.Parse(tmp);
@@ -78,10 +78,11 @@ namespace SharedMemory
 		void Receive ()
 		{
 			try {
-				byte[] buffer = new byte[1024];
+				byte[] buffer = new byte[1024 * 8];
+				socket.ReceiveBufferSize = 1024 * 8;
 				String msg = "";
 				while(socket.Connected) {
-					buffer = new byte[1024];
+					buffer = new byte[1024 * 8];
 					socket.Receive(buffer);
 					String tmp = Encoding.Unicode.GetString(buffer);
 					if(tmp.Contains(":::end"))
@@ -105,7 +106,9 @@ namespace SharedMemory
 		{
 			String t = msg + ";:;";
 			byte[] tmp = Encoding.Unicode.GetBytes(t);
-			Console.WriteLine(msg);
+			Double blocks_ = (double)tmp.Length / (1024.0d * 8.0d);
+			int blocks = (int)Math.Ceiling(blocks_);
+			Global.log("Sending package: \n\tBytes:" + tmp.Length + " \n\tPort: " + RemotePort + "\n\tIP: " + RemoteIP + "\n\tBlocks: " + blocks);
 			socket.Send(tmp);
 		}
 

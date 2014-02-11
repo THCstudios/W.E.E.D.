@@ -1,0 +1,83 @@
+<Objects>
+	<Object id="0" name="Game" >
+		<Entries>
+			<Entry name="SharedMemoryInfo" value="2" type="OBJECT" ></Entry>
+			<Entry name="GameInfo" value="1" type="OBJECT" ></Entry>
+		</Entries>
+	</Object>
+	<Object id="1" name="GameInfo" >
+		<Entries>
+			<Entry name="Name" value="Test" type="STRING" ></Entry>
+			<Entry name="Level" value="3" type="OBJECT" ></Entry>
+			<Entry name="Host" value="THC" type="STRING" ></Entry>
+		</Entries>
+	</Object>
+	<Object id="2" name="SharedMemoryInfo" >
+		<Entries>
+			<Entry name="Version" value="0.1beta" type="STRING" ></Entry>
+			<Entry name="Vendor" value="InfiniteReality" type="STRING" ></Entry>
+			<Entry name="ConnectionFormatter" value="JSON" type="STRING" ></Entry>
+		</Entries>
+	</Object>
+	<Object id="3" name="Level" >
+		<Entries>
+			<Entry name="Map" value="4" type="OBJECT" ></Entry>
+			<Entry name="Entities" value="6" type="OBJECT" ></Entry>
+		</Entries>
+	</Object>
+	<Object id="4" name="Map" >
+		<Entries>
+			<Entry name="Tiles" value="5" type="OBJECT" ></Entry>
+			<Entry name="Name" value="TestMap" type="STRING" ></Entry>
+			<Entry name="File" value="test_map.map" type="STRING" ></Entry>
+		</Entries>
+	</Object>
+	<Object id="5" name="Tiles" >
+		<Entries>
+			<Entry name="TileCount" value="2" type="INT" ></Entry>
+			<Entry name="Tile_1" value="101" type="OBJECT" ></Entry>
+			<Entry name="Tile_0" value="100" type="OBJECT" ></Entry>
+		</Entries>
+	</Object>
+	<Object id="6" name="Entities" >
+		<Entries>
+			<Entry name="EntityCount" value="2" type="INT" ></Entry>
+			<Entry name="Entity_1" value="1001" type="OBJECT" ></Entry>
+			<Entry name="Entity_0" value="1000" type="OBJECT" ></Entry>
+		</Entries>
+	</Object>
+	<Object id="100" name="Tile_0" >
+		<Entries>
+			<Entry name="Y" value="0" type="INT" ></Entry>
+			<Entry name="X" value="0" type="INT" ></Entry>
+			<Entry name="Terrain" value="0" type="INT" ></Entry>
+			<Entry name="Levitation" value="0" type="INT" ></Entry>
+		</Entries>
+	</Object>
+	<Object id="101" name="Tile_1" >
+		<Entries>
+			<Entry name="Y" value="0" type="INT" ></Entry>
+			<Entry name="X" value="1" type="INT" ></Entry>
+			<Entry name="Terrain" value="0" type="INT" ></Entry>
+			<Entry name="Levitation" value="0" type="INT" ></Entry>
+		</Entries>
+	</Object>
+	<Object id="1000" name="Entity_0" >
+		<Entries>
+			<Entry name="Tile" value="100" type="OBJECT" ></Entry>
+			<Entry name="Name" value="Townhall" type="STRING" ></Entry>
+			<Entry name="HP" value="1500" type="INT" ></Entry>
+			<Entry name="EntityType" value="100" type="INT" ></Entry>
+			<Entry name="AP" value="20" type="INT" ></Entry>
+		</Entries>
+	</Object>
+	<Object id="1001" name="Entity_1" >
+		<Entries>
+			<Entry name="Tile" value="101" type="OBJECT" ></Entry>
+			<Entry name="Name" value="Crossbow" type="STRING" ></Entry>
+			<Entry name="HP" value="150" type="INT" ></Entry>
+			<Entry name="EntityType" value="1000" type="INT" ></Entry>
+			<Entry name="AP" value="10" type="INT" ></Entry>
+		</Entries>
+	</Object>
+</Objects>

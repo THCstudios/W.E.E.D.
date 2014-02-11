@@ -38,7 +38,7 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\SharedMemory\SharedMemory.csproj">
-      <Project>{4786FAAA-187D-4C51-8F6C-6619BED57B2B}</Project>
+      <Project>{E3CAC295-80E3-4D3A-8933-A1CD315F8ADE}</Project>
       <Name>SharedMemory</Name>
     </ProjectReference>
   </ItemGroup>

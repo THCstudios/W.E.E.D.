@@ -52,6 +52,12 @@
     <Compile Include="Global.cs" />
     <Compile Include="XMLFormatter.cs" />
     <Compile Include="SharedMemory.cs" />
+    <Compile Include="SQLExporter.cs" />
+    <Compile Include="MySQLFormatter.cs" />
+    <Compile Include="SQLiteFormatter.cs" />
+    <Compile Include="DownloadJob.cs" />
+    <Compile Include="Target.cs" />
+    <Compile Include="TaskManager.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

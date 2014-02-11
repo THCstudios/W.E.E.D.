@@ -15,7 +15,7 @@ namespace Server
 			info.noOfClients = 2;
 			connection.Info = info;
 			connection.State = SharedMemoryControl.ServerClientState.SERVER;
-			connection.AddSource(File.ReadAllText("err_shutdown.json"));
+			connection.AddSource(File.ReadAllText("../../../initial_game.json"));
 			Console.WriteLine("Starting SharedMemory(tm) Session");
 			connection.Start();
 			Console.WriteLine("Client(s) Connected!");

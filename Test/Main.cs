@@ -30,6 +30,8 @@ namespace Test
 			FeMoManager man = new FeMoManager();
 			man.ReadFromFile("../../../initial_game.json", FeMoUpdateStringFormatter.JSON);
 			man.FileDump("dump.xml", FeMoUpdateStringFormatter.XML);
+			man.FileDump("sqlite.sql", FeMoUpdateStringFormatter.SQLITE);
+			man.FileDump("mysql.sql", FeMoUpdateStringFormatter.MYSQL);
 			man.SendUpdateString();
 			//Console.WriteLine(man.Dump(FeMoUpdateStringFormatter.CONSOLE));
 			FeMoObject game = man.Get(0);
