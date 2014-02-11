@@ -4,6 +4,7 @@ using System.IO;
 using System.Net;
 using System.Net.Sockets;
 using System.Threading;
+using System.Text.RegularExpressions;
 
 namespace SharedMemory
 {
@@ -44,7 +45,7 @@ namespace SharedMemory
 
 		protected virtual void OnReceivedMessage (String msg)
 		{
-			Global.femo(msg);
+			//Global.femo("Received Message: " + msg);
 			if (msg.StartsWith ("port")) {
 				String tmp = msg.Split('t')[1];
 				port = Int32.Parse(tmp);
@@ -78,20 +79,28 @@ namespace SharedMemory
 		void Receive ()
 		{
 			try {
+				Regex regex = new Regex("\b;:;\b");
 				byte[] buffer = new byte[1024 * 8];
 				socket.ReceiveBufferSize = 1024 * 8;
 				String msg = "";
 				while(socket.Connected) {
 					buffer = new byte[1024 * 8];
 					socket.Receive(buffer);
-					String tmp = Encoding.Unicode.GetString(buffer);
+					String tmp = "";
+					for(int i = 0; i < 8 * 1024; i++) {
+						if(buffer[i] != 0)
+							tmp += (char)buffer[i];
+					}
 					if(tmp.Contains(":::end"))
 						Close();
 					if(tmp == "") {
 					} else if(tmp.Contains(";:;")) {
-						String eve = msg + tmp.Substring(0, tmp.IndexOf(";:;"));
-						msg += tmp.Substring(tmp.IndexOf(";:;") + 3);
-						OnReceivedMessage(eve);
+						String eve = msg + tmp.Substring(0, tmp.LastIndexOf(";:;"));
+						msg += tmp.Substring(tmp.LastIndexOf(";:;") + 3);
+						String[] msgs = regex.Split(eve);
+						foreach(String m in msgs) {
+							OnReceivedMessage(m);
+						}
 					} else {
 						msg += tmp;
 					}
@@ -108,7 +117,7 @@ namespace SharedMemory
 			byte[] tmp = Encoding.Unicode.GetBytes(t);
 			Double blocks_ = (double)tmp.Length / (1024.0d * 8.0d);
 			int blocks = (int)Math.Ceiling(blocks_);
-			Global.log("Sending package: \n\tBytes:" + tmp.Length + " \n\tPort: " + RemotePort + "\n\tIP: " + RemoteIP + "\n\tBlocks: " + blocks);
+			//Global.log("Sending package: \n\tBytes:" + tmp.Length + " \n\tPort: " + RemotePort + "\n\tIP: " + RemoteIP + "\n\tBlocks: " + blocks);
 			socket.Send(tmp);
 		}
 
@@ -169,7 +178,7 @@ namespace SharedMemory
 					return null;
 				}
 			} catch (Exception ex) {
-				Console.WriteLine(ex);
+				//Console.WriteLine(ex);
 				return null;
 			}
 		}

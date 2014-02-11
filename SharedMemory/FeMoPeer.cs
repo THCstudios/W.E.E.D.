@@ -40,7 +40,7 @@ namespace SharedMemory
 			} else if (msgString.StartsWith("cmd:=")) {
 				OnReceivedCommand(val);
 			} else {
-				Console.WriteLine("Unknown Message Type, make sure you are using compatible Versions\n\tType: \"" + msgString.Substring(0, 5) + "\"");
+				Global.warn("Unknown Message Type, make sure you are using compatible Versions\n\tType: \"" + msgString.Substring(0, 5) + "\"");
 			}
 		}
 

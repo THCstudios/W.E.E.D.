@@ -122,7 +122,7 @@ namespace SharedMemory
 				try {
 					p.Close();
 				} catch {
-					Console.WriteLine("[FEMO] Connection already shutdown");
+					Global.femo ("Connection already shutdown");
 				}
 			}
 		}

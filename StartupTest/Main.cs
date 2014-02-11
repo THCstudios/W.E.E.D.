@@ -14,9 +14,9 @@ namespace StartupTest
 			tm.RunAll();
 			SharedMemoryControl connection = new SharedMemoryControl();
 			ConnectionInformation info = new ConnectionInformation();
-			info.address = "10.23.11.158";
+			info.address = "10.34.6.160";
 			info.port = 12345;
-			info.noOfClients = 2;
+			info.noOfClients = 3;
 			connection.Info = info;
 			connection.State = SharedMemoryControl.ServerClientState.SERVER;
 			connection.AddSource(File.ReadAllText("initial_game.json"));
@@ -43,19 +43,13 @@ namespace StartupTest
 		public override TargetState run() {
 			TestTarget test = new TestTarget();
 			OtherTarget other = new OtherTarget();
-			DownloadJob dl = new DownloadJob(301, "http://www.google.com/index.html", "index.html");
 			DownloadJob dj = new DownloadJob(302, "http://localhost/initial_game.json", "initial_game.json");
 			test.predesecors.Add(this);
-			dl.predesecors.Add(this);
 			dj.predesecors.Add(this);
-			other.predesecors.Add(dl);
-			if(!File.Exists("initial_game.json"))
-				other.predesecors.Add(dj);
+			other.predesecors.Add(dj);
 			tm.pushTarget(100, test);
 			tm.pushTarget(200, other);
-			tm.pushTarget(301, dl);
-			if(!File.Exists("initial_game.json"))
-				tm.pushTarget(302, dj);
+			tm.pushTarget(302, dj);
 			return TargetState.DONE;
 		}
 	}
