@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 
 /*
  * Changes:
@@ -11,42 +11,40 @@ public class GameUnit :  TopLevelUnits{
 	private float movementSpeed;
 	[SerializeField]
 	private bool isSelected;
-	[SerializeField]
-	private bool isAtTarget;
-	[SerializeField]
-	private Vector3 destinationPoint;
+	//[SerializeField]
+	//private bool isAtTarget;
+	//[SerializeField]
+	//private Vector3 destinationPoint;
 	[SerializeField]
 	private double collisionTime;
 	private bool moveOverload;
 
+	public GameObject Level;
+	public List<Vector3> Path;
+
+	public float MaximumDistance = 0.5f;
 
 	// Use this for initialization
 	void Start () {
 		isSelected = false;
-		isAtTarget = true;
 		movementSpeed = 2.0f;
 		moveOverload = false;
 	}
 	
 	// Update is called once per frame
 	public void Update () {
-		if(!isAtTarget) {
+		if(!IsAtTarget) {
 			MoveUnit();
 		}
-		RaycastHit hit;
+		// USE?
+		/*RaycastHit hit;
 		if(Physics.Raycast(transform.position,-Vector3.up,out hit)) {
 			Vector3 forwd = Vector3.Cross(transform.right,hit.normal);
 			transform.rotation = Quaternion.Slerp(transform.rotation,Quaternion.LookRotation(forwd, hit.normal), 3*Time.deltaTime);
-		}
+		}*/
 	}
 	public void OnMouseDown(){
-		if (!isSelected) {
-			isSelected = true;
-			renderer.material.color = Color.blue;
-		} else {
-			isSelected = false;
-			renderer.material.color = Color.red;
-		}
+		IsSelected = !IsSelected;
 	}
 	public void OnCollisionEnter(Collision collision){
 		if(collision.gameObject.tag != "Unit" && collision.gameObject.tag != "Terrain"){
@@ -57,33 +55,43 @@ public class GameUnit :  TopLevelUnits{
 	public void OnCollisionStay(Collision collision) {
 		if(collision.gameObject.tag != "Unit" && collision.gameObject.tag != "Terrain"){
 			if(collisionTime > 0) {
-				Debug.Log(collisionTime);
+				//Debug.Log(collisionTime);
 				collisionTime -= Time.deltaTime;
 			} else {
-				Debug.DrawRay(transform.position,(destinationPoint - transform.position).normalized, Color.red);
-				if(!Physics.Raycast(transform.position, (destinationPoint - transform.position).normalized, 2f)) {
-					Debug.Log("view clear");
-				} else {
-					Debug.Log ("!view clear");
-					Debug.DrawRay(transform.position, Vector3.Cross(transform.up, (destinationPoint - transform.position).normalized), Color.red);
-					if(!Physics.Raycast(transform.position, Vector3.Cross(transform.up, (destinationPoint - transform.position).normalized), 2f)) {
-						moveOverload = true;
-						rigidbody.velocity = Vector3.Cross(transform.up, (destinationPoint - transform.position).normalized).normalized * movementSpeed;
+				if (!IsAtTarget) {
+					//Debug.DrawRay(transform.position,(DestinationPoint - transform.position).normalized, Color.red);
+					if(!Physics.Raycast(transform.position, (DestinationPoint - transform.position).normalized, 2f)) {
+						//Debug.Log("view clear");
+					} else {
+						//Debug.Log ("!view clear");
+						//Debug.DrawRay(transform.position, Vector3.Cross(transform.up, (DestinationPoint - transform.position).normalized), Color.red);
+						/*if(!Physics.Raycast(transform.position, Vector3.Cross(transform.up, (destinationPoint - transform.position).normalized), 2f)) {
+							moveOverload = true;
+							rigidbody.velocity = Vector3.Cross(transform.up, (destinationPoint - transform.position).normalized).normalized * movementSpeed;
+						}*/
 					}
 				}
 			}
 		}
 	}
 	public void FixedUpdate() {
-		if(!isAtTarget) {
+		if(!IsAtTarget) {
 			//rigidbody.MovePosition(Vector3.MoveTowards (transform.position, destinationPoint, (float)(movementSpeed * Time.deltaTime)));
 			//rigidbody.velocity = movementSpeed * rigidbody.velocity.normalized;
-			if(!moveOverload)
-				rigidbody.velocity = (destinationPoint - transform.position).normalized * movementSpeed; //Vector3.MoveTowards (transform.position, destinationPoint, (float)(movementSpeed * Time.deltaTime));
+			if(!moveOverload) {
+				Vector3 dir = (DestinationPoint - transform.position).normalized * movementSpeed;
+				if ((DestinationPoint - transform.position - dir).magnitude < MaximumDistance) {
+					dir = DestinationPoint - transform.position;
+				}
+				dir.y = rigidbody.velocity.y;
+				rigidbody.velocity =  dir; //Vector3.MoveTowards (transform.position, destinationPoint, (float)(movementSpeed * Time.deltaTime));
+				Debug.DrawRay (transform.position, dir * 10);
+				Debug.DrawRay (transform.position, DestinationPoint - transform.position);
+			}
 		}
 	}
 	public void MoveUnit(){
-		var newRotation = Quaternion.LookRotation (destinationPoint - transform.position).eulerAngles;
+		var newRotation = Quaternion.LookRotation (DestinationPoint - transform.position).eulerAngles;
 		newRotation.x = transform.rotation.eulerAngles.x;
 		float tempY;
 		if (Mathf.Abs(transform.rotation.eulerAngles.y - newRotation.y) >180) {
@@ -103,10 +111,38 @@ public class GameUnit :  TopLevelUnits{
 		//this.rigidbody.MovePosition(Vector3.MoveTowards(transform.position, destinationPoint, (float) (movementSpeed * Time.deltaTime)));
 		//rigidbody.AddForce(Vector3.MoveTowards (transform.position, destinationPoint, (float)(movementSpeed * Time.deltaTime)));
 		//rigidbody.AddForce (Vector3.forward);
-		if(Vector3.Distance(transform.position, destinationPoint) < 0.2) {
-			isAtTarget = true;
+		//Debug.Log (Vector3.Distance (transform.position, DestinationPoint));
+		if(Vector3.Distance(transform.position, DestinationPoint) < MaximumDistance) {
+			Path.RemoveAt (0);
 		}
 	}
+
+	private Vector3 convert(Tile tile) {
+		return new Vector3 (tile.pos.x * 2, 0, tile.pos.y * 2);
+	}
+
+	public List<Vector3> Optimize (List<Tile> path, Vector3 finalDest) {
+		if (path == null) {
+			return null;
+		}
+		List<Vector3> opped = new List<Vector3>();
+		foreach (Tile tile in path) {
+			opped.Add (new Vector3 (tile.pos.x + collider.bounds.size.x / 2, 0, tile.pos.y + collider.bounds.size.z / 2));
+		}
+		opped.Add (finalDest);
+		for (int i = 0; i < opped.Count - 2; i++) {
+			for (int j = i + 2; j < opped.Count; j++) {
+				Vector3 dir = opped[j] - opped[i];
+				float distance = dir.magnitude;
+				if (!Physics.Raycast (opped[i], dir, distance)) {
+					opped.RemoveRange (i + 1, j - i - 1);
+					j = i + 1;
+				}
+			}
+		}
+		return opped;
+	}
+
 	public float MovementSpeed {
 		get {
 			return this.movementSpeed;
@@ -130,18 +166,22 @@ public class GameUnit :  TopLevelUnits{
 	}
 	public bool IsAtTarget {
 		get {
-			return this.isAtTarget;
-		}
-		set {
-			isAtTarget = value;
+			return Path == null || Path.Count == 0;
 		}
 	}
 	public Vector3 DestinationPoint {
 		get {
-			return this.destinationPoint;
+			return Path[0];
 		}
 		set {
-			destinationPoint = value;
+			Path = Optimize(Level.GetComponent<PathFinder>().FindPath (transform.position, value), value);
+		}
+	}
+
+	public Tile Tile {
+		get {
+			return Level.GetComponent<Level>().tiles
+				[(int)transform.position.x, (int) transform.position.z];
 		}
 	}
 }

@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 
 
 /*
@@ -13,6 +13,8 @@ public class Controller : MonoBehaviour {
 	private Vector2 startPos;
 	// Selection ending position
 	private Vector2 endPos;
+	// The style used to draw the selection rectangle
+	private GUIStyle selectionStyle;
 	// Generates selection rectangle
 	private Rect selection {
 		get {
@@ -39,7 +41,6 @@ public class Controller : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
 	}
 	
 	// Update is called once per frame
@@ -55,7 +56,6 @@ public class Controller : MonoBehaviour {
 
 				foreach(GameObject unit in units) {
 					if(unit.GetComponent<GameUnit>().IsSelected == true){
-						unit.GetComponent<GameUnit>().IsAtTarget = false;
 						//hit.point = new Vector3(hit.point.x, 0 , hit.point.z);
 						unit.GetComponent<GameUnit>().DestinationPoint = hit.point;
 
@@ -69,17 +69,20 @@ public class Controller : MonoBehaviour {
 			startPos = endPos = Vector2.zero;
 		}
 		if (Input.GetMouseButtonDown (0)) {
-			isSelecting = true;
 			startPos = Input.mousePosition;
 		}
-		if (isSelecting && Input.GetMouseButton (0)) {
+		if (!isSelecting && Input.GetMouseButton (0)) {
+			isSelecting = startPos != (Vector2)Input.mousePosition;
+		}
+
+		if (isSelecting) {
 			// Only update selection if the mouse actually moved!
 			// Subject for debate (what if units moved inbetween?)
 			if (endPos != (Vector2) Input.mousePosition) {
 				endPos = Input.mousePosition;
-
+				
 				GameObject[] units = GameObject.FindGameObjectsWithTag ("Unit");
-
+				
 				foreach (GameObject unit in units) {
 					Vector3 screenCoords = Camera.main.WorldToScreenPoint (unit.transform.position);
 					unit.GetComponent<GameUnit>().IsSelected = selection.Contains (screenCoords);
@@ -96,7 +99,18 @@ public class Controller : MonoBehaviour {
 		return rect;
 	}
 
+	private void initStyle() {
+		selectionStyle = new GUIStyle ("Box");
+		selectionStyle.border.top = selectionStyle.border.bottom = 
+			selectionStyle.border.left = selectionStyle.border.right = 2; 
+	}
+
 	void OnGUI() {
-		GUI.Box (fixRectForGui(selection), "");
+		if (selectionStyle == null) {
+			initStyle();
+		}
+		if (isSelecting) {
+			GUI.Box (fixRectForGui(selection), "", selectionStyle);
+		}
 	}
 }
