@@ -115,8 +115,8 @@ namespace SharedMemory {
 		{
 			var erg = from e in Current where e.Name == name && e.Type == Type.INT select e;
 			if (erg.Count() == 1) {
-				return Int16.Parse(erg.ToList().First().Value);
-			} 
+				return Int32.Parse(erg.ToList().First().Value);
+			}
 			throw new Exception("Query \"GET INT " + name + " IN CURRENT\" returned illegal amount of Elements: " + erg.Count());
 		}
 
@@ -134,8 +134,8 @@ namespace SharedMemory {
 			var erg = from e in Current where e.Name == name && e.Type == Type.INT select e;
 			if (erg.Count() == 1) {
 				erg.First().Value = "" + value;
-			} 
-			throw new Exception("Query \"GET INT " + name + " IN CURRENT\" returned illegal amount of Elements: " + erg.Count());
+			} else 
+				throw new Exception("Query \"SET INT " + name + " IN CURRENT\" returned illegal amount of Elements: " + erg.Count());
 		}
 
 		public Double GetDecimal (String name)
@@ -161,8 +161,8 @@ namespace SharedMemory {
 			var erg = from e in Current where e.Name == name && e.Type == Type.DECIMAL select e;
 			if (erg.Count() == 1) {
 				erg.First().Value = "" + value;
-			} 
-			throw new Exception("Query \"GET DECIMAL " + name + " IN CURRENT\" returned illegal amount of Elements: " + erg.Count());
+			} else
+			throw new Exception("Query \"GST DECIMAL " + name + " IN CURRENT\" returned illegal amount of Elements: " + erg.Count());
 		}
 
 		public String GetString (String name)
@@ -188,8 +188,8 @@ namespace SharedMemory {
 			var erg = from e in Current where e.Name == name && e.Type == Type.STRING select e;
 			if (erg.Count() == 1) {
 				erg.First().Value = value;
-			} 
-			throw new Exception("Query \"GET STRING " + name + " IN CURRENT\" returned illegal amount of Elements: " + erg.Count());
+			} else
+			throw new Exception("Query \"SET STRING " + name + " IN CURRENT\" returned illegal amount of Elements: " + erg.Count());
 		}
 
 		public FeMoObject GetObject (String name)
@@ -216,8 +216,8 @@ namespace SharedMemory {
 			var erg = from e in Current where e.Name == name && e.Type == Type.OBJECT select e;
 			if (erg.Count() == 1) {
 				erg.First().Value = value.Id + "";
-			} 
-			throw new Exception("Query \"GET OBJECT " + name + " IN CURRENT\" returned illegal amount of Elements: " + erg.Count());
+			} else
+			throw new Exception("Query \"SET OBJECT " + name + " IN CURRENT\" returned illegal amount of Elements: " + erg.Count());
 		}
 
 		public bool GetBool (String name)
@@ -243,8 +243,8 @@ namespace SharedMemory {
 			var erg = from e in Current where e.Name == name && e.Type == Type.BOOL select e;
 			if (erg.Count() == 1) {
 				erg.First().Value = value ? "T" : "F";
-			} 
-			throw new Exception("Query \"GET BOOL " + name + " IN CURRENT\" returned illegal amount of Elements: " + erg.Count());
+			} else
+			throw new Exception("Query \"SET BOOL " + name + " IN CURRENT\" returned illegal amount of Elements: " + erg.Count());
 		}
 
 		public FeMoRemoveState RemoveEntry(FeMoEntry entry) {

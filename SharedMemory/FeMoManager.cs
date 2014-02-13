@@ -17,11 +17,17 @@ namespace SharedMemory
 		private SortedDictionary<long, FeMoObject> cache = new SortedDictionary<long, FeMoObject>();
 		private List<FeMoCreator> creators = new List<FeMoCreator>();
 		private List<FeMoPeer> peers = new List<FeMoPeer>();
+		private CommandHandler handler = null;
 
 		public void AddConnection (FeMoPeer peer)
 		{
 			peers.Add(peer);
 			creators.Add(new FeMoCreator(this,peer));
+		}
+
+		public List<FeMoPeer> GetConnections ()
+		{
+			return peers;
 		}
 
 		public long CacheObject (FeMoObject obj)
@@ -125,6 +131,10 @@ namespace SharedMemory
 					Global.femo ("Connection already shutdown");
 				}
 			}
+		}
+
+		public void EnableCommandHandling() {
+			handler = new CommandHandler(this);
 		}
 
 		public void FileDump (String file, FeMoUpdateStringFormatter formatter)

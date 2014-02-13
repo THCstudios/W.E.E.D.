@@ -28,11 +28,13 @@
 				{"Name":"Name", "Value":"TestMap", "Type":"STRING"},
 				{"Name":"File", "Value":"test_map.map", "Type":"STRING"}
 			]
-		}, {"Id":"5", "Name":"Tiles", "update":
+		}, {"Id":"5", "Name":"Tile", "update":
 			[
-				{"Name":"TileCount", "Value":"2", "Type":"INT"},
+				{"Name":"Count", "Value":"4", "Type":"INT"},
 				{"Name":"Tile_0", "Value":"100", "Type":"OBJECT"},
-				{"Name":"Tile_1", "Value":"101", "Type":"OBJECT"}
+				{"Name":"Tile_1", "Value":"101", "Type":"OBJECT"},
+				{"Name":"Tile_2", "Value":"102", "Type":"OBJECT"},
+				{"Name":"Tile_3", "Value":"103", "Type":"OBJECT"}
 			]
 		}, {"Id":"100", "Name":"Tile_0", "update":
 			[
@@ -48,9 +50,23 @@
 				{"Name":"Y", "Value":"0", "Type":"INT"},
 				{"Name":"Levitation", "Value":"0", "Type":"INT"}
 			]
-		}, {"Id":"6", "Name":"Entities", "update":
+		}, {"Id":"102", "Name":"Tile_2", "update":
 			[
-				{"Name":"EntityCount", "Value":"2", "Type":"INT"},
+				{"Name":"Terrain", "Value":"0", "Type":"INT"},
+				{"Name":"X", "Value":"0", "Type":"INT"},
+				{"Name":"Y", "Value":"1", "Type":"INT"},
+				{"Name":"Levitation", "Value":"0", "Type":"INT"}
+			]
+		}, {"Id":"103", "Name":"Tile_3", "update":
+			[
+				{"Name":"Terrain", "Value":"0", "Type":"INT"},
+				{"Name":"X", "Value":"1", "Type":"INT"},
+				{"Name":"Y", "Value":"1", "Type":"INT"},
+				{"Name":"Levitation", "Value":"0", "Type":"INT"}
+			]
+		}, {"Id":"6", "Name":"Entity", "update":
+			[
+				{"Name":"Count", "Value":"2", "Type":"INT"},
 				{"Name":"Entity_0", "Value":"1000", "Type":"OBJECT"},
 				{"Name":"Entity_1", "Value":"1001", "Tyoe":"OBJECT"}
 			]

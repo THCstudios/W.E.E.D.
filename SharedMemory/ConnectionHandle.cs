@@ -79,7 +79,7 @@ namespace SharedMemory
 		void Receive ()
 		{
 			try {
-				Regex regex = new Regex("\b;:;\b");
+				Regex regex = new Regex(";:;");
 				byte[] buffer = new byte[1024 * 8];
 				socket.ReceiveBufferSize = 1024 * 8;
 				String msg = "";
@@ -99,6 +99,7 @@ namespace SharedMemory
 						msg += tmp.Substring(tmp.LastIndexOf(";:;") + 3);
 						String[] msgs = regex.Split(eve);
 						foreach(String m in msgs) {
+							Global.femo(m);
 							OnReceivedMessage(m);
 						}
 					} else {

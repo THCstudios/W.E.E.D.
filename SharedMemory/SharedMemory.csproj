@@ -58,6 +58,8 @@
     <Compile Include="DownloadJob.cs" />
     <Compile Include="Target.cs" />
     <Compile Include="TaskManager.cs" />
+    <Compile Include="CommandHandler.cs" />
+    <Compile Include="FeMoList.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

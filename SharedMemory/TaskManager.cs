@@ -26,7 +26,7 @@ namespace SharedMemory
 					if (states[t] == TargetState.WAIT) {
 						bool ok = true;
 						foreach(Target pre in t.predesecors) {
-							if(states[pre] == TargetState.FAIL) {
+							if(!targets.ContainsKey(pre.Id) || states[pre] == TargetState.FAIL) {
 								states[t] = TargetState.FAIL;
 								ok = false;
 							} else if (states[pre] == TargetState.WAIT) {

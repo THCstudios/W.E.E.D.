@@ -8,15 +8,15 @@ namespace StartupTest
 	{
 		public static void Main (string[] args)
 		{
-			TaskManager tm = new TaskManager();
-			InitTarget init = new InitTarget(tm);
-			tm.pushTarget(0, init);
-			tm.RunAll();
+
+			InitTarget init = new InitTarget(Global.ConnectionStartup);
+			Global.AddJob(init);
+			Global.RunJobs();
 			SharedMemoryControl connection = new SharedMemoryControl();
 			ConnectionInformation info = new ConnectionInformation();
-			info.address = "10.34.6.160";
+			info.address = "0.0.0.0";
 			info.port = 12345;
-			info.noOfClients = 3;
+			info.noOfClients = 1;
 			connection.Info = info;
 			connection.State = SharedMemoryControl.ServerClientState.SERVER;
 			connection.AddSource(File.ReadAllText("initial_game.json"));
@@ -26,6 +26,9 @@ namespace StartupTest
 			Console.WriteLine("Buffer:");
 			Console.WriteLine(connection.Manager.CacheInfo());
 			Console.WriteLine(connection.Manager.Dump(FeMoUpdateStringFormatter.CONSOLE));
+			System.Threading.Thread.Sleep(1000);
+			connection.Manager.BroadcastCommand("test");
+			connection.Manager.BroadcastCommand("boing");
 		}
 	}
 
@@ -41,14 +44,14 @@ namespace StartupTest
 		}
 		
 		public override TargetState run() {
-			TestTarget test = new TestTarget();
-			OtherTarget other = new OtherTarget();
+			//TestTarget test = new TestTarget();
+			//OtherTarget other = new OtherTarget();
 			DownloadJob dj = new DownloadJob(302, "http://localhost/initial_game.json", "initial_game.json");
-			test.predesecors.Add(this);
+			//test.predesecors.Add(this);
 			dj.predesecors.Add(this);
-			other.predesecors.Add(dj);
-			tm.pushTarget(100, test);
-			tm.pushTarget(200, other);
+			//other.predesecors.Add(dj);
+			//tm.pushTarget(100, test);
+			//tm.pushTarget(200, other);
 			tm.pushTarget(302, dj);
 			return TargetState.DONE;
 		}

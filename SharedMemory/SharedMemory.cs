@@ -62,7 +62,7 @@ namespace SharedMemory
 			if (state != null && info != null) {
 				runServerClientPhase();
 				runSlaveMasterPhase();
-
+				Global.RunJobs();
 			}
 		}
 
@@ -162,15 +162,17 @@ namespace SharedMemory
 				fmm.SendUpdateString();
 				Global.femo ("Entering Phase 2 - Peer - Role " + state);
 				fmm.BroadcastCommand("run");
+				fmm.EnableCommandHandling();
 			} else {
 				bool block = true;
-				fmp.ReceivedCommand += delegate(string cmdString) {
+				fmp.ReceivedCommand += delegate(FeMoPeer peer, string cmdString) {
 					//Console.WriteLine("[FEMO] " + cmdString);
 					if(cmdString == "run")
 						block = false;
 				};
 				while(block)
 					System.Threading.Thread.Sleep(5);
+				fmm.EnableCommandHandling();
 				Global.femo ("Entering Phase 2 - Peer - Role " + state);
 			}
 		}

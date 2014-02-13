@@ -4,11 +4,17 @@ using System.Text;
 namespace SharedMemory
 {
 	public delegate void ReceivedObjectHandler (String objString);
-	public delegate void ReceivedCommandHandler (String cmdString);
+	public delegate void ReceivedCommandHandler (FeMoPeer source, String cmdString);
 
 	public class FeMoPeer
 	{
 		private ConnectionHandle handle;
+
+		public ConnectionHandle Handle {
+			get {
+				return handle;
+			}
+		}
 
 		public event ReceivedCommandHandler ReceivedCommand;
 		public event ReceivedObjectHandler ReceivedObject;
@@ -16,7 +22,7 @@ namespace SharedMemory
 		protected virtual void OnReceivedCommand (String cmdString)
 		{
 			if(ReceivedCommand != null)
-				ReceivedCommand(cmdString);
+				ReceivedCommand(this, cmdString);
 		}
 
 		protected virtual void OnReceivedObject (String objString)
@@ -43,6 +49,7 @@ namespace SharedMemory
 				Global.warn("Unknown Message Type, make sure you are using compatible Versions\n\tType: \"" + msgString.Substring(0, 5) + "\"");
 			}
 		}
+
 
 		public void Close ()
 		{
