@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -50,6 +50,7 @@
     <Compile Include="FeMoPeer.cs" />
     <Compile Include="FeMoCreator.cs" />
     <Compile Include="Global.cs" />
+    <Compile Include="TypenAPI.cs" />
     <Compile Include="XMLFormatter.cs" />
     <Compile Include="SharedMemory.cs" />
     <Compile Include="SQLExporter.cs" />
