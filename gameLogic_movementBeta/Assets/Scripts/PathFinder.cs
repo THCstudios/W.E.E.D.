@@ -11,7 +11,7 @@ public class PathFinder : MonoBehaviour
 	}
 
 		// Update is called once per frame
-	void Update ()
+	/*void Update ()
 	{
 		for (int i = 0; i < level.tiles.GetLength (0) + 1; i++) {
 			Debug.DrawLine (new Vector3 (i, 0.5f, 0), new Vector3 (i, 0.5f, level.tiles.GetLength (0)), Color.red);
@@ -19,7 +19,7 @@ public class PathFinder : MonoBehaviour
 		for (int i = 0; i < level.tiles.GetLength (1) + 1; i++) {
 			Debug.DrawLine (new Vector3 (0, 0.5f, i), new Vector3 (level.tiles.GetLength (1), 0.5f, i), Color.red);
 		}
-	}
+	}*/
 
 	public List<Tile> FindPath (Vector3 src, Vector3 dst) {
 		Tile tSrc = level.tiles[(int) src.x, (int) src.z];

@@ -21,14 +21,17 @@ public class GameUnit :  TopLevelUnits{
 
 	public GameObject Level;
 	public List<Vector3> Path;
+	Vector3 halfBounds;
 
-	public float MaximumDistance = 0.5f;
+	public float MaximumDistance = 0f;
 
 	// Use this for initialization
 	void Start () {
 		isSelected = false;
 		movementSpeed = 2.0f;
 		moveOverload = false;
+		Collider collider = GetComponent<Collider>();
+		halfBounds = new Vector3 (collider.bounds.size.x / 2, 0, collider.bounds.size.z / 2);
 	}
 	
 	// Update is called once per frame
@@ -76,6 +79,14 @@ public class GameUnit :  TopLevelUnits{
 	}
 	public void FixedUpdate() {
 		if(!IsAtTarget) {
+			for (int i = 0; i < Path.Count - 1; i++) {
+				Vector3 dir = Path[i + 1] - Path[i];
+				Debug.DrawRay (Path[i], dir, Color.green);
+				Debug.DrawRay (Path[i] + halfBounds, dir, Color.green);
+				Debug.DrawRay (Path[i] - halfBounds, dir, Color.green);
+				Debug.DrawRay (Path[i] + halfBounds * 1.1f, dir, Color.blue);
+				Debug.DrawRay (Path[i] - halfBounds * 1.1f, dir, Color.blue);
+			}
 			//rigidbody.MovePosition(Vector3.MoveTowards (transform.position, destinationPoint, (float)(movementSpeed * Time.deltaTime)));
 			//rigidbody.velocity = movementSpeed * rigidbody.velocity.normalized;
 			if(!moveOverload) {
@@ -85,8 +96,6 @@ public class GameUnit :  TopLevelUnits{
 				}
 				dir.y = rigidbody.velocity.y;
 				rigidbody.velocity =  dir; //Vector3.MoveTowards (transform.position, destinationPoint, (float)(movementSpeed * Time.deltaTime));
-				Debug.DrawRay (transform.position, dir * 10);
-				Debug.DrawRay (transform.position, DestinationPoint - transform.position);
 			}
 		}
 	}
@@ -112,7 +121,7 @@ public class GameUnit :  TopLevelUnits{
 		//rigidbody.AddForce(Vector3.MoveTowards (transform.position, destinationPoint, (float)(movementSpeed * Time.deltaTime)));
 		//rigidbody.AddForce (Vector3.forward);
 		//Debug.Log (Vector3.Distance (transform.position, DestinationPoint));
-		if(Vector3.Distance(transform.position, DestinationPoint) < MaximumDistance) {
+		if(Vector3.Distance(transform.position, DestinationPoint) <= MaximumDistance) {
 			Path.RemoveAt (0);
 		}
 	}
@@ -127,17 +136,41 @@ public class GameUnit :  TopLevelUnits{
 		}
 		List<Vector3> opped = new List<Vector3>();
 		foreach (Tile tile in path) {
-			opped.Add (new Vector3 (tile.pos.x + collider.bounds.size.x / 2, 0, tile.pos.y + collider.bounds.size.z / 2));
+			opped.Add (new Vector3 (tile.pos.x + 0.5f, 0.5f, tile.pos.y + 0.5f));
 		}
 		opped.Add (finalDest);
 		for (int i = 0; i < opped.Count - 2; i++) {
 			for (int j = i + 2; j < opped.Count; j++) {
 				Vector3 dir = opped[j] - opped[i];
 				float distance = dir.magnitude;
-				if (!Physics.Raycast (opped[i], dir, distance)) {
-					opped.RemoveRange (i + 1, j - i - 1);
-					j = i + 1;
+				RaycastHit[] hits;
+				hits = Physics.RaycastAll (opped[i], dir, distance);
+				Collider c;
+				foreach (RaycastHit hit in hits) {
+					if (hit.collider != collider && hit.collider.gameObject.tag != "Terrain") {
+						c = hit.collider;
+						goto NotDirect;
+					}
 				}
+				hits = Physics.RaycastAll (opped[i] - halfBounds * 1.1f, dir, distance);
+				foreach (RaycastHit hit in hits) {
+					if (hit.collider != collider && hit.collider.gameObject.tag != "Terrain") {
+						c = hit.collider;
+						goto NotDirect;
+					}
+				}
+				hits = Physics.RaycastAll (opped[i] + halfBounds * 1.1f, dir, distance);
+				foreach (RaycastHit hit in hits) {
+					if (hit.collider != collider && hit.collider.gameObject.tag != "Terrain") {
+						c = hit.collider;
+						goto NotDirect;
+					}
+				}
+				opped.RemoveRange (i + 1, j - i - 1);
+				j = i + 1;
+				continue;
+			NotDirect:
+					;
 			}
 		}
 		return opped;
