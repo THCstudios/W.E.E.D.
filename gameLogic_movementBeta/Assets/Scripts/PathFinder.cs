@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -28,6 +29,7 @@ public class PathFinder : MonoBehaviour
 	}
 
 	public List<Tile> FindPath (Tile src, Tile dst) {
+		int start = getTime();
 		HashSet<Tile> closedSet = new HashSet<Tile>();
 		HashSet<Tile> openSet = new HashSet<Tile>();
 		Dictionary<Tile, Tile> cameFrom = new Dictionary<Tile, Tile>();
@@ -48,14 +50,20 @@ public class PathFinder : MonoBehaviour
 			}
 			if (current == dst) {
 				List<Tile> path = new List<Tile>();
+				Debug.Log (start);
+				Debug.Log (getTime ());
+				Debug.Log ("ROUTINE A");
+				Debug.Log ("It took me " + (getTime() - start) + " milliseconds to find the destination");
+				start = getTime();
 				reconstructPath (cameFrom, dst, path);
+				Debug.Log ("It took me " + (getTime() - start) + " milliseconds to determine the path");
 				return path;
 			}
-			if (current.IsOccupied) {
-				closedSet.Add (current);
-				openSet.Remove (current);
-				continue;
-			}
+			//if (current.IsOccupied) {
+			//	closedSet.Add (current);
+			//	openSet.Remove (current);
+			//	continue;
+			//}
 			openSet.Remove (current);
 			closedSet.Add (current);
 
@@ -82,7 +90,23 @@ public class PathFinder : MonoBehaviour
 				min = closedSet.ElementAt (i);
 			}
 		}
-		return reconstructPath (cameFrom, min);
+		Debug.Log ("ROUTINE B");
+		Debug.Log ("It took me " + (getTime () - start) + " milliseconds to find the destination");
+		start = getTime();
+		var Path = reconstructPath (cameFrom, min);
+		Debug.Log ("It took me " + (getTime () - start) + " milliseconds to determine the path");
+		Debug.Log ("Reconstructed path: " + Path.Count + " elements");
+		foreach (var tile in Path) {
+			Debug.Log (tile);
+		}
+		for (int i = 0; i < Path.Count - 1; i++) {
+			Debug.Log (Path[i].pos + " => " + Path[i + 1].pos + " costs " + Path[i].NeighborCost (Path[i + 1]));
+		}
+		return Path;
+	}
+
+	private int getTime() {
+		return DateTime.Now.Millisecond;
 	}
 
 	private List<Tile> reconstructPath (Dictionary<Tile, Tile> cameFrom, Tile current) {

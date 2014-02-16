@@ -135,6 +135,7 @@ public class GameUnit :  TopLevelUnits{
 			return null;
 		}
 		List<Vector3> opped = new List<Vector3>();
+		opped.Add (transform.position);
 		foreach (Tile tile in path) {
 			opped.Add (new Vector3 (tile.pos.x + 0.5f, 0.5f, tile.pos.y + 0.5f));
 		}
@@ -173,6 +174,7 @@ public class GameUnit :  TopLevelUnits{
 					;
 			}
 		}
+		opped.Remove (transform.position);
 		return opped;
 	}
 

@@ -70,7 +70,7 @@ public class Tile {
 	
 	public float NeighborCost (Tile neighbor) {
 		if (neighbor.IsOccupied) {
-			return 200;
+			return 3.5f;
 		}
 		return HeuristicCost (neighbor);
 	}
