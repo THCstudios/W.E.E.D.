@@ -27,10 +27,12 @@ namespace SharedMemory
 		}
 
 		public static void DebugObject(FeMoObject obj) {
-			Console.WriteLine("[DEBUG] OBJECT");
-			Console.WriteLine("Debug Stack for " + obj.Name + " (" + obj.Id + ")");
-			Console.WriteLine(obj.Manager.CacheInfo());
-			Console.WriteLine(obj);
+			if (obj.Manager != null) {
+				Console.WriteLine("[DEBUG] OBJECT");
+				Console.WriteLine("Debug Stack for " + obj.Name + " (" + obj.Id + ")");
+				Console.WriteLine(obj.Manager.CacheInfo());
+				Console.WriteLine(obj);
+			}
 		}
 
 		public static void AddJob (Target job)
@@ -81,6 +83,31 @@ namespace SharedMemory
 			job.Id = 101;
 			job.Name = "Add Commands";
 			AddJob(job);
+		}
+
+		public static Type CastEnum(String n) {
+			Type type;
+			switch (n) {
+				case "INT":
+					type = Type.INT;
+					break;
+				case "DECIMAL":
+					type = Type.DECIMAL;
+					break;
+				case "STRING":
+					type = Type.STRING;
+					break;
+				case "OBJECT":
+					type = Type.OBJECT;
+					break;
+				case "BOOL":
+					type = Type.BOOL;
+					break;
+				default:
+					type = Type.UNKNOWN;
+					break;
+			}
+			return type;
 		}
 
 		private class CommandJob : Target {

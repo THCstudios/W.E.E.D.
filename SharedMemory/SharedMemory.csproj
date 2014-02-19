@@ -29,6 +29,9 @@
     <ConsolePause>False</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="SQLiteWrapper">
+      <HintPath>..\..\..\..\User\Downloads\SQLiteWrapper_dll\SQLiteWrapper.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Data" />

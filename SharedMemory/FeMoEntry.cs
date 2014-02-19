@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace SharedMemory {
 
 	public enum Type {
-		INT, DECIMAL, STRING, OBJECT, BOOL
+		INT, DECIMAL, STRING, OBJECT, BOOL,UNKNOWN
 	}
 
 	public class FeMoEntry : IComparable {
