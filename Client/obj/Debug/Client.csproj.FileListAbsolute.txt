@@ -1,0 +1,9 @@
+F:\SYNC\Git\W.E.E.D\Client\bin\Debug\Client.exe
+F:\SYNC\Git\W.E.E.D\Client\bin\Debug\Client.pdb
+F:\SYNC\Git\W.E.E.D\Client\bin\Debug\SharedMemory.dll
+F:\SYNC\Git\W.E.E.D\Client\bin\Debug\SharedMemory.pdb
+F:\SYNC\Git\W.E.E.D\Client\obj\Debug\Client.csprojResolveAssemblyReference.cache
+F:\SYNC\Git\W.E.E.D\Client\obj\Debug\Client.exe
+F:\SYNC\Git\W.E.E.D\Client\obj\Debug\Client.pdb
+F:\SYNC\Git\W.E.E.D\Client\bin\Debug\SQLiteWrapper.dll
+F:\SYNC\Git\W.E.E.D\Client\bin\Debug\SQLiteWrapper.xml

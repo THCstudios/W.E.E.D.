@@ -179,7 +179,7 @@ namespace SharedMemory
 					return null;
 				}
 			} catch (Exception ex) {
-				//Console.WriteLine(ex);
+				Console.WriteLine(ex);
 				return null;
 			}
 		}

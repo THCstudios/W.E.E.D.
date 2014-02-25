@@ -16,7 +16,7 @@ namespace StartupTest
 			ConnectionInformation info = new ConnectionInformation();
 			info.address = "0.0.0.0";
 			info.port = 12345;
-			info.noOfClients = 1;
+			info.noOfClients = 2;
 			connection.Info = info;
 			connection.State = SharedMemoryControl.ServerClientState.SERVER;
 			connection.AddSource(File.ReadAllText("initial_game.json"));
@@ -29,6 +29,7 @@ namespace StartupTest
 			System.Threading.Thread.Sleep(1000);
 			connection.Manager.BroadcastCommand("test");
 			connection.Manager.BroadcastCommand("boing");
+			connection.Manager.BroadcastCommand("console_dump");
 		}
 	}
 

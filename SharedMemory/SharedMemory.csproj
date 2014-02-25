@@ -29,6 +29,9 @@
     <ConsolePause>False</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="SQLiteWrapper">
+      <HintPath>..\..\..\..\User\Downloads\SQLiteWrapper_dll\SQLiteWrapper.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Data" />
@@ -61,6 +64,7 @@
     <Compile Include="TaskManager.cs" />
     <Compile Include="CommandHandler.cs" />
     <Compile Include="FeMoList.cs" />
+    <Compile Include="MemorySpan.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
