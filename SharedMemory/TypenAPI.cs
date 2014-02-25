@@ -34,7 +34,10 @@ namespace SharedMemory{
 				}
 				base.AddEntry(entry);
 			}
+<<<<<<< HEAD
 			Manager.SendUpdateString();
+=======
+>>>>>>> 41bd51a411cde4eea20ac5731b4825a4064013a1
 			Global.DebugObject(this);
 		}
 	}
