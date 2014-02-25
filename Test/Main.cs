@@ -18,7 +18,7 @@ namespace Test
 			fem.Manager = man;
 			fem.AddEntry(fer);
 			man.SendUpdateString();
-			TypenAPI api = new TypenAPI(fem);
+			//TypenAPI api = new TypenAPI(fem);
 
 			
 			//FeMoManager man = new FeMoManager();

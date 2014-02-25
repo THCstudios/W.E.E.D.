@@ -7,6 +7,20 @@ namespace SharedMemory
 	{
 		private static TaskManager connectionStartup = new TaskManager();
 
+		private static FeMoManager currentManager;
+
+		public static FeMoManager CurrentManager {
+			get {
+				return currentManager;
+			}
+		}
+
+		public static void RegisterManager (FeMoManager manager)
+		{
+			if(manager != null)
+				currentManager = manager;
+		}
+
 		public static TaskManager ConnectionStartup {
 			get {
 				return connectionStartup;
@@ -27,12 +41,10 @@ namespace SharedMemory
 		}
 
 		public static void DebugObject(FeMoObject obj) {
-			if (obj.Manager != null) {
-				Console.WriteLine("[DEBUG] OBJECT");
-				Console.WriteLine("Debug Stack for " + obj.Name + " (" + obj.Id + ")");
-				Console.WriteLine(obj.Manager.CacheInfo());
-				Console.WriteLine(obj);
-			}
+			Console.WriteLine("[DEBUG] OBJECT");
+			Console.WriteLine("Debug Stack for " + obj.Name + " (" + obj.Id + ")");
+			Console.WriteLine(obj.Manager.CacheInfo());
+			Console.WriteLine(obj);
 		}
 
 		public static void AddJob (Target job)
@@ -85,31 +97,6 @@ namespace SharedMemory
 			AddJob(job);
 		}
 
-		public static Type CastEnum(String n) {
-			Type type;
-			switch (n) {
-				case "INT":
-					type = Type.INT;
-					break;
-				case "DECIMAL":
-					type = Type.DECIMAL;
-					break;
-				case "STRING":
-					type = Type.STRING;
-					break;
-				case "OBJECT":
-					type = Type.OBJECT;
-					break;
-				case "BOOL":
-					type = Type.BOOL;
-					break;
-				default:
-					type = Type.UNKNOWN;
-					break;
-			}
-			return type;
-		}
-
 		private class CommandJob : Target {
 
 			private CommandHandler handler;
@@ -127,6 +114,24 @@ namespace SharedMemory
 				handler.PutMethod("boing", delegate(string[] args) {
 					Global.warn("Boing is too warm!!!");
 					Global.warn("Shutting down!!!");
+					return 0;
+				});
+				handler.PutMethod("range", delegate(string[] args) {
+					long top, low;
+					char owner;
+					top = long.Parse(args[2]);
+					low = long.Parse(args[1]);
+					owner = args[3][0];
+					MemorySpan span = new MemorySpan(low, top, currentManager, owner);
+					currentManager.AddRange(span);
+					if(args.Length == 5)
+						if(args[4] == "owner")
+							currentManager.Own = span;
+					return 0;
+				});
+				handler.PutMethod("console_dump", delegate(string[] args) {
+					log(Global.CurrentManager.CacheInfo());
+					log(Global.CurrentManager.Dump(Global.GetDefaultOutputFormatter()));
 					return 0;
 				});
 				return TargetState.DONE;

@@ -61,8 +61,8 @@ namespace SharedMemory
 		{
 			if (state != null && info != null) {
 				runServerClientPhase();
-				runSlaveMasterPhase();
 				Global.RunJobs();
+				runSlaveMasterPhase();
 			}
 		}
 
@@ -98,6 +98,10 @@ namespace SharedMemory
 				int max_con = 0, curr = -1;
 				ConnectionHandle handle;
 				list.Add(handle = ConnectionHandle.Connect(ConnectionType.CONNECT, info.address, info.port));
+				if(handle == null) {
+					Global.fail("Connecting to Server failed.");
+					Environment.Exit(1);
+				}
 				handle.ReceivedMessage += delegate(string msg) {
 					String[] parts = msg.Split(";".ToCharArray());
 					for(int i = 0; i < parts.Length; i++) {
@@ -147,7 +151,7 @@ namespace SharedMemory
 		public void runSlaveMasterPhase ()
 		{
 			Global.femo ("Entering Phase 1 - Master Slave - Role " + state);
-			fmm = new FeMoManager();
+			fmm = new FeMoManager ();
 			FeMoPeer fmp = null;
 			foreach (var handle in list) {
 				if(fmp == null)
@@ -155,24 +159,33 @@ namespace SharedMemory
 				else
 					fmm.AddConnection (new FeMoPeer (handle));
 			}
+			fmm.EnableCommandHandling();
+			Global.ConnectionStartup.RunAll();
 			if (state == ServerClientState.SERVER) {
+				fmm.BroadcastCommand("range 0 9999 Z");
+				fmm.AddRange(new MemorySpan(0, 9999, fmm, 'Z'));
+				fmm.BroadcastCommand("range 260000 269999 Z");
+				fmm.AddRange(new MemorySpan(260000, 269999, fmm, 'Z'));
+				fmm.BroadcastCommand("range 270000 279999 Z");
+				fmm.AddRange(new MemorySpan(270000, 279999, fmm, 'Z'));
+				for (int i = 0; i < this.info.noOfClients; i++) {
+					fmm.BroadcastCommand("range " + (10000 * (i + 1)) + " " + (10000 * (i + 1) + 9999) + " " + (char)(65 + i));
+					fmm.AddRange(new MemorySpan(10000 * (i + 1), 10000 * (i + 1) + 9999, fmm, (char)(65 + i)));
+				}
 				foreach (String s in initializationData) {
 					fmm.ReadFromString (s, Global.GetDefaultFormatter());
 				}
 				fmm.SendUpdateString();
 				Global.femo ("Entering Phase 2 - Peer - Role " + state);
 				fmm.BroadcastCommand("run");
-				fmm.EnableCommandHandling();
 			} else {
 				bool block = true;
 				fmp.ReceivedCommand += delegate(FeMoPeer peer, string cmdString) {
-					//Console.WriteLine("[FEMO] " + cmdString);
 					if(cmdString == "run")
 						block = false;
 				};
 				while(block)
 					System.Threading.Thread.Sleep(5);
-				fmm.EnableCommandHandling();
 				Global.femo ("Entering Phase 2 - Peer - Role " + state);
 			}
 		}

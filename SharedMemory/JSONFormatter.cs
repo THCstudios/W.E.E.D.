@@ -49,7 +49,7 @@ namespace SharedMemory
 
 		public override FeMoObject[] Parse (String objString)
 		{
-			String json = objString.Trim ().Replace (" ", "").Replace ("\t", "").Replace ("\n", "").Replace("\r", "");
+			String json = objString.Trim ().Replace (" ", "").Replace ("\t", "").Replace ("\n", "");
 			if (json.StartsWith ("{") && json.EndsWith ("}")) {
 				List<FeMoObject> fmos = new List<FeMoObject>();
 				json = json.Substring(1, json.Length - 2);

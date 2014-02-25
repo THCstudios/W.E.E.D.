@@ -19,6 +19,43 @@ namespace SharedMemory
 		private List<FeMoPeer> peers = new List<FeMoPeer>();
 		private CommandHandler handler = null;
 
+		private List<MemorySpan> ranges = new List<MemorySpan>();
+
+		public List<MemorySpan> Ranges {
+			get {
+				return ranges;
+			}
+		}
+
+		private MemorySpan own;
+
+		public MemorySpan Own {
+			get {
+				return own;
+			}
+			set {
+				own = value;
+			}
+		}
+
+		private char localId;
+
+		public char LocalId {
+			get {
+				return localId;
+			}
+			set {
+				localId = value;
+			}
+		}
+
+		public void AddRange (MemorySpan span)
+		{
+			if(span.Owner == localId)
+				own = span;
+			ranges.Add(span);
+		}
+
 		public void AddConnection (FeMoPeer peer)
 		{
 			peers.Add(peer);
@@ -28,6 +65,11 @@ namespace SharedMemory
 		public List<FeMoPeer> GetConnections ()
 		{
 			return peers;
+		}
+
+		public FeMoManager ()
+		{
+			Global.RegisterManager(this);
 		}
 
 		public long CacheObject (FeMoObject obj)
@@ -103,7 +145,7 @@ namespace SharedMemory
 
 
 		public String CacheInfo() {
-			return String.Format("Objects: {0, 10} Updates: {1,5} AddressRanges: {2, 3}", cache.Count, this.Updates(), 0);
+			return String.Format("Objects: {0, 10} Updates: {1,5} AddressRanges: {2, 3}", cache.Count, this.Updates(), ranges.Count);
 		}
 
 		public void HandleOnObjectRead (FeMoObject fmo)
@@ -134,7 +176,9 @@ namespace SharedMemory
 		}
 
 		public void EnableCommandHandling() {
+			Global.log("Enabling Remote Command Handling");
 			handler = new CommandHandler(this);
+			Global.AddCommandsJob(handler);
 		}
 
 		public void FileDump (String file, FeMoUpdateStringFormatter formatter)

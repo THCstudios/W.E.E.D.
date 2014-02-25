@@ -33,7 +33,7 @@ namespace Client
 			Global.AddJob (new InitTask ());
 			SharedMemoryControl connection = new SharedMemoryControl ();
 			ConnectionInformation info = new ConnectionInformation ();
-			info.address = "10.91.52.125";
+			info.address = "10.91.4.57";
 			info.port = 12345;
 			info.noOfClients = 0;
 			connection.Info = info;
@@ -53,36 +53,36 @@ namespace Client
 //				Console.WriteLine("[ OK ] Test Completed!");
 //			else
 //				Console.WriteLine("[FAIL] Expected: Test, Found: " + fmo.GetInt("TestString"));
-			Console.WriteLine (man.Dump (FeMoUpdateStringFormatter.CONSOLE));
-			try {
-				Global.DebugObject(man.Get(5));
-				FeMoList list = new FeMoList (connection.Manager.Get (5));
-				FeMoObject obj = list.GetIndex (1);
-				Global.DebugObject (obj);
-				FeMoObject tile_4 = new FeMoObject();
-				tile_4.Name = "Tile_4";
-				tile_4.Id = 104;
-				tile_4.AddInt("Terrain", 0);
-				tile_4.AddInt("X", 2);
-				tile_4.AddInt("Y", 0);
-				tile_4.AddInt("Levitation", 0);
-				man.CacheObject(tile_4);
-				list.AddObject(tile_4);
-				connection.Manager.SendUpdateString();
-				Global.DebugObject(man.Get(5));
-				Console.WriteLine(man.CacheInfo());
-				Console.WriteLine(man.Dump(Global.GetDefaultOutputFormatter()));
-				list.RemoveObject(4);
-				connection.Manager.SendUpdateString();
-				Console.WriteLine(man.CacheInfo());
-				Console.WriteLine(man.Dump(Global.GetDefaultOutputFormatter()));
-				Global.DebugObject(man.Get(5));
-			} catch (Exception e) {
-				Global.fail(e.ToString());
-				Global.DebugObject(connection.Manager.Get(5));
-				Console.WriteLine(man.CacheInfo());
-				Console.WriteLine(man.Dump(Global.GetDefaultOutputFormatter()));
-			}
+//			Console.WriteLine (man.Dump (FeMoUpdateStringFormatter.CONSOLE));
+//			try {
+//				Global.DebugObject(man.Get(5));
+//				FeMoList list = new FeMoList (connection.Manager.Get (5));
+//				FeMoObject obj = list.GetIndex (1);
+//				Global.DebugObject (obj);
+//				FeMoObject tile_4 = new FeMoObject();
+//				tile_4.Name = "Tile_4";
+//				tile_4.Id = 104;
+//				tile_4.AddInt("Terrain", 0);
+//				tile_4.AddInt("X", 2);
+//				tile_4.AddInt("Y", 0);
+//				tile_4.AddInt("Levitation", 0);
+//				man.CacheObject(tile_4);
+//				list.AddObject(tile_4);
+//				connection.Manager.SendUpdateString();
+//				Global.DebugObject(man.Get(5));
+//				Console.WriteLine(man.CacheInfo());
+//				Console.WriteLine(man.Dump(Global.GetDefaultOutputFormatter()));
+//				list.RemoveObject(4);
+//				connection.Manager.SendUpdateString();
+//				Console.WriteLine(man.CacheInfo());
+//				Console.WriteLine(man.Dump(Global.GetDefaultOutputFormatter()));
+//				Global.DebugObject(man.Get(5));
+//			} catch (Exception e) {
+//				Global.fail(e.ToString());
+//				Global.DebugObject(connection.Manager.Get(5));
+//				Console.WriteLine(man.CacheInfo());
+//				Console.WriteLine(man.Dump(Global.GetDefaultOutputFormatter()));
+//			}
 			/*connection.Close();
 			Environment.Exit(0);*/
 		}

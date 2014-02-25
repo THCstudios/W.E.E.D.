@@ -15,14 +15,14 @@ namespace SharedMemory
 			foreach (FeMoPeer p in fm.GetConnections()) {
 				p.ReceivedCommand += HandleReceivedCommand;
 			}
-			Global.AddCommandsJob(this);
+			//Global.AddCommandsJob(this);
 		}
 
 		void HandleReceivedCommand (FeMoPeer source, string cmdString)
 		{
-			Global.log("Remote issued command: " + cmdString + " origin: " + source.Handle.RemoteIP);
 			String[] args = cmdString.Split(" ".ToCharArray());
 			String cmd = args[0];
+			Global.log("Remote issued command: " + cmd + " origin: " + source.Handle.RemoteIP);
 			if(remotes.ContainsKey(cmd))
 				remotes[cmd](args);
 		}
