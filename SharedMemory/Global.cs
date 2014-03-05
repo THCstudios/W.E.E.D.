@@ -121,30 +121,7 @@ namespace SharedMemory
 			job.Name = "Add Commands";
 			AddJob(job);
 		}
-		public static Type CastEnum(string p) {
-			Type t = new Type;
-			switch (p) {
-				case "INT":
-					t = Type.INT;
-					break;
-				case "DECIMAL":
-					t = Type.DECIMAL;
-					break;
-				case "STRING":
-					t = Type.STRING;
-					break;
-				case "OBJECT":
-					t = Type.OBJECT;
-					break;
-				case "BOOL":
-					t = Type.BOOL;
-					break;
-				default:
-					t = Type.UNKNOWN;
-					break;
-			}
-		return t;
-		}
+
 
 		private class CommandJob : Target {
 
