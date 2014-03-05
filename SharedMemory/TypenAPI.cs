@@ -34,6 +34,7 @@ namespace SharedMemory{
 				}
 				base.AddEntry(entry);
 			}
+			Manager.SendUpdateString();
 			Global.DebugObject(this);
 		}
 	}

@@ -121,6 +121,30 @@ namespace SharedMemory
 			job.Name = "Add Commands";
 			AddJob(job);
 		}
+		public static Type CastEnum(string p) {
+			Type t = new Type;
+			switch (p) {
+				case "INT":
+					t = Type.INT;
+					break;
+				case "DECIMAL":
+					t = Type.DECIMAL;
+					break;
+				case "STRING":
+					t = Type.STRING;
+					break;
+				case "OBJECT":
+					t = Type.OBJECT;
+					break;
+				case "BOOL":
+					t = Type.BOOL;
+					break;
+				default:
+					t = Type.UNKNOWN;
+					break;
+			}
+		return t;
+		}
 
 		private class CommandJob : Target {
 
@@ -130,8 +154,7 @@ namespace SharedMemory
 				this.handler = handler;
 			}
 
-			public override TargetState run ()
-			{
+			public override TargetState run() {
 				handler.PutMethod("test", delegate(string[] args) {
 					Global.log("Test");
 					return 0;
@@ -149,8 +172,8 @@ namespace SharedMemory
 					owner = args[3][0];
 					MemorySpan span = new MemorySpan(low, top, currentManager, owner);
 					currentManager.AddRange(span);
-					if(args.Length == 5)
-						if(args[4] == "owner")
+					if (args.Length == 5)
+						if (args[4] == "owner")
 							currentManager.Own = span;
 					return 0;
 				});
@@ -160,7 +183,7 @@ namespace SharedMemory
 					return 0;
 				});
 				return TargetState.DONE;
-			}			
+			}
 		}
 	}
 }
