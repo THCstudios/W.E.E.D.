@@ -9,27 +9,27 @@ namespace SharedMemory
 	{
 		public override string FormatEntry (FeMoEntry entry)
 		{
-			return "{\"Name\":\"" + entry.Name + "\", \"Value\":\"" + entry.Value + "\", \"Type\":\"" + entry.Type + "\"}";
+			return "\t\t\t{\n\t\t\t\t\"Name\" : \"" + entry.Name + "\", \n\t\t\t\t\"Value\" : \"" + entry.Value + "\", \n\t\t\t\t\"Type\" : \"" + entry.Type + "\"\n\t\t\t}";
 		}
 
 		public override string CloseEntryList ()
 		{
-			return "]}";
+			return "\n\t\t]\n\t}";
 		}
 
 		public override string OpenEntryList ()
 		{
-			return "\"update\":[";
+			return "\n\t\t\"update\":\n\t\t[\n";
 		}
 
 		public override string EntrySeparator ()
 		{
-			return ", ";
+			return ", \n";
 		}
 
 		public override string FormatObject (FeMoObject obj)
 		{
-			return "{\"Id\":\"" + obj.Id + "\", \"Name\":\"" + obj.Name + "\",";
+			return "\t{\n\t\t\"Id\" : \"" + obj.Id + "\", \n\t\t\"Name\":\"" + obj.Name + "\", ";
 		}
 
 		public override string ObjectSeparator ()
@@ -39,17 +39,17 @@ namespace SharedMemory
 
 		public override string OpenObjectList ()
 		{
-			return "{\"updates\":[";
+			return "{\"updates\":\n\t[";
 		}
 
 		public override string CloseObjectList ()
 		{
-			return "]}";
+			return "\n\t]\n}";
 		}
 
 		public override FeMoObject[] Parse (String objString)
 		{
-			String json = objString.Trim ().Replace (" ", "").Replace ("\t", "").Replace ("\n", "");
+			String json = objString.Trim ().Replace (" ", "").Replace ("\t", "").Replace ("\n", "").Replace("\r", "");
 			if (json.StartsWith ("{") && json.EndsWith ("}")) {
 				List<FeMoObject> fmos = new List<FeMoObject>();
 				json = json.Substring(1, json.Length - 2);
