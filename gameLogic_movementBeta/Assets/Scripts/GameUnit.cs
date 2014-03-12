@@ -19,7 +19,7 @@ public class GameUnit :  TopLevelUnits{
 	private double collisionTime;
 	private bool moveOverload;
 
-	public GameObject Level;
+	public GameObject Controlling;
 	public List<Vector3> Path;
 	Vector3 halfBounds;
 
@@ -32,6 +32,7 @@ public class GameUnit :  TopLevelUnits{
 		moveOverload = false;
 		Collider collider = GetComponent<Collider>();
 		halfBounds = new Vector3 (collider.bounds.size.x / 2, 0, collider.bounds.size.z / 2);
+		Controlling = GameObject.FindGameObjectWithTag ("GameController");
 	}
 	
 	// Update is called once per frame
@@ -40,11 +41,11 @@ public class GameUnit :  TopLevelUnits{
 			MoveUnit();
 		}
 		// USE?
-		/*RaycastHit hit;
+		RaycastHit hit;
 		if(Physics.Raycast(transform.position,-Vector3.up,out hit)) {
 			Vector3 forwd = Vector3.Cross(transform.right,hit.normal);
 			transform.rotation = Quaternion.Slerp(transform.rotation,Quaternion.LookRotation(forwd, hit.normal), 3*Time.deltaTime);
-		}*/
+		}
 	}
 	public void OnMouseDown(){
 		IsSelected = !IsSelected;
@@ -193,9 +194,9 @@ public class GameUnit :  TopLevelUnits{
 		set {
 			isSelected = value;
 			if (isSelected) {
-				renderer.material.color = Color.blue;
+				GetComponentInChildren<Projector>().enabled = true;
 			} else {
-				renderer.material.color = Color.red;
+				GetComponentInChildren<Projector>().enabled = false;
 			}
 		}
 	}
@@ -209,13 +210,13 @@ public class GameUnit :  TopLevelUnits{
 			return Path[0];
 		}
 		set {
-			Path = Optimize(Level.GetComponent<PathFinder>().FindPath (transform.position, value), value);
+			Path = Optimize(Controlling.GetComponent<PathFinder>().FindPath (transform.position, value), value);
 		}
 	}
 
 	public Tile Tile {
 		get {
-			return Level.GetComponent<Level>().tiles
+			return Controlling.GetComponent<Level>().tiles
 				[(int)transform.position.x, (int) transform.position.z];
 		}
 	}

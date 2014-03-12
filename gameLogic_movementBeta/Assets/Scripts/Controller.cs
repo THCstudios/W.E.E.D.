@@ -8,7 +8,7 @@ using System.Collections.Generic;
  *  +	Added selection rectangle (TODO: rectangle design)
  */
 public class Controller : MonoBehaviour {
-
+	
 	// Selection starting position
 	private Vector2 startPos;
 	// Selection ending position
@@ -38,6 +38,7 @@ public class Controller : MonoBehaviour {
 	}
 	// Only true while the mouse button 0 (left button) is being held down
 	private bool isSelecting;
+
 
 	// Use this for initialization
 	void Start () {
