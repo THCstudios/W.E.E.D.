@@ -501,7 +501,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 357ee3c3e34e1f14d845763e29a15726, type: 2}
       propertyPath: MaximumDistance
-      value: .0199999996
+      value: .0209999997
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 357ee3c3e34e1f14d845763e29a15726, type: 2}
@@ -712,7 +712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba6e1caa3d7862e4f86c0aceeb721881, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 3
+  movementSpeed: 4
   isSelected: 0
   collisionTime: 0
   Controlling: {fileID: 0}
@@ -783,7 +783,7 @@ MonoBehaviour:
   healthbar_neardeath: {fileID: 0}
   healthbar_background: {fileID: 0}
   Target: {fileID: 0}
-  MaximumDistance: .0199999996
+  MaximumDistance: .0209999997
 --- !u!23 &688975137
 Renderer:
   m_ObjectHideFlags: 0
@@ -1049,7 +1049,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba6e1caa3d7862e4f86c0aceeb721881, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 3
+  movementSpeed: 4
   isSelected: 0
   collisionTime: 0
   Controlling: {fileID: 0}
@@ -1120,7 +1120,7 @@ MonoBehaviour:
   healthbar_neardeath: {fileID: 0}
   healthbar_background: {fileID: 0}
   Target: {fileID: 0}
-  MaximumDistance: .0199999996
+  MaximumDistance: .0209999997
 --- !u!23 &921327421
 Renderer:
   m_ObjectHideFlags: 0
@@ -1246,7 +1246,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 357ee3c3e34e1f14d845763e29a15726, type: 2}
       propertyPath: MaximumDistance
-      value: .0199999996
+      value: .0209999997
       objectReference: {fileID: 0}
     - target: {fileID: 13600000, guid: 357ee3c3e34e1f14d845763e29a15726, type: 2}
       propertyPath: m_Enabled
@@ -1551,7 +1551,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 357ee3c3e34e1f14d845763e29a15726, type: 2}
       propertyPath: MaximumDistance
-      value: .0199999996
+      value: .0209999997
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 357ee3c3e34e1f14d845763e29a15726, type: 2}
@@ -1634,7 +1634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba6e1caa3d7862e4f86c0aceeb721881, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 3
+  movementSpeed: 4
   isSelected: 0
   collisionTime: 0
   Controlling: {fileID: 0}
@@ -1705,7 +1705,7 @@ MonoBehaviour:
   healthbar_neardeath: {fileID: 0}
   healthbar_background: {fileID: 0}
   Target: {fileID: 0}
-  MaximumDistance: .0199999996
+  MaximumDistance: .0209999997
 --- !u!23 &1386507135
 Renderer:
   m_ObjectHideFlags: 0

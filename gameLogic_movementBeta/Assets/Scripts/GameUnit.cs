@@ -40,6 +40,8 @@ public class GameUnit :  TopLevelUnits{
 
 	public float MaximumDistance = 0f;
 
+	private int progress;
+
 	// Use this for initialization
 	void Start () {
 		Stats = new UnitStats(new FeMoObject());
@@ -77,6 +79,7 @@ public class GameUnit :  TopLevelUnits{
 			if (Path.finished || Path.cancelled) {
 				Path = null;
 			}
+			progress = 0;
 		}
 		if (Health <= 0) {
 			Destroy (gameObject);
@@ -84,8 +87,13 @@ public class GameUnit :  TopLevelUnits{
 		if (Target != null && lastKnownTargetPos != Target.Tile) {
 			Attack (Target);
 		}
-		if(!IsAtTarget) {
-			MoveUnit();
+		if (BackupWaypoints != null && BackupWaypoints.Count > 1) {
+			int progress = this.progress == BackupWaypoints.Count - 1 ? BackupWaypoints.Count - 2 : this.progress;
+			Vector3 newRotation = Quaternion.LookRotation (BackupWaypoints[progress + 1] - BackupWaypoints[progress]).eulerAngles;
+			Vector3 oldRotation = transform.rotation.eulerAngles;
+			if (newRotation != oldRotation) {
+				RotateUnit(newRotation);
+			}
 		}
 		/*RaycastHit hit;
 		if(Physics.Raycast(transform.position,-Vector3.up,out hit)) {
@@ -125,30 +133,36 @@ public class GameUnit :  TopLevelUnits{
 		}
 	}
 	public void FixedUpdate() {
+		for (int i = 0; BackupPath != null && i < BackupPath.path.Count - 1; i++) {
+			Debug.DrawLine (new Vector3(BackupPath.path[i].pos.x + 0.5f, 0.5f, BackupPath.path[i].pos.y + 0.5f), new Vector3(BackupPath.path[i + 1].pos.x + 0.5f, 0.5f, BackupPath.path[i + 1].pos.y + 0.5f), Color.cyan);
+		}
+		for (int i = 0; BackupWaypoints != null && i < BackupWaypoints.Count - 1; i++) {
+			Vector3 dir = BackupWaypoints[i + 1] - BackupWaypoints[i];
+			float distance = dir.magnitude;
+			//Debug.DrawRay (BackupWaypoints[i], dir, Color.blue, distance);
+			//Debug.DrawRay (BackupWaypoints[i] + halfBounds * 1.1f, dir, Color.green, distance);
+		}
 		if(!IsAtTarget) {
-			for (int i = 0; BackupPath != null && i < BackupPath.path.Count - 1; i++) {
-				Debug.DrawLine (new Vector3(BackupPath.path[i].pos.x + 0.5f, 0.5f, BackupPath.path[i].pos.y + 0.5f), new Vector3(BackupPath.path[i + 1].pos.x + 0.5f, 0.5f, BackupPath.path[i + 1].pos.y + 0.5f), Color.cyan);
-			}
-			for (int i = 0; BackupWaypoints != null && i < BackupWaypoints.Count - 1; i++) {
-				Vector3 dir = BackupWaypoints[i + 1] - BackupWaypoints[i];
-				float distance = dir.magnitude;
-				//Debug.DrawRay (BackupWaypoints[i], dir, Color.blue, distance);
-				//Debug.DrawRay (BackupWaypoints[i] + halfBounds * 1.1f, dir, Color.green, distance);
-			}
 			//rigidbody.MovePosition(Vector3.MoveTowards (transform.position, destinationPoint, (float)(movementSpeed * Time.deltaTime)));
 			//rigidbody.velocity = movementSpeed * rigidbody.velocity.normalized;
 			if(!moveOverload) {
 				Vector3 dir = (DestinationPoint - transform.position).normalized * movementSpeed;
-				if ((DestinationPoint - transform.position - dir).magnitude < MaximumDistance) {
-					dir = DestinationPoint - transform.position;
+				if (movementSpeed * Time.fixedDeltaTime > (DestinationPoint - transform.position).magnitude) {
+					dir = (DestinationPoint - transform.position) / Time.fixedDeltaTime;
+					Debug.Log (dir + " " + dir.magnitude);
 				}
 				dir.y = rigidbody.velocity.y;
 				rigidbody.velocity =  dir; //Vector3.MoveTowards (transform.position, destinationPoint, (float)(movementSpeed * Time.deltaTime));
 			}
+			if(Vector3.Distance(transform.position, DestinationPoint) <= MaximumDistance) {
+				Waypoints.RemoveAt (0);
+				progress++;
+			}
+		} else {
+			rigidbody.velocity = new Vector3(0, rigidbody.velocity.y);
 		}
 	}
-	public void MoveUnit(){
-		var newRotation = Quaternion.LookRotation (DestinationPoint - transform.position).eulerAngles;
+	public void RotateUnit(Vector3 newRotation){
 		newRotation.x = transform.rotation.eulerAngles.x;
 		float tempY;
 		if (Mathf.Abs(transform.rotation.eulerAngles.y - newRotation.y) >180) {
@@ -169,11 +183,6 @@ public class GameUnit :  TopLevelUnits{
 		//rigidbody.AddForce(Vector3.MoveTowards (transform.position, destinationPoint, (float)(movementSpeed * Time.deltaTime)));
 		//rigidbody.AddForce (Vector3.forward);
 		//Debug.Log (Vector3.Distance (transform.position, DestinationPoint));
-		if(Vector3.Distance(transform.position, DestinationPoint) <= MaximumDistance) {
-			Waypoints.RemoveAt (0);
-		} else {
-			Debug.Log(Vector3.Distance(transform.position, DestinationPoint));
-		}
 	}
 
 	public void Attack(GameUnit unit) {
@@ -298,6 +307,7 @@ public class GameUnit :  TopLevelUnits{
 			Waypoints = Optimize (Path, value + new Vector3(0, .5f, 0));
 			BackupWaypoints = new List<Vector3>(Waypoints);
 			BackupWaypoints.Insert (0, transform.position);
+			progress = 0;
 		}
 	}
 

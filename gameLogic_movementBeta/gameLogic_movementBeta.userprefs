@@ -1,10 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GameUnit.cs">
     <Files>
-      <File FileName="Assets\Scripts\PathFinder.cs" Line="167" Column="1" />
-      <File FileName="Assets\Scripts\GameUnit.cs" Line="175" Column="13" />
-      <File FileName="Assets\Scripts\Controller.cs" Line="57" Column="5" />
+      <File FileName="Assets\Scripts\GameUnit.cs" Line="95" Column="15" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
