@@ -57,10 +57,7 @@ public class Controller : MonoBehaviour {
 
 				foreach(GameObject unit in units) {
 					if(unit.GetComponent<GameUnit>().IsSelected == true){
-						//hit.point = new Vector3(hit.point.x, 0 , hit.point.z);
-						unit.GetComponent<GameUnit>().DestinationPoint = hit.point;
-
-						Debug.Log (hit.point);
+						unit.GetComponent<GameUnit>().Goto (hit.point);
 					}
 				}
 			}
