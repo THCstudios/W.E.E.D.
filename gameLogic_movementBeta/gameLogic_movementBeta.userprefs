@@ -1,19 +1,19 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GameUnit.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Building.cs">
     <Files>
-      <File FileName="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Light.shader" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Building.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\GUIControl.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PathFinder.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\GameUnit.cs" Line="199" Column="57" />
-      <File FileName="Assets\Scripts\Tile.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\CameraControl.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Level.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Controller.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GUIControl.cs" Line="115" Column="30" />
+      <File FileName="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Light.shader" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Building.cs" Line="111" Column="4" />
+      <File FileName="Assets\Scripts\PathFinder.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GameUnit.cs" Line="29" Column="2" />
+      <File FileName="Assets\Scripts\Tile.cs" Line="13" Column="54" />
+      <File FileName="Assets\Scripts\CameraControl.cs" Line="35" Column="4" />
+      <File FileName="Assets\Scripts\Level.cs" Line="1" Column="1" />
       <File FileName="Assets\Standard Assets\Projectors\Guidelines.txt" Line="1" Column="1" />
-      <File FileName="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Multiply.shader" Line="27" Column="2" />
-      <File FileName="Assets\Standard Assets\Projectors\Sources\Shaders\CustomProjectorShader.shader" Line="25" Column="10" />
+      <File FileName="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Multiply.shader" Line="1" Column="1" />
+      <File FileName="Assets\Standard Assets\Projectors\Sources\Shaders\CustomProjectorShader.shader" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

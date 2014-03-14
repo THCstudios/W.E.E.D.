@@ -11,10 +11,6 @@ public class GameUnit :  TopLevelUnits{
 	private float movementSpeed;
 	[SerializeField]
 	private bool isSelected;
-	//[SerializeField]
-	//private bool isAtTarget;
-	//[SerializeField]
-	//private Vector3 destinationPoint;
 	[SerializeField]
 	private double collisionTime;
 	private bool moveOverload;
@@ -22,14 +18,27 @@ public class GameUnit :  TopLevelUnits{
 	public GameObject Controlling;
 	public List<Vector3> Path;
 	Vector3 halfBounds;
-
+	public float BuildTimeAbsolute;
+	private float buildTimeTemp;
+	public Texture2D Icon;
 	public float MaximumDistance = 0f;
+
+	public float BuildTimeTemp { 
+		get { return buildTimeTemp; } 
+		set { buildTimeTemp = value; } 
+	}
+
+	void Awake() {
+		buildTimeTemp = BuildTimeAbsolute;
+		Debug.Log (buildTimeTemp);
+	}
 
 	// Use this for initialization
 	void Start () {
 		isSelected = false;
 		movementSpeed = 2.0f;
 		moveOverload = false;
+
 		Collider collider = GetComponent<Collider>();
 		halfBounds = new Vector3 (collider.bounds.size.x / 2, 0, collider.bounds.size.z / 2);
 		Controlling = GameObject.FindGameObjectWithTag ("GameController");
