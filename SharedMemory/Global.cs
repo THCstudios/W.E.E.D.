@@ -110,6 +110,10 @@ namespace SharedMemory
 			Console.WriteLine("[FAIL] " + msg);
 		}
 
+		public static void user(String msg) {
+			Console.WriteLine("[USER] " + msg);
+		}
+
 		public static void warn (String msg)
 		{
 			Console.WriteLine ("[WARN] " + msg);

@@ -99,7 +99,7 @@ namespace SharedMemory
 						msg += tmp.Substring(tmp.LastIndexOf(";:;") + 3);
 						String[] msgs = regex.Split(eve);
 						foreach(String m in msgs) {
-							Global.femo(m);
+							//Global.femo(m);
 							OnReceivedMessage(m);
 						}
 					} else {

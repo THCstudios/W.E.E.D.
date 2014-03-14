@@ -8,7 +8,7 @@ namespace SharedMemory
 	{
 		private long id;
 		private String name;
-		public SortedSet<Target> predesecors = new SortedSet<Target>();
+		public List<Target> predesecors = new List<Target>();
 
 		public abstract TargetState run();
 

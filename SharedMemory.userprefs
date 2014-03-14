@@ -1,30 +1,59 @@
 ﻿<Properties GitUserInfo="UsingGIT">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="SharedMemory/Global.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="UserServiceTest/Main.cs">
     <Files>
       <File FileName="Test/Main.cs" Line="21" Column="6" />
-      <File FileName="SharedMemory/FeMoEntry.cs" Line="32" Column="4" />
+      <File FileName="SharedMemory/FeMoEntry.cs" Line="5" Column="19" />
       <File FileName="SharedMemory/FeMoUpdateStringFormatter.cs" Line="12" Column="72" />
-      <File FileName="SharedMemory/ConnectionHandle.cs" Line="150" Column="4" />
-      <File FileName="Client/Main.cs" Line="58" Column="38" />
+      <File FileName="SharedMemory/ConnectionHandle.cs" Line="78" Column="3" />
+      <File FileName="Client/Main.cs" Line="36" Column="30" />
       <File FileName="Server/Main.cs" Line="24" Column="82" />
       <File FileName="SharedMemory/FeMoPeer.cs" Line="23" Column="4" />
       <File FileName="SharedMemory/FeMoCreator.cs" Line="52" Column="1" />
-      <File FileName="SharedMemory/Global.cs" Line="129" Column="19" />
-      <File FileName="SharedMemory/FeMoObject.cs" Line="313" Column="17" />
-      <File FileName="SharedMemory/JSONFormatter.cs" Line="128" Column="4" />
-      <File FileName="SharedMemory/FeMoManager.cs" Line="171" Column="16" />
-      <File FileName="SharedMemory/ConsoleFormatter.cs" Line="29" Column="50" />
+      <File FileName="SharedMemory/Global.cs" Line="113" Column="26" />
+      <File FileName="SharedMemory/FeMoObject.cs" Line="16" Column="3" />
+      <File FileName="SharedMemory/JSONFormatter.cs" Line="112" Column="6" />
+      <File FileName="SharedMemory/FeMoManager.cs" Line="162" Column="35" />
+      <File FileName="SharedMemory/ConsoleFormatter.cs" Line="12" Column="37" />
       <File FileName="SharedMemory/XMLFormatter.cs" Line="20" Column="1" />
       <File FileName="SharedMemory/SharedMemory.cs" Line="23" Column="31" />
-      <File FileName="StartupTest/Main.cs" Line="32" Column="56" />
-      <File FileName="SharedMemory/Target.cs" Line="9" Column="19" />
-      <File FileName="SharedMemory/DownloadJob.cs" Line="47" Column="25" />
+      <File FileName="StartupTest/Main.cs" Line="41" Column="4" />
+      <File FileName="SharedMemory/Target.cs" Line="22" Column="24" />
+      <File FileName="SharedMemory/DownloadJob.cs" Line="25" Column="23" />
       <File FileName="SharedMemory/CommandHandler.cs" Line="17" Column="5" />
       <File FileName="SharedMemory/TaskManager.cs" Line="29" Column="12" />
-      <File FileName="SharedMemory/FeMoList.cs" Line="22" Column="5" />
+      <File FileName="SharedMemory/FeMoList.cs" Line="24" Column="4" />
       <File FileName="SharedMemory/MemorySpan.cs" Line="40" Column="5" />
+      <File FileName="SharedMemory/TypenAPI.cs" Line="16" Column="5" />
+      <File FileName="SharedMemory/UserServices.cs" Line="13" Column="55" />
+      <File FileName="UserServiceTest/Main.cs" Line="25" Column="52" />
+      <File FileName="SharedMemory/MySQLFormatter.cs" Line="1" Column="1" />
+      <File FileName="SharedMemory/SQLExporter.cs" Line="21" Column="35" />
+      <File FileName="SharedMemory/SQLiteFormatter.cs" Line="1" Column="1" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Client" expanded="True" />
+          <Node name="SharedMemory" expanded="True">
+            <Node name="References" expanded="True" />
+          </Node>
+          <Node name="StartupTest" expanded="True" />
+          <Node name="UserServiceTest" expanded="True">
+            <Node name="Main.cs" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+      <Pad Id="MonoDevelop.NUnit.TestPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
