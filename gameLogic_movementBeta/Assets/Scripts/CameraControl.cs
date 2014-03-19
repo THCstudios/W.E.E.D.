@@ -19,10 +19,10 @@ public class CameraControl : MonoBehaviour
 		yRotation = transform.eulerAngles.y;
 
 		GameObject terrain = GameObject.FindGameObjectWithTag ("Terrain");
-		xMinBoundary = (int)terrain.transform.position.x - 0;
-		xMaxBoundary = (int)(terrain.transform.position.x + terrain.GetComponent<Terrain> ().terrainData.size.x + 0);
-		zMinBoundary = (int)terrain.transform.position.z - 3;
-		zMaxBoundary = (int)(terrain.transform.position.z + terrain.GetComponent<Terrain> ().terrainData.size.z - 10);
+		xMinBoundary = (int) terrain.transform.position.x - 0;
+		xMaxBoundary = (int) (terrain.transform.position.x + terrain.GetComponent<Terrain> ().terrainData.size.x + 0);
+		zMinBoundary = (int) terrain.transform.position.z - 3;
+		zMaxBoundary = (int) (terrain.transform.position.z + terrain.GetComponent<Terrain> ().terrainData.size.z - 10);
 	}
 
 	// Update is called once per frame

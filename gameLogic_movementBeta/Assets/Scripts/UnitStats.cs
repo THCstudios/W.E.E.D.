@@ -1,8 +1,8 @@
-using SharedMemory;
+//using SharedMemory;
 
 public class UnitStats 
 {
-	private FeMoObject backing;
+	//private FeMoObject backing;
 	
 	public AttackType CachedAttackType;
 	public DefenseStats CachedDefenseStats = new DefenseStats ();
@@ -10,14 +10,18 @@ public class UnitStats
 	public int CachedAttackRange;
 	public int CachedMaxHealth = 100;
 
-	public UnitStats (FeMoObject backing) {
+	public UnitStats(object o) {
+
+	}
+
+	/*public UnitStats (FeMoObject backing) {
 		this.backing = backing;
 		backing.AddDecimal ("AttackDamage", CachedAttackDamage);
 		backing.AddInt ("AttackRange", CachedAttackRange);
 		backing.AddInt ("MaxHealth", CachedMaxHealth);
-	}
+	}*/
 
-	public void RenewCache() {
+	/*public void RenewCache() {
 		CachedAttackDamage = AttackDamage;
 		CachedAttackRange = AttackRange;
 		CachedMaxHealth = MaxHealth;
@@ -51,7 +55,7 @@ public class UnitStats
 		set {
 			backing.SetInt ("MaxHealth", value);
 		}
-	}
+	}*/
 }
 
 

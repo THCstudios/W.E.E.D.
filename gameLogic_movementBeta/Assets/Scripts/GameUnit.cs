@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
-using SharedMemory;
 
 /*
  * Changes:
@@ -8,7 +7,6 @@ using SharedMemory;
  */
 public class GameUnit :  TopLevelUnits
 {
-
 	[SerializeField]
 	private float
 		movementSpeed;
@@ -54,7 +52,7 @@ public class GameUnit :  TopLevelUnits
 	// Use this for initialization
 	void Start ()
 	{
-		Stats = new UnitStats (new FeMoObject ());
+		Stats = new UnitStats (null);//new FeMoObject ());
 		Health = Stats.CachedMaxHealth;
 		isSelected = false;
 		movementSpeed = 2.0f;
