@@ -1,12 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Controller.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GameUnit.cs">
     <Files>
-      <File FileName="Assets\Scripts\DefenseStats.cs" Line="14" Column="14" />
-      <File FileName="Assets\Scripts\GameUnit.cs" Line="112" Column="3" />
-      <File FileName="Assets\Scripts\Controller.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PathFinder.cs" Line="164" Column="3" />
-      <File FileName="Assets\Scripts\ProcessingPath.cs" Line="21" Column="4" />
+      <File FileName="Assets\Scripts\CameraControl.cs" Line="15" Column="3" />
+      <File FileName="Assets\Scripts\GameUnit.cs" Line="207" Column="67" />
+      <File FileName="Assets\Scripts\GUIControl.cs" Line="70" Column="9" />
+      <File FileName="Assets\Scripts\Controller.cs" Line="1" Column="19" />
+      <File FileName="Assets\Scripts\CircleProjector.cs" Line="8" Column="62" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

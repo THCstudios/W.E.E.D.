@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\AttackType.cs" />
      <Compile Include="Assets\Scripts\Building.cs" />
      <Compile Include="Assets\Scripts\CameraControl.cs" />
+     <Compile Include="Assets\Scripts\CircleProjector.cs" />
      <Compile Include="Assets\Scripts\Controller.cs" />
      <Compile Include="Assets\Scripts\DefenseStats.cs" />
      <Compile Include="Assets\Scripts\GUIControl.cs" />

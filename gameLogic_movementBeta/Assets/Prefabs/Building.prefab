@@ -9,6 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 119: {fileID: 11900000}
+  - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: Blob Light Projector
   m_TagString: Untagged
@@ -114,9 +115,20 @@ MonoBehaviour:
   isPlaced: 1
   isSelected: 0
   BuildingQueue: []
-  CubePrefab: {fileID: 100000, guid: 357ee3c3e34e1f14d845763e29a15726, type: 2}
+  CubePrefab: {fileID: 0}
   Width: 5
   Height: 5
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ddb72c50cd39a14392a7e941674e37e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!119 &11900000
 Projector:
   m_ObjectHideFlags: 1
