@@ -1,50 +1,17 @@
 using UnityEngine;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-
-class PathInfo {
-	public Tile src;
-	public Tile dst;
-	
-	public PathInfo(Tile src, Tile dst) {
-		this.src = src;
-		this.dst = dst;
-	}
-	
-	public override bool Equals(object o) {
-		if (o == null || !(o is PathInfo)) {
-			return false;
-		}
-		PathInfo info = o as PathInfo;
-		return info.src == src && info.dst == dst;
-	}
-	
-	public static bool operator== (PathInfo o, object o1) {
-		return o.Equals (o1);
-	}
-	
-	public static bool operator!= (PathInfo o, object o1) {
-		return !(o == o1);
-	}
-	
-	public override int GetHashCode() {
-		return src.GetHashCode () ^ dst.GetHashCode ();
-	}
-}
 
 public class PathFinder : MonoBehaviour
 {
 	private Level level;
-	
-	private Dictionary<PathInfo, ProcessingPath> processingPaths = new Dictionary<PathInfo, ProcessingPath>(); 
-	
+
 	void Start() {
 		level = GetComponent<Level>();
 	}
-	
-	// Update is called once per frame
+
+		// Update is called once per frame
 	/*void Update ()
 	{
 		for (int i = 0; i < level.tiles.GetLength (0) + 1; i++) {
@@ -54,31 +21,15 @@ public class PathFinder : MonoBehaviour
 			Debug.DrawLine (new Vector3 (0, 0.5f, i), new Vector3 (level.tiles.GetLength (1), 0.5f, i), Color.red);
 		}
 	}*/
-	
-	public ProcessingPath FindPath (Vector3 src, Vector3 dst) {
+
+	public List<Tile> FindPath (Vector3 src, Vector3 dst) {
 		Tile tSrc = level.tiles[(int) src.x, (int) src.z];
 		Tile tDst = level.tiles[(int) dst.x, (int) dst.z];
 		return FindPath (tSrc, tDst);
 	}
-	
-	public ProcessingPath FindPath (Tile src, Tile dst) {
-		PathInfo info = new PathInfo(src, dst);
-		if (processingPaths.ContainsKey (info)) {
-			ProcessingPath path;
-			if (processingPaths.TryGetValue (info, out path)) {
-				if (path.finished) {
-					processingPaths.Remove (info);
-				}
-				return path;
-			}
-		}
-		StartCoroutine (PathRoutine (src, dst));
-		return FindPath (src, dst);
-	}
-	
-	private IEnumerator PathRoutine (Tile src, Tile dst) {
-		ProcessingPath path = new ProcessingPath();
-		processingPaths.Add (new PathInfo(src, dst), path);
+
+	public List<Tile> FindPath (Tile src, Tile dst) {
+		int start = getTime();
 		HashSet<Tile> closedSet = new HashSet<Tile>();
 		HashSet<Tile> openSet = new HashSet<Tile>();
 		Dictionary<Tile, Tile> cameFrom = new Dictionary<Tile, Tile>();
@@ -87,11 +38,10 @@ public class PathFinder : MonoBehaviour
 		Dictionary<Tile, float> fScore = new Dictionary<Tile, float>();
 		gScore.Add (src, 0);
 		fScore.Add (src, src.HeuristicCost (dst));
-		
-		int start = now();
+
 		int cnt = 0;
 		
-		while (cnt < 500 && openSet.Count > 0 && !path.cancelled) {
+		while (cnt < 500 && openSet.Count > 0) {
 			Tile current = openSet.ElementAt (0);
 			for (int i = 1; i < openSet.Count; i++) {
 				if (fScore[current] > fScore[openSet.ElementAt (i)]) {
@@ -99,22 +49,24 @@ public class PathFinder : MonoBehaviour
 				}
 			}
 			if (current == dst) {
-				path.path = reconstructPath (cameFrom, current);
-				path.finished = true;
-				Debug.Log ("SUCCESS");
-				Debug.Log (now () - start);
-				return true;
+				List<Tile> path = new List<Tile>();
+				Debug.Log (start);
+				Debug.Log (getTime ());
+				Debug.Log ("ROUTINE A");
+				Debug.Log ("It took me " + (getTime() - start) + " milliseconds to find the destination");
+				start = getTime();
+				reconstructPath (cameFrom, dst, path);
+				Debug.Log ("It took me " + (getTime() - start) + " milliseconds to determine the path");
+				return path;
 			}
+			//if (current.IsOccupied) {
+			//	closedSet.Add (current);
+			//	openSet.Remove (current);
+			//	continue;
+			//}
 			openSet.Remove (current);
 			closedSet.Add (current);
-			
-			if (now () - start >= 10) {
-				path.path = reconstructPath (cameFrom, current);
-				start = now ();
-				Debug.Log (now () - start);
-				yield return null;
-			}
-			
+
 			List<Tile> neighbors = current.Neighbors;
 			foreach (Tile neighbor in neighbors) {
 				if (closedSet.Contains (neighbor)) {
@@ -138,13 +90,25 @@ public class PathFinder : MonoBehaviour
 				min = closedSet.ElementAt (i);
 			}
 		}
-		path.path = reconstructPath (cameFrom, min);
-		path.finished = true;
-		Debug.Log ("GAVE UP");
-		Debug.Log (now () - start);
-		return true;
+		Debug.Log ("ROUTINE B");
+		Debug.Log ("It took me " + (getTime () - start) + " milliseconds to find the destination");
+		start = getTime();
+		var Path = reconstructPath (cameFrom, min);
+		Debug.Log ("It took me " + (getTime () - start) + " milliseconds to determine the path");
+		Debug.Log ("Reconstructed path: " + Path.Count + " elements");
+		foreach (var tile in Path) {
+			Debug.Log (tile);
+		}
+		for (int i = 0; i < Path.Count - 1; i++) {
+			Debug.Log (Path[i].pos + " => " + Path[i + 1].pos + " costs " + Path[i].NeighborCost (Path[i + 1]));
+		}
+		return Path;
 	}
-	
+
+	private int getTime() {
+		return DateTime.Now.Millisecond;
+	}
+
 	private List<Tile> reconstructPath (Dictionary<Tile, Tile> cameFrom, Tile current) {
 		return reconstructPath (cameFrom, current, new List<Tile>());
 	}
@@ -157,10 +121,6 @@ public class PathFinder : MonoBehaviour
 			path.Add (current);
 		}
 		return path;
-	}
-	
-	private int now() {
-		return DateTime.Now.Millisecond;
 	}
 }
 

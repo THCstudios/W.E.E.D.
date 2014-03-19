@@ -107,6 +107,12 @@ public class Building : MonoBehaviour {
 					go.GetComponent<Building>().IsSelected = false;
 				}
 			}
+			GameObject[] units = GameObject.FindGameObjectsWithTag("Unit");
+			foreach(GameObject go in units) {
+				if(go.GetComponent<GameUnit>().IsSelected) {
+					go.GetComponent<GameUnit>().IsSelected = false;
+				}
+			}
 			IsSelected = true;
 		}
 	}
@@ -114,9 +120,11 @@ public class Building : MonoBehaviour {
 		Object.Destroy (this.gameObject, 0);
 	}
 	public void MakeCube() {
-		GameObject newEntry = (GameObject)Instantiate(CubePrefab, FindFreeAdjacentTile(), Quaternion.Euler(0,0,0));
-		newEntry.SetActive (false);
-		BuildingQueue.Add (newEntry);
+		if(BuildingQueue.Count < 5) {
+			GameObject newEntry = (GameObject)Instantiate(CubePrefab, FindFreeAdjacentTile(), Quaternion.Euler(0,0,0));
+			newEntry.SetActive (false);
+			BuildingQueue.Add (newEntry);
+		}
 	}
 	public Vector3 FindFreeAdjacentTile() {
 		foreach(Tile t in this.Tiles) {

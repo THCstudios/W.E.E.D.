@@ -57,7 +57,10 @@ public class Controller : MonoBehaviour {
 
 				foreach(GameObject unit in units) {
 					if(unit.GetComponent<GameUnit>().IsSelected == true){
-						unit.GetComponent<GameUnit>().Goto (hit.point);
+						//hit.point = new Vector3(hit.point.x, 0 , hit.point.z);
+						unit.GetComponent<GameUnit>().DestinationPoint = hit.point;
+
+						Debug.Log (hit.point);
 					}
 				}
 			}
@@ -70,7 +73,9 @@ public class Controller : MonoBehaviour {
 			startPos = Input.mousePosition;
 		}
 		if (!isSelecting && Input.GetMouseButton (0)) {
-			isSelecting = startPos != (Vector2)Input.mousePosition;
+			if(((Mathf.Abs(((Vector2)Input.mousePosition).x - startPos.x) > 5)) || (Mathf.Abs(((Vector2)Input.mousePosition).y - startPos.y) > 5)) {
+				isSelecting = true;
+			}
 		}
 
 		if (isSelecting) {
