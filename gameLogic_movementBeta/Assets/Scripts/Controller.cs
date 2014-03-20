@@ -15,6 +15,9 @@ public class Controller : MonoBehaviour {
 	private Vector2 endPos;
 	// The style used to draw the selection rectangle
 	private GUIStyle selectionStyle;
+
+	public List<Player> players;
+
 	// Generates selection rectangle
 	private Rect selection {
 		get {
@@ -35,13 +38,22 @@ public class Controller : MonoBehaviour {
 			}
 			return new Rect (minX, minY, maxX - minX, maxY - minY);
 		}
+
 	}
 	// Only true while the mouse button 0 (left button) is being held down
 	private bool isSelecting;
 
 
+	void Awake() {
+		players = new List<Player>();
+		Player me = new Player();
+		me.isMe = true;
+		Debug.Log(me);
+		players.Add(me);
+	}
 	// Use this for initialization
 	void Start () {
+		
 	}
 	
 	// Update is called once per frame
@@ -58,7 +70,12 @@ public class Controller : MonoBehaviour {
 				foreach(GameObject unit in units) {
 					if(unit.GetComponent<GameUnit>().IsSelected == true){
 						//hit.point = new Vector3(hit.point.x, 0 , hit.point.z);
-						unit.GetComponent<GameUnit>().DestinationPoint = hit.point;
+						if (unit.GetComponent<GameUnit>() is WorkerUnit) {
+							unit.GetComponent<GameUnit>().DestinationPoint = Input.mousePosition;
+						} else {
+							unit.GetComponent<GameUnit>().DestinationPoint = hit.point;
+						}
+						
 
 						Debug.Log (hit.point);
 					}
