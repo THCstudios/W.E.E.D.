@@ -115,6 +115,7 @@ MonoBehaviour:
   isSelected: 0
   BuildingQueue: []
   CubePrefab: {fileID: 100000, guid: 357ee3c3e34e1f14d845763e29a15726, type: 2}
+  ConstructionTimeAbsolute: 3
   Width: 5
   Height: 5
 --- !u!119 &11900000
