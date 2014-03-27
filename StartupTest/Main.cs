@@ -17,6 +17,8 @@ namespace StartupTest
 			info.address = "0.0.0.0";
 			info.port = 12345;
 			info.noOfClients = 1;
+			info.uname = "test";
+			info.password = "test";
 			connection.Info = info;
 			connection.State = SharedMemoryControl.ServerClientState.SERVER;
 			connection.AddSource(File.ReadAllText("initial_game.json"));
@@ -25,11 +27,12 @@ namespace StartupTest
 			Console.WriteLine("Client(s) Connected!");
 			Console.WriteLine("Buffer:");
 			Console.WriteLine(connection.Manager.CacheInfo());
-			Console.WriteLine(connection.Manager.Dump(FeMoUpdateStringFormatter.XML));
+			Console.WriteLine(connection.Manager.Dump(FeMoUpdateStringFormatter.CONSOLE));
 			System.Threading.Thread.Sleep(1000);
 			connection.Manager.BroadcastCommand("test");
 			connection.Manager.BroadcastCommand("boing");
 			connection.Manager.BroadcastCommand("console_dump");
+			connection.Close();
 		}
 	}
 

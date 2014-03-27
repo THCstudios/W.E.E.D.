@@ -21,6 +21,7 @@ namespace SharedMemory
 
 		protected virtual void OnReceivedCommand (String cmdString)
 		{
+			//Global.femo("Command: " + cmdString);
 			if(ReceivedCommand != null)
 				ReceivedCommand(this, cmdString);
 		}

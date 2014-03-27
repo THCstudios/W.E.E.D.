@@ -22,7 +22,7 @@ namespace SharedMemory
 		{
 			String[] args = cmdString.Split(" ".ToCharArray());
 			String cmd = args[0];
-			Global.log("Remote issued command: " + cmd + " origin: " + source.Handle.RemoteIP);
+			//Global.log("Remote issued command: " + cmd + " origin: " + source.Handle.RemoteIP);
 			if(remotes.ContainsKey(cmd))
 				remotes[cmd](args);
 		}

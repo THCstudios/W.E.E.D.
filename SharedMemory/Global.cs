@@ -163,6 +163,14 @@ namespace SharedMemory
 					log(Global.CurrentManager.Dump(Global.GetDefaultOutputFormatter()));
 					return 0;
 				});
+				handler.PutMethod("user", delegate(string[] args) {
+					if(UserServices.CheckToken(args[1], args[2])) {
+						Global.success("User Authenticated: " + args[1]);
+					} else {
+						Global.warn("User is not registered on Server: " + args[1]);
+					}
+					return 0;
+				});
 				return TargetState.DONE;
 			}
 		}

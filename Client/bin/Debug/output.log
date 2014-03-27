@@ -1,0 +1,1340 @@
+Connecting to Server
+[FEMO] Verifying User Credentials
+[USER] Contacting UserServices...
+[USER] Received Answer!
+[USER] Creating RSA Key...
+[USER] Key generation took 32 ms
+[USER] Found 22 Blocks
+[FEMO] Entering Phase 0 - Server Client - Role CLIENT
+[INFO] Sending package: 
+	Bytes:24 
+	Port: 12345
+	IP: 10.91.4.57
+	Blocks: 1
+	Text: port12345
+[FEMO] Received Message: port57141
+[FEMO] Received Message: max_con:1;curr:1
+[FEMO] Waiting for further connections
+       Starting Task Init Task (0)
+Init
+[DONE] Finished Target Init Task (0)
+DONE: 1 WAIT: 0 FAIL: 0
+[FEMO] Entering Phase 1 - Master Slave - Role CLIENT
+[INFO] Enabling Remote Command Handling
+       Starting Task Add Commands (101)
+[DONE] Finished Target Add Commands (101)
+DONE: 2 WAIT: 0 FAIL: 0
+[FEMO] Received Message: cmd:=range 0 9999 Z
+[FEMO] Command: range 0 9999 Z
+[INFO] Remote issued command: range origin: 10.91.4.57
+[INFO] Block Command: range 0 9999 Z
+[FEMO] Received Message: cmd:=range 260000 269999 Z
+[FEMO] Command: range 260000 269999 Z
+[INFO] Remote issued command: range origin: 10.91.4.57
+[INFO] Block Command: range 260000 269999 Z
+[FEMO] Received Message: cmd:=range 270000 279999 Z
+[FEMO] Command: range 270000 279999 Z
+[INFO] Remote issued command: range origin: 10.91.4.57
+[INFO] Block Command: range 270000 279999 Z
+[FEMO] Received Message: cmd:=range 10000 19999 A
+[FEMO] Command: range 10000 19999 A
+[INFO] Remote issued command: range origin: 10.91.4.57
+[INFO] Block Command: range 10000 19999 A
+[FEMO] Received Message: obj:={"updates":
+	[	{
+		"Id" : "0", 
+		"Name":"Game", 
+		"update":
+		[
+			{
+				"Name" : "SharedMemoryInfo", 
+				"Value" : "2", 
+				"Type" : "OBJECT"
+			}, 
+			{
+				"Name" : "GameInfo", 
+				"Value" : "1", 
+				"Type" : "OBJECT"
+			}
+		]
+	}, 
+	{
+		"Id" : "1", 
+		"Name":"GameInfo", 
+		"update":
+		[
+			{
+				"Name" : "Name", 
+				"Value" : "Test", 
+				"Type" : "STRING"
+			}, 
+			{
+				"Name" : "Level", 
+				"Value" : "3", 
+				"Type" : "OBJECT"
+			}, 
+			{
+				"Name" : "Host", 
+				"Value" : "THC", 
+				"Type" : "STRING"
+			}
+		]
+	}, 
+	{
+		"Id" : "2", 
+		"Name":"SharedMemoryInfo", 
+		"update":
+		[
+			{
+				"Name" : "Version", 
+				"Value" : "0.1beta", 
+				"Type" : "STRING"
+			}, 
+			{
+				"Name" : "Vendor", 
+				"Value" : "InfiniteReality", 
+				"Type" : "STRING"
+			}, 
+			{
+				"Name" : "ConnectionFormatter", 
+				"Value" : "JSON", 
+				"Type" : "STRING"
+			}
+		]
+	}, 
+	{
+		"Id" : "3", 
+		"Name":"Level", 
+		"update":
+		[
+			{
+				"Name" : "Map", 
+				"Value" : "4", 
+				"Type" : "OBJECT"
+			}, 
+			{
+				"Name" : "Entities", 
+				"Value" : "6", 
+				"Type" : "OBJECT"
+			}
+		]
+	}, 
+	{
+		"Id" : "4", 
+		"Name":"Map", 
+		"update":
+		[
+			{
+				"Name" : "Tiles", 
+				"Value" : "5", 
+				"Type" : "OBJECT"
+			}, 
+			{
+				"Name" : "Name", 
+				"Value" : "TestMap", 
+				"Type" : "STRING"
+			}, 
+			{
+				"Name" : "File", 
+				"Value" : "test_map.map", 
+				"Type" : "STRING"
+			}
+		]
+	}, 
+	{
+		"Id" : "5", 
+		"Name":"Tile", 
+		"update":
+		[
+			{
+				"Name" : "Tile_3", 
+				"Value" : "103", 
+				"Type" : "OBJECT"
+			}, 
+			{
+				"Name" : "Tile_2", 
+				"Value" : "102", 
+				"Type" : "OBJECT"
+			}, 
+			{
+				"Name" : "Tile_1", 
+				"Value" : "101", 
+				"Type" : "OBJECT"
+			}, 
+			{
+				"Name" : "Tile_0", 
+				"Value" : "100", 
+				"Type" : "OBJECT"
+			}, 
+			{
+				"Name" : "Count", 
+				"Value" : "4", 
+				"Type" : "INT"
+			}
+		]
+	}, 
+	{
+		"Id" : "6", 
+		"Name":"Entity", 
+		"update":
+		[
+			{
+				"Name" : "Entity_1", 
+				"Value" : "1001", 
+				"Type" : "OBJECT"
+			}, 
+			{
+				"Name" : "Entity_0", 
+				"Value" : "1000", 
+				"Type" : "OBJECT"
+			}, 
+			{
+				"Name" : "Count", 
+				"Value" : "2", 
+				"Type" : "INT"
+			}
+		]
+	}, 
+	{
+		"Id" : "100", 
+		"Name":"Tile_0", 
+		"update":
+		[
+			{
+				"Name" : "Y", 
+				"Value" : "0", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "X", 
+				"Value" : "0", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "Terrain", 
+				"Value" : "0", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "Levitation", 
+				"Value" : "0", 
+				"Type" : "INT"
+			}
+		]
+	}, 
+	{
+		"Id" : "101", 
+		"Name":"Tile_1", 
+		"update":
+		[
+			{
+				"Name" : "Y", 
+				"Value" : "0", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "X", 
+				"Value" : "1", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "Terrain", 
+				"Value" : "0", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "Levitation", 
+				"Value" : "0", 
+				"Type" : "INT"
+			}
+		]
+	}, 
+	{
+		"Id" : "102", 
+		"Name":"Tile_2", 
+		"update":
+		[
+			{
+				"Name" : "Y", 
+				"Value" : "1", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "X", 
+				"Value" : "0", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "Terrain", 
+				"Value" : "0", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "Levitation", 
+				"Value" : "0", 
+				"Type" : "INT"
+			}
+		]
+	}, 
+	{
+		"Id" : "103", 
+		"Name":"Tile_3", 
+		"update":
+		[
+			{
+				"Name" : "Y", 
+				"Value" : "1", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "X", 
+				"Value" : "1", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "Terrain", 
+				"Value" : "0", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "Levitation", 
+				"Value" : "0", 
+				"Type" : "INT"
+			}
+		]
+	}, 
+	{
+		"Id" : "1000", 
+		"Name":"Entity_0", 
+		"update":
+		[
+			{
+				"Name" : "Tile", 
+				"Value" : "100", 
+				"Type" : "OBJECT"
+			}, 
+			{
+				"Name" : "Name", 
+				"Value" : "Townhall", 
+				"Type" : "STRING"
+			}, 
+			{
+				"Name" : "HP", 
+				"Value" : "1500", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "EntityType", 
+				"Value" : "100", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "AP", 
+				"Value" : "20", 
+				"Type" : "INT"
+			}
+		]
+	}, 
+	{
+		"Id" : "1001", 
+		"Name":"Entity_1", 
+		"update":
+		[
+			{
+				"Name" : "Tile", 
+				"Value" : "101", 
+				"Type" : "OBJECT"
+			}, 
+			{
+				"Name" : "Name", 
+				"Value" : "Crossbow", 
+				"Type" : "STRING"
+			}, 
+			{
+				"Name" : "HP", 
+				"Value" : "150", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "EntityType", 
+				"Value" : "1000", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "AP", 
+				"Value" : "10", 
+				"Type" : "INT"
+			}
+		]
+	}
+	]
+}
+[FEMO] Received Message: obj:={"updates":
+	[	{
+		"Id" : "0", 
+		"Name":"Game", 
+		"update":
+		[
+			{
+				"Name" : "SharedMemoryInfo", 
+				"Value" : "2", 
+				"Type" : "OBJECT"
+			}, 
+			{
+				"Name" : "GameInfo", 
+				"Value" : "1", 
+				"Type" : "OBJECT"
+			}
+		]
+	}, 
+	{
+		"Id" : "1", 
+		"Name":"GameInfo", 
+		"update":
+		[
+			{
+				"Name" : "Name", 
+				"Value" : "Test", 
+				"Type" : "STRING"
+			}, 
+			{
+				"Name" : "Level", 
+				"Value" : "3", 
+				"Type" : "OBJECT"
+			}, 
+			{
+				"Name" : "Host", 
+				"Value" : "THC", 
+				"Type" : "STRING"
+			}
+		]
+	}, 
+	{
+		"Id" : "2", 
+		"Name":"SharedMemoryInfo", 
+		"update":
+		[
+			{
+				"Name" : "Version", 
+				"Value" : "0.1beta", 
+				"Type" : "STRING"
+			}, 
+			{
+				"Name" : "Vendor", 
+				"Value" : "InfiniteReality", 
+				"Type" : "STRING"
+			}, 
+			{
+				"Name" : "ConnectionFormatter", 
+				"Value" : "JSON", 
+				"Type" : "STRING"
+			}
+		]
+	}, 
+	{
+		"Id" : "3", 
+		"Name":"Level", 
+		"update":
+		[
+			{
+				"Name" : "Map", 
+				"Value" : "4", 
+				"Type" : "OBJECT"
+			}, 
+			{
+				"Name" : "Entities", 
+				"Value" : "6", 
+				"Type" : "OBJECT"
+			}
+		]
+	}, 
+	{
+		"Id" : "4", 
+		"Name":"Map", 
+		"update":
+		[
+			{
+				"Name" : "Tiles", 
+				"Value" : "5", 
+				"Type" : "OBJECT"
+			}, 
+			{
+				"Name" : "Name", 
+				"Value" : "TestMap", 
+				"Type" : "STRING"
+			}, 
+			{
+				"Name" : "File", 
+				"Value" : "test_map.map", 
+				"Type" : "STRING"
+			}
+		]
+	}, 
+	{
+		"Id" : "5", 
+		"Name":"Tile", 
+		"update":
+		[
+			{
+				"Name" : "Tile_3", 
+				"Value" : "103", 
+				"Type" : "OBJECT"
+			}, 
+			{
+				"Name" : "Tile_2", 
+				"Value" : "102", 
+				"Type" : "OBJECT"
+			}, 
+			{
+				"Name" : "Tile_1", 
+				"Value" : "101", 
+				"Type" : "OBJECT"
+			}, 
+			{
+				"Name" : "Tile_0", 
+				"Value" : "100", 
+				"Type" : "OBJECT"
+			}, 
+			{
+				"Name" : "Count", 
+				"Value" : "4", 
+				"Type" : "INT"
+			}
+		]
+	}, 
+	{
+		"Id" : "6", 
+		"Name":"Entity", 
+		"update":
+		[
+			{
+				"Name" : "Entity_1", 
+				"Value" : "1001", 
+				"Type" : "OBJECT"
+			}, 
+			{
+				"Name" : "Entity_0", 
+				"Value" : "1000", 
+				"Type" : "OBJECT"
+			}, 
+			{
+				"Name" : "Count", 
+				"Value" : "2", 
+				"Type" : "INT"
+			}
+		]
+	}, 
+	{
+		"Id" : "100", 
+		"Name":"Tile_0", 
+		"update":
+		[
+			{
+				"Name" : "Y", 
+				"Value" : "0", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "X", 
+				"Value" : "0", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "Terrain", 
+				"Value" : "0", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "Levitation", 
+				"Value" : "0", 
+				"Type" : "INT"
+			}
+		]
+	}, 
+	{
+		"Id" : "101", 
+		"Name":"Tile_1", 
+		"update":
+		[
+			{
+				"Name" : "Y", 
+				"Value" : "0", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "X", 
+				"Value" : "1", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "Terrain", 
+				"Value" : "0", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "Levitation", 
+				"Value" : "0", 
+				"Type" : "INT"
+			}
+		]
+	}, 
+	{
+		"Id" : "102", 
+		"Name":"Tile_2", 
+		"update":
+		[
+			{
+				"Name" : "Y", 
+				"Value" : "1", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "X", 
+				"Value" : "0", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "Terrain", 
+				"Value" : "0", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "Levitation", 
+				"Value" : "0", 
+				"Type" : "INT"
+			}
+		]
+	}, 
+	{
+		"Id" : "103", 
+		"Name":"Tile_3", 
+		"update":
+		[
+			{
+				"Name" : "Y", 
+				"Value" : "1", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "X", 
+				"Value" : "1", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "Terrain", 
+				"Value" : "0", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "Levitation", 
+				"Value" : "0", 
+				"Type" : "INT"
+			}
+		]
+	}, 
+	{
+		"Id" : "1000", 
+		"Name":"Entity_0", 
+		"update":
+		[
+			{
+				"Name" : "Tile", 
+				"Value" : "100", 
+				"Type" : "OBJECT"
+			}, 
+			{
+				"Name" : "Name", 
+				"Value" : "Townhall", 
+				"Type" : "STRING"
+			}, 
+			{
+				"Name" : "HP", 
+				"Value" : "1500", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "EntityType", 
+				"Value" : "100", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "AP", 
+				"Value" : "20", 
+				"Type" : "INT"
+			}
+		]
+	}, 
+	{
+		"Id" : "1001", 
+		"Name":"Entity_1", 
+		"updatecmd:=run
+Connecting to Server
+[FEMO] Verifying User Credentials
+[USER] Contacting UserServices...
+[USER] Received Answer!
+[USER] Creating RSA Key...
+[USER] Key generation took 33 ms
+[USER] Found 22 Blocks
+[FEMO] Entering Phase 0 - Server Client - Role CLIENT
+[INFO] Sending package: 
+	Bytes:24 
+	Port: 12345
+	IP: 10.91.4.57
+	Blocks: 1
+	Text: port12345
+[FEMO] Received Message: port57150
+[FEMO] Received Message: max_con:1;curr:1
+[FEMO] Waiting for further connections
+       Starting Task Init Task (0)
+Init
+[DONE] Finished Target Init Task (0)
+DONE: 1 WAIT: 0 FAIL: 0
+[FEMO] Entering Phase 1 - Master Slave - Role CLIENT
+[INFO] Enabling Remote Command Handling
+       Starting Task Add Commands (101)
+[DONE] Finished Target Add Commands (101)
+DONE: 2 WAIT: 0 FAIL: 0
+[FEMO] Received Message: cmd:=range 0 9999 Z
+[FEMO] Command: range 0 9999 Z
+[INFO] Remote issued command: range origin: 10.91.4.57
+[INFO] Block Command: range 0 9999 Z
+[FEMO] Received Message: cmd:=range 260000 269999 Z
+[FEMO] Command: range 260000 269999 Z
+[INFO] Remote issued command: range origin: 10.91.4.57
+[INFO] Block Command: range 260000 269999 Z
+[FEMO] Received Message: cmd:=range 270000 279999 Z
+[FEMO] Command: range 270000 279999 Z
+[INFO] Remote issued command: range origin: 10.91.4.57
+[INFO] Block Command: range 270000 279999 Z
+[FEMO] Received Message: cmd:=range 10000 19999 A
+[FEMO] Command: range 10000 19999 A
+[INFO] Remote issued command: range origin: 10.91.4.57
+[INFO] Block Command: range 10000 19999 A
+[FEMO] Received Message: obj:={"updates":
+	[	{
+		"Id" : "0", 
+		"Name":"Game", 
+		"update":
+		[
+			{
+				"Name" : "SharedMemoryInfo", 
+				"Value" : "2", 
+				"Type" : "OBJECT"
+			}, 
+			{
+				"Name" : "GameInfo", 
+				"Value" : "1", 
+				"Type" : "OBJECT"
+			}
+		]
+	}, 
+	{
+		"Id" : "1", 
+		"Name":"GameInfo", 
+		"update":
+		[
+			{
+				"Name" : "Name", 
+				"Value" : "Test", 
+				"Type" : "STRING"
+			}, 
+			{
+				"Name" : "Level", 
+				"Value" : "3", 
+				"Type" : "OBJECT"
+			}, 
+			{
+				"Name" : "Host", 
+				"Value" : "THC", 
+				"Type" : "STRING"
+			}
+		]
+	}, 
+	{
+		"Id" : "2", 
+		"Name":"SharedMemoryInfo", 
+		"update":
+		[
+			{
+				"Name" : "Version", 
+				"Value" : "0.1beta", 
+				"Type" : "STRING"
+			}, 
+			{
+				"Name" : "Vendor", 
+				"Value" : "InfiniteReality", 
+				"Type" : "STRING"
+			}, 
+			{
+				"Name" : "ConnectionFormatter", 
+				"Value" : "JSON", 
+				"Type" : "STRING"
+			}
+		]
+	}, 
+	{
+		"Id" : "3", 
+		"Name":"Level", 
+		"update":
+		[
+			{
+				"Name" : "Map", 
+				"Value" : "4", 
+				"Type" : "OBJECT"
+			}, 
+			{
+				"Name" : "Entities", 
+				"Value" : "6", 
+				"Type" : "OBJECT"
+			}
+		]
+	}, 
+	{
+		"Id" : "4", 
+		"Name":"Map", 
+		"update":
+		[
+			{
+				"Name" : "Tiles", 
+				"Value" : "5", 
+				"Type" : "OBJECT"
+			}, 
+			{
+				"Name" : "Name", 
+				"Value" : "TestMap", 
+				"Type" : "STRING"
+			}, 
+			{
+				"Name" : "File", 
+				"Value" : "test_map.map", 
+				"Type" : "STRING"
+			}
+		]
+	}, 
+	{
+		"Id" : "5", 
+		"Name":"Tile", 
+		"update":
+		[
+			{
+				"Name" : "Tile_3", 
+				"Value" : "103", 
+				"Type" : "OBJECT"
+			}, 
+			{
+				"Name" : "Tile_2", 
+				"Value" : "102", 
+				"Type" : "OBJECT"
+			}, 
+			{
+				"Name" : "Tile_1", 
+				"Value" : "101", 
+				"Type" : "OBJECT"
+			}, 
+			{
+				"Name" : "Tile_0", 
+				"Value" : "100", 
+				"Type" : "OBJECT"
+			}, 
+			{
+				"Name" : "Count", 
+				"Value" : "4", 
+				"Type" : "INT"
+			}
+		]
+	}, 
+	{
+		"Id" : "6", 
+		"Name":"Entity", 
+		"update":
+		[
+			{
+				"Name" : "Entity_1", 
+				"Value" : "1001", 
+				"Type" : "OBJECT"
+			}, 
+			{
+				"Name" : "Entity_0", 
+				"Value" : "1000", 
+				"Type" : "OBJECT"
+			}, 
+			{
+				"Name" : "Count", 
+				"Value" : "2", 
+				"Type" : "INT"
+			}
+		]
+	}, 
+	{
+		"Id" : "100", 
+		"Name":"Tile_0", 
+		"update":
+		[
+			{
+				"Name" : "Y", 
+				"Value" : "0", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "X", 
+				"Value" : "0", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "Terrain", 
+				"Value" : "0", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "Levitation", 
+				"Value" : "0", 
+				"Type" : "INT"
+			}
+		]
+	}, 
+	{
+		"Id" : "101", 
+		"Name":"Tile_1", 
+		"update":
+		[
+			{
+				"Name" : "Y", 
+				"Value" : "0", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "X", 
+				"Value" : "1", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "Terrain", 
+				"Value" : "0", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "Levitation", 
+				"Value" : "0", 
+				"Type" : "INT"
+			}
+		]
+	}, 
+	{
+		"Id" : "102", 
+		"Name":"Tile_2", 
+		"update":
+		[
+			{
+				"Name" : "Y", 
+				"Value" : "1", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "X", 
+				"Value" : "0", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "Terrain", 
+				"Value" : "0", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "Levitation", 
+				"Value" : "0", 
+				"Type" : "INT"
+			}
+		]
+	}, 
+	{
+		"Id" : "103", 
+		"Name":"Tile_3", 
+		"update":
+		[
+			{
+				"Name" : "Y", 
+				"Value" : "1", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "X", 
+				"Value" : "1", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "Terrain", 
+				"Value" : "0", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "Levitation", 
+				"Value" : "0", 
+				"Type" : "INT"
+			}
+		]
+	}, 
+	{
+		"Id" : "1000", 
+		"Name":"Entity_0", 
+		"update":
+		[
+			{
+				"Name" : "Tile", 
+				"Value" : "100", 
+				"Type" : "OBJECT"
+			}, 
+			{
+				"Name" : "Name", 
+				"Value" : "Townhall", 
+				"Type" : "STRING"
+			}, 
+			{
+				"Name" : "HP", 
+				"Value" : "1500", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "EntityType", 
+				"Value" : "100", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "AP", 
+				"Value" : "20", 
+				"Type" : "INT"
+			}
+		]
+	}, 
+	{
+		"Id" : "1001", 
+		"Name":"Entity_1", 
+		"update":
+		[
+			{
+				"Name" : "Tile", 
+				"Value" : "101", 
+				"Type" : "OBJECT"
+			}, 
+			{
+				"Name" : "Name", 
+				"Value" : "Crossbow", 
+				"Type" : "STRING"
+			}, 
+			{
+				"Name" : "HP", 
+				"Value" : "150", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "EntityType", 
+				"Value" : "1000", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "AP", 
+				"Value" : "10", 
+				"Type" : "INT"
+			}
+		]
+	}
+	]
+}
+[FEMO] Received Message: obj:={"updates":
+	[	{
+		"Id" : "0", 
+		"Name":"Game", 
+		"update":
+		[
+			{
+				"Name" : "SharedMemoryInfo", 
+				"Value" : "2", 
+				"Type" : "OBJECT"
+			}, 
+			{
+				"Name" : "GameInfo", 
+				"Value" : "1", 
+				"Type" : "OBJECT"
+			}
+		]
+	}, 
+	{
+		"Id" : "1", 
+		"Name":"GameInfo", 
+		"update":
+		[
+			{
+				"Name" : "Name", 
+				"Value" : "Test", 
+				"Type" : "STRING"
+			}, 
+			{
+				"Name" : "Level", 
+				"Value" : "3", 
+				"Type" : "OBJECT"
+			}, 
+			{
+				"Name" : "Host", 
+				"Value" : "THC", 
+				"Type" : "STRING"
+			}
+		]
+	}, 
+	{
+		"Id" : "2", 
+		"Name":"SharedMemoryInfo", 
+		"update":
+		[
+			{
+				"Name" : "Version", 
+				"Value" : "0.1beta", 
+				"Type" : "STRING"
+			}, 
+			{
+				"Name" : "Vendor", 
+				"Value" : "InfiniteReality", 
+				"Type" : "STRING"
+			}, 
+			{
+				"Name" : "ConnectionFormatter", 
+				"Value" : "JSON", 
+				"Type" : "STRING"
+			}
+		]
+	}, 
+	{
+		"Id" : "3", 
+		"Name":"Level", 
+		"update":
+		[
+			{
+				"Name" : "Map", 
+				"Value" : "4", 
+				"Type" : "OBJECT"
+			}, 
+			{
+				"Name" : "Entities", 
+				"Value" : "6", 
+				"Type" : "OBJECT"
+			}
+		]
+	}, 
+	{
+		"Id" : "4", 
+		"Name":"Map", 
+		"update":
+		[
+			{
+				"Name" : "Tiles", 
+				"Value" : "5", 
+				"Type" : "OBJECT"
+			}, 
+			{
+				"Name" : "Name", 
+				"Value" : "TestMap", 
+				"Type" : "STRING"
+			}, 
+			{
+				"Name" : "File", 
+				"Value" : "test_map.map", 
+				"Type" : "STRING"
+			}
+		]
+	}, 
+	{
+		"Id" : "5", 
+		"Name":"Tile", 
+		"update":
+		[
+			{
+				"Name" : "Tile_3", 
+				"Value" : "103", 
+				"Type" : "OBJECT"
+			}, 
+			{
+				"Name" : "Tile_2", 
+				"Value" : "102", 
+				"Type" : "OBJECT"
+			}, 
+			{
+				"Name" : "Tile_1", 
+				"Value" : "101", 
+				"Type" : "OBJECT"
+			}, 
+			{
+				"Name" : "Tile_0", 
+				"Value" : "100", 
+				"Type" : "OBJECT"
+			}, 
+			{
+				"Name" : "Count", 
+				"Value" : "4", 
+				"Type" : "INT"
+			}
+		]
+	}, 
+	{
+		"Id" : "6", 
+		"Name":"Entity", 
+		"update":
+		[
+			{
+				"Name" : "Entity_1", 
+				"Value" : "1001", 
+				"Type" : "OBJECT"
+			}, 
+			{
+				"Name" : "Entity_0", 
+				"Value" : "1000", 
+				"Type" : "OBJECT"
+			}, 
+			{
+				"Name" : "Count", 
+				"Value" : "2", 
+				"Type" : "INT"
+			}
+		]
+	}, 
+	{
+		"Id" : "100", 
+		"Name":"Tile_0", 
+		"update":
+		[
+			{
+				"Name" : "Y", 
+				"Value" : "0", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "X", 
+				"Value" : "0", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "Terrain", 
+				"Value" : "0", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "Levitation", 
+				"Value" : "0", 
+				"Type" : "INT"
+			}
+		]
+	}, 
+	{
+		"Id" : "101", 
+		"Name":"Tile_1", 
+		"update":
+		[
+			{
+				"Name" : "Y", 
+				"Value" : "0", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "X", 
+				"Value" : "1", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "Terrain", 
+				"Value" : "0", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "Levitation", 
+				"Value" : "0", 
+				"Type" : "INT"
+			}
+		]
+	}, 
+	{
+		"Id" : "102", 
+		"Name":"Tile_2", 
+		"update":
+		[
+			{
+				"Name" : "Y", 
+				"Value" : "1", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "X", 
+				"Value" : "0", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "Terrain", 
+				"Value" : "0", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "Levitation", 
+				"Value" : "0", 
+				"Type" : "INT"
+			}
+		]
+	}, 
+	{
+		"Id" : "103", 
+		"Name":"Tile_3", 
+		"update":
+		[
+			{
+				"Name" : "Y", 
+				"Value" : "1", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "X", 
+				"Value" : "1", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "Terrain", 
+				"Value" : "0", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "Levitation", 
+				"Value" : "0", 
+				"Type" : "INT"
+			}
+		]
+	}, 
+	{
+		"Id" : "1000", 
+		"Name":"Entity_0", 
+		"update":
+		[
+			{
+				"Name" : "Tile", 
+				"Value" : "100", 
+				"Type" : "OBJECT"
+			}, 
+			{
+				"Name" : "Name", 
+				"Value" : "Townhall", 
+				"Type" : "STRING"
+			}, 
+			{
+				"Name" : "HP", 
+				"Value" : "1500", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "EntityType", 
+				"Value" : "100", 
+				"Type" : "INT"
+			}, 
+			{
+				"Name" : "AP", 
+				"Value" : "20", 
+				"Type" : "INT"
+			}
+		]
+	}, 
+	{
+		"Id" : "1001", 
+		"Name":"Entity_1", 
+		"updatecmd:=run

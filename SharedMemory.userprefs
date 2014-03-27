@@ -1,47 +1,46 @@
 ﻿<Properties GitUserInfo="UsingGIT">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="UserServiceTest/Main.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="SharedMemory/UserServices.cs">
     <Files>
       <File FileName="Test/Main.cs" Line="21" Column="6" />
       <File FileName="SharedMemory/FeMoEntry.cs" Line="5" Column="19" />
       <File FileName="SharedMemory/FeMoUpdateStringFormatter.cs" Line="12" Column="72" />
-      <File FileName="SharedMemory/ConnectionHandle.cs" Line="78" Column="3" />
-      <File FileName="Client/Main.cs" Line="36" Column="30" />
+      <File FileName="SharedMemory/ConnectionHandle.cs" Line="123" Column="6" />
+      <File FileName="Client/Main.cs" Line="40" Column="27" />
       <File FileName="Server/Main.cs" Line="24" Column="82" />
-      <File FileName="SharedMemory/FeMoPeer.cs" Line="23" Column="4" />
+      <File FileName="SharedMemory/FeMoPeer.cs" Line="24" Column="6" />
       <File FileName="SharedMemory/FeMoCreator.cs" Line="52" Column="1" />
-      <File FileName="SharedMemory/Global.cs" Line="113" Column="26" />
+      <File FileName="SharedMemory/Global.cs" Line="170" Column="64" />
       <File FileName="SharedMemory/FeMoObject.cs" Line="16" Column="3" />
       <File FileName="SharedMemory/JSONFormatter.cs" Line="112" Column="6" />
       <File FileName="SharedMemory/FeMoManager.cs" Line="162" Column="35" />
       <File FileName="SharedMemory/ConsoleFormatter.cs" Line="12" Column="37" />
       <File FileName="SharedMemory/XMLFormatter.cs" Line="20" Column="1" />
-      <File FileName="SharedMemory/SharedMemory.cs" Line="23" Column="31" />
-      <File FileName="StartupTest/Main.cs" Line="41" Column="4" />
+      <File FileName="SharedMemory/SharedMemory.cs" Line="194" Column="8" />
+      <File FileName="StartupTest/Main.cs" Line="35" Column="23" />
       <File FileName="SharedMemory/Target.cs" Line="22" Column="24" />
       <File FileName="SharedMemory/DownloadJob.cs" Line="25" Column="23" />
-      <File FileName="SharedMemory/CommandHandler.cs" Line="17" Column="5" />
+      <File FileName="SharedMemory/CommandHandler.cs" Line="25" Column="6" />
       <File FileName="SharedMemory/TaskManager.cs" Line="29" Column="12" />
       <File FileName="SharedMemory/FeMoList.cs" Line="24" Column="4" />
       <File FileName="SharedMemory/MemorySpan.cs" Line="40" Column="5" />
       <File FileName="SharedMemory/TypenAPI.cs" Line="16" Column="5" />
-      <File FileName="SharedMemory/UserServices.cs" Line="13" Column="55" />
-      <File FileName="UserServiceTest/Main.cs" Line="25" Column="52" />
+      <File FileName="SharedMemory/UserServices.cs" Line="15" Column="60" />
+      <File FileName="UserServiceTest/Main.cs" Line="26" Column="44" />
       <File FileName="SharedMemory/MySQLFormatter.cs" Line="1" Column="1" />
       <File FileName="SharedMemory/SQLExporter.cs" Line="21" Column="35" />
       <File FileName="SharedMemory/SQLiteFormatter.cs" Line="1" Column="1" />
+      <File FileName="StartupTest/AssemblyInfo.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
           <Node name="Client" expanded="True" />
           <Node name="SharedMemory" expanded="True">
-            <Node name="References" expanded="True" />
+            <Node name="UserServices.cs" selected="True" />
           </Node>
           <Node name="StartupTest" expanded="True" />
-          <Node name="UserServiceTest" expanded="True">
-            <Node name="Main.cs" selected="True" />
-          </Node>
+          <Node name="UserServiceTest" expanded="True" />
         </State>
       </Pad>
       <Pad Id="ClassPad">

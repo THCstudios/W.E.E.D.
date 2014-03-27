@@ -10,7 +10,7 @@ namespace SharedMemory
 	public class UserServices
 	{
 
-		private const String AUTH_SERVER = "http://localhost:8080/";
+		private const String AUTH_SERVER = "http://www.hadl.info:8080/";
 
 		public static FeMoObject FetchUserInfo (String username, String password)
 		{

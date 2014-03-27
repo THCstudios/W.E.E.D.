@@ -91,6 +91,7 @@ namespace SharedMemory
 						if(buffer[i] != 0)
 							tmp += (char)buffer[i];
 					}
+					//Global.log("Raw message: " + tmp);
 					if(tmp.Contains(":::end"))
 						Close();
 					if(tmp == "") {
@@ -102,6 +103,7 @@ namespace SharedMemory
 							//Global.femo(m);
 							OnReceivedMessage(m);
 						}
+						msg = "";
 					} else {
 						msg += tmp;
 					}
@@ -115,11 +117,20 @@ namespace SharedMemory
 		public void Send (String msg)
 		{
 			String t = msg + ";:;";
-			byte[] tmp = Encoding.Unicode.GetBytes(t);
+			byte[] tmp = Encoding.Unicode.GetBytes (t);
 			Double blocks_ = (double)tmp.Length / (1024.0d * 8.0d);
-			int blocks = (int)Math.Ceiling(blocks_);
-			//Global.log("Sending package: \n\tBytes:" + tmp.Length + " \n\tPort: " + RemotePort + "\n\tIP: " + RemoteIP + "\n\tBlocks: " + blocks);
-			socket.Send(tmp);
+			int blocks = (int)Math.Ceiling (blocks_);
+			//Global.log ("Sending package: \n\tBytes:" + tmp.Length + " \n\tPort: " + RemotePort + "\n\tIP: " + RemoteIP + "\n\tBlocks: " + blocks + "\n\tText: " + msg);
+			if (blocks > 1) {
+				byte[] tmp_ = new byte[1024 * 8 * blocks];
+				tmp.CopyTo(tmp_, 0);
+				for (int i = 0; i < blocks; i++) {
+					byte[] m = new byte[1024 * 8];
+					Array.Copy(tmp_, 1024 * 8 * i, m, 0, 1024 * 8);
+					socket.Send(m);
+				}
+			} else 
+				socket.Send(tmp);
 		}
 
 		public String RemoteIP {

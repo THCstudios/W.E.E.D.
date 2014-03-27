@@ -10,6 +10,8 @@ namespace SharedMemory
 		public int port;
 		public String address;
 		public int noOfClients;
+		public String uname;
+		public String password;
 	}
 
 	public class SharedMemoryControl
@@ -66,8 +68,12 @@ namespace SharedMemory
 			}
 		}
 
+		private FeMoObject userInfo;
+
 		public void runServerClientPhase ()
 		{
+			Global.femo ("Verifying User Credentials");
+			userInfo = UserServices.FetchUserInfo(info.uname, info.password);
 			Global.femo ("Entering Phase 0 - Server Client - Role " + state);
 			if (state == ServerClientState.SERVER) {
 				for (int i = 0; i < info.noOfClients; i++) {
@@ -160,6 +166,9 @@ namespace SharedMemory
 					fmm.AddConnection (new FeMoPeer (handle));
 			}
 			fmm.EnableCommandHandling();
+			userInfo.Id = 30;
+			userInfo.UpdateString(Global.GetDefaultFormatter());
+			fmm.CacheObject(userInfo);
 			Global.ConnectionStartup.RunAll();
 			if (state == ServerClientState.SERVER) {
 				fmm.BroadcastCommand("range 0 9999 Z");
@@ -176,11 +185,13 @@ namespace SharedMemory
 					fmm.ReadFromString (s, Global.GetDefaultFormatter());
 				}
 				fmm.SendUpdateString();
+				System.Threading.Thread.Sleep(250);
 				Global.femo ("Entering Phase 2 - Peer - Role " + state);
 				fmm.BroadcastCommand("run");
 			} else {
 				bool block = true;
 				fmp.ReceivedCommand += delegate(FeMoPeer peer, string cmdString) {
+					//Global.log("Block Command: " + cmdString);
 					if(cmdString == "run")
 						block = false;
 				};
@@ -188,6 +199,8 @@ namespace SharedMemory
 					System.Threading.Thread.Sleep(5);
 				Global.femo ("Entering Phase 2 - Peer - Role " + state);
 			}
+			Global.femo("Broadcasting User Information");
+			fmm.BroadcastCommand("user " + userInfo.GetString("Username") + " " + UserServices.Encrypt(userInfo.GetString("Token"), UserServices.GenerateKeys(info.password)));
 		}
 
 		public void Close ()

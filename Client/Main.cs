@@ -36,6 +36,8 @@ namespace Client
 			info.address = "10.91.4.57";
 			info.port = 12345;
 			info.noOfClients = 0;
+			info.uname = "felix";
+			info.password = "4309";
 			connection.Info = info;
 			connection.State = SharedMemoryControl.ServerClientState.CLIENT;
 			Console.WriteLine ("Connecting to Server");
