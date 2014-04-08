@@ -55,6 +55,7 @@
     <Compile Include="FeMoPeer.cs" />
     <Compile Include="FeMoCreator.cs" />
     <Compile Include="Global.cs" />
+    <Compile Include="QueryParser.cs" />
     <Compile Include="TypenAPI.cs" />
     <Compile Include="XMLFormatter.cs" />
     <Compile Include="SharedMemory.cs" />
