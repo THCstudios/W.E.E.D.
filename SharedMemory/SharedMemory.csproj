@@ -70,5 +70,8 @@
     <Compile Include="MemorySpan.cs" />
     <Compile Include="UserServices.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
