@@ -47,6 +47,9 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Building.cs" />
+     <Compile Include="Assets\Scripts\CalculationTile.cs" />
+     <Compile Include="Assets\Scripts\CalculationTileMap.cs" />
+     <Compile Include="Assets\Scripts\CalculationTileThreadWrap.cs" />
      <Compile Include="Assets\Scripts\CameraControl.cs" />
      <Compile Include="Assets\Scripts\Controller.cs" />
      <Compile Include="Assets\Scripts\GUIControl.cs" />
@@ -54,6 +57,7 @@
      <Compile Include="Assets\Scripts\Level.cs" />
      <Compile Include="Assets\Scripts\Minimap.cs" />
      <Compile Include="Assets\Scripts\PathFinder.cs" />
+     <Compile Include="Assets\Scripts\PathFinder2.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\Resource.cs" />
      <Compile Include="Assets\Scripts\Tile.cs" />
