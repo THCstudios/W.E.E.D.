@@ -65,7 +65,7 @@ public class Tile {
 	public Vector2 pos;
 	
 	public float HeuristicCost (Tile dst) {
-		return Mathf.Abs((dst.pos - pos).magnitude);
+		return Mathf.Abs((dst.pos - pos).sqrMagnitude);
 	}
 	
 	public float NeighborCost (Tile neighbor) {

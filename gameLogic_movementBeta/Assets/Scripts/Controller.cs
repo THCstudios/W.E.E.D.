@@ -50,6 +50,11 @@ public class Controller : MonoBehaviour {
 		me.isMe = true;
 		Debug.Log(me);
 		players.Add(me);
+
+		Building.ResourceCosts = new Dictionary<ResourceType, int>() {
+		   {ResourceType.Wood, 5},
+		   {ResourceType.Gold, 5}
+		};
 	}
 	// Use this for initialization
 	void Start () {

@@ -1,60 +1,120 @@
 ﻿using UnityEngine;
 using System.Collections;
-using Assets.Scripts;
+using System;
+using System.Collections.Generic;
 
 public class WorkerUnit : GameUnit {
 
 	[SerializeField]
+	private float maxResourceLoad;
 	private float resourceLoad;
-	private bool assignedToGather;
-
-	public bool AssignedToGather {
-		get { return assignedToGather; }
-		set { assignedToGather = value; }
-	}
+	private float gatheringSpeed;
+	private ResourceType carriedType;
+	private GameObject resourceNode;
+	private GameObject homeNode;
+	private bool onWayBack;
+	private List<Vector3> otherTarget;
 
 	public float ResourceLoad {
 		get { return resourceLoad; }
 		set { resourceLoad = value; }
 	}
 
-	void Awake() {
+	public override void Awake() {
 		base.BuildTimeTemp = BuildTimeAbsolute;
 	}
 	// Use this for initialization
-	void Start () {
-		base.IsSelected = false;
-		base.MovementSpeed = 3f;
-		base.MoveOverload = false;
-		assignedToGather = false;
-
-		Collider collider = GetComponent<Collider>();
-		base.HalfBounds = new Vector3(collider.bounds.size.x / 2, 0, collider.bounds.size.z / 2);
-		base.Controlling = GameObject.FindGameObjectWithTag("GameController");
+	public override void Start () {
+		base.Start();
+		resourceNode = null;
+		homeNode = null;
+		gatheringSpeed = 3;
+		resourceLoad = 0;
+		maxResourceLoad = 10;
 	}
-	
-	// Update is called once per frame
-	/*void Update () {
+	public override void Update() {
 		base.Update();
-	}
-	void OnMouseDown() {
-		base.OnMouseDown();
-	}
-	void FixedUpdate() {
-		base.FixedUpdate();
-	}
-	void MoveUnit() {
-		base.MoveUnit();
-	}*/
+		if (IsAtTarget) {
+			if (!onWayBack && resourceNode != null) {
+				Debug.Log("Is at resource");
+				if (resourceLoad >= maxResourceLoad) {
+					Debug.Log(resourceLoad + ", " + maxResourceLoad);
+					resourceLoad -= (resourceLoad - maxResourceLoad);
+					onWayBack = true;
+					Path = Optimize(Controlling.GetComponent<PathFinder>().FindPath(transform.position, homeNode.transform.position), homeNode.transform.position);
+				} else {
+					if (resourceLoad == 0) {
+						carriedType = resourceNode.GetComponent<Resource>().resourceType;
+						resourceLoad += gatheringSpeed * Time.deltaTime;
+						resourceNode.GetComponent<Resource>().CapacityTemp -= gatheringSpeed * Time.deltaTime;
+					} else {
+						if (carriedType != resourceNode.GetComponent<Resource>().resourceType) {
+							carriedType = resourceNode.GetComponent<Resource>().resourceType;
+							resourceLoad = gatheringSpeed * Time.deltaTime;
+							resourceNode.GetComponent<Resource>().CapacityTemp -= gatheringSpeed * Time.deltaTime;
+						} else {
+							resourceLoad += gatheringSpeed * Time.deltaTime;
+							resourceNode.GetComponent<Resource>().CapacityTemp -= gatheringSpeed * Time.deltaTime;
+						}
+					}
+				}
+			} else if (onWayBack) {
+				Debug.Log("Is at building");
+				if (resourceLoad > 0 && carriedType != null) {
+					foreach (Player p in Controlling.GetComponent<Controller>().players) {
+						if (p.isMe) {
+							p.resources[carriedType] += (int)resourceLoad;
+							resourceLoad = 0;
+						}
+					}
+				}
+				if (resourceNode != null) {
+					Path = Optimize(Controlling.GetComponent<PathFinder>().FindPath(transform.position, resourceNode.transform.position), resourceNode.transform.position);
+					onWayBack = false;
+				}
+			}
+		}
+	} 
+	
 	public override Vector3 DestinationPoint {
 		get {
-			return base.DestinationPoint;
+			return Path[0];
 		}
 		set {
-			Path = Optimize(Controlling.GetComponent<PathFinder>().FindPath(transform.position, value), value);
-			foreach (GameObject go in GameObject.FindGameObjectsWithTag("Resource")) {
-				if (go.GetComponent<Resource>().Tiles.Contains(GameObject.FindGameObjectWithTag("GameController").GetComponent<Level>().tiles[(int)value.x, (int)value.z])) {
-					assignedToGather = true;
+
+			Debug.Log("blub");
+			Ray ray = Camera.main.ScreenPointToRay(value);
+			RaycastHit hit;
+
+			if (Physics.Raycast(ray, out hit, Mathf.Infinity)) {
+				if (hit.collider.gameObject.GetComponent<Resource>() != null) {
+					Debug.Log("I move towards a resource!");
+					resourceNode = hit.collider.gameObject;
+					resourceNode.renderer.material.color = Color.green;
+					GameObject[] buildings = GameObject.FindGameObjectsWithTag("Building");
+					GameObject nearestBuilding = buildings[0];
+					for (int i = 1; i < buildings.Length; i++) {
+						if ((transform.position - nearestBuilding.transform.position).magnitude > (transform.position - buildings[i].transform.position).magnitude) {
+							nearestBuilding = buildings[i];
+						}
+					}
+					homeNode = nearestBuilding;
+					homeNode.renderer.material.color = Color.blue;
+					onWayBack = false;
+
+				} else if (hit.collider.gameObject.GetComponent<Building>() != null) {
+					Debug.Log("I move towards a building!");
+					resourceNode = null;
+					homeNode = hit.collider.gameObject;
+					onWayBack = true;
+				} else {
+					resourceNode = null;
+					homeNode = null;
+					onWayBack = false;
+				}
+				RaycastHit hit2;
+				if (Physics.Raycast(ray, out hit2, Mathf.Infinity, 1 << 8)) {
+					Path = Optimize(Controlling.GetComponent<PathFinder>().FindPath(transform.position, hit2.point), hit2.point);
 				}
 			}
 		}

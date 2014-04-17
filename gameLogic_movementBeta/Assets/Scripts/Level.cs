@@ -5,11 +5,13 @@ public class Level : MonoBehaviour
 {
 	public Terrain Terrain;
 	public Tile[,] tiles;
+	public CalculationTileMap calculationTiles;
 
 	void Start() {
 		if (tiles == null) {
 			GenerateTiles (Terrain.terrainData);
 		}
+		calculationTiles = new CalculationTileMap(tiles);
 	}
 
 	public void GenerateTiles (TerrainData data) {
@@ -21,6 +23,11 @@ public class Level : MonoBehaviour
 				currentTile.pos.x = i;
 				currentTile.pos.y = j;
 			}
+		}
+	}
+	public void UpdateCalculationTiles(List<Tile> tiles, bool isOccupied) {
+		foreach (Tile t in tiles) {
+			calculationTiles.Tiles[(int)t.pos.x,(int)t.pos.y].IsOccupied = isOccupied;
 		}
 	}
 }

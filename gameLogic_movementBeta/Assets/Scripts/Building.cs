@@ -90,6 +90,7 @@ public class Building : MonoBehaviour {
 		if (isPlaced) {
 			if (constructionTimeTemp <= 0) {
 				renderer.enabled = true;
+				Level.UpdateCalculationTiles(GetCurrentTiles(), true);
 			} else {
 				constructionTimeTemp -= Time.deltaTime;
 			}
@@ -156,6 +157,7 @@ public class Building : MonoBehaviour {
 		}
 	}
 	public void DestroyBuilding() {
+		Level.UpdateCalculationTiles(GetCurrentTiles(), false);
 		Object.Destroy (this.gameObject, 0);
 	}
 	public void MakeCube() {

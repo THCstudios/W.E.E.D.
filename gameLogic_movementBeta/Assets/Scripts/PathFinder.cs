@@ -1,7 +1,7 @@
 using UnityEngine;
-using System;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 
 public class PathFinder : MonoBehaviour
 {
@@ -21,7 +21,6 @@ public class PathFinder : MonoBehaviour
 			Debug.DrawLine (new Vector3 (0, 0.5f, i), new Vector3 (level.tiles.GetLength (1), 0.5f, i), Color.red);
 		}
 	}*/
-
 	public List<Tile> FindPath (Vector3 src, Vector3 dst) {
 		Tile tSrc = level.tiles[(int) src.x, (int) src.z];
 		Tile tDst = level.tiles[(int) dst.x, (int) dst.z];
@@ -29,6 +28,7 @@ public class PathFinder : MonoBehaviour
 	}
 
 	public List<Tile> FindPath (Tile src, Tile dst) {
+		Debug.Log("FindPath");
 		int start = getTime();
 		HashSet<Tile> closedSet = new HashSet<Tile>();
 		HashSet<Tile> openSet = new HashSet<Tile>();
