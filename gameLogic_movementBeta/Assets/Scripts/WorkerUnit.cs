@@ -36,12 +36,11 @@ public class WorkerUnit : GameUnit {
 		base.Update();
 		if (IsAtTarget) {
 			if (!onWayBack && resourceNode != null) {
-				Debug.Log("Is at resource");
 				if (resourceLoad >= maxResourceLoad) {
 					Debug.Log(resourceLoad + ", " + maxResourceLoad);
 					resourceLoad -= (resourceLoad - maxResourceLoad);
 					onWayBack = true;
-					Path = Optimize(Controlling.GetComponent<PathFinder>().FindPath(transform.position, homeNode.transform.position), homeNode.transform.position);
+					base.SetDestinationPointDirect(homeNode.transform.position, homeNode);
 				} else {
 					if (resourceLoad == 0) {
 						carriedType = resourceNode.GetComponent<Resource>().resourceType;
@@ -59,7 +58,6 @@ public class WorkerUnit : GameUnit {
 					}
 				}
 			} else if (onWayBack) {
-				Debug.Log("Is at building");
 				if (resourceLoad > 0 && carriedType != null) {
 					foreach (Player p in Controlling.GetComponent<Controller>().players) {
 						if (p.isMe) {
@@ -69,7 +67,7 @@ public class WorkerUnit : GameUnit {
 					}
 				}
 				if (resourceNode != null) {
-					Path = Optimize(Controlling.GetComponent<PathFinder>().FindPath(transform.position, resourceNode.transform.position), resourceNode.transform.position);
+					base.SetDestinationPointDirect(resourceNode.transform.position,resourceNode);
 					onWayBack = false;
 				}
 			}
@@ -81,8 +79,6 @@ public class WorkerUnit : GameUnit {
 			return Path[0];
 		}
 		set {
-
-			Debug.Log("blub");
 			Ray ray = Camera.main.ScreenPointToRay(value);
 			RaycastHit hit;
 
@@ -112,10 +108,7 @@ public class WorkerUnit : GameUnit {
 					homeNode = null;
 					onWayBack = false;
 				}
-				RaycastHit hit2;
-				if (Physics.Raycast(ray, out hit2, Mathf.Infinity, 1 << 8)) {
-					Path = Optimize(Controlling.GetComponent<PathFinder>().FindPath(transform.position, hit2.point), hit2.point);
-				}
+				base.DestinationPoint = value;
 			}
 		}
 	}

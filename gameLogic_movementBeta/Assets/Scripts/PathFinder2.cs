@@ -30,11 +30,11 @@ class PathFinder2 {
 				reconstructPath(cameFrom, dst, path);
 				return path;
 			}
-			//if (current.IsOccupied) {
-			//	closedSet.Add (current);
-			//	openSet.Remove (current);
-			//	continue;
-			//}
+			if (current.IsOccupied) {
+				closedSet.Add(current);
+				openSet.Remove(current);
+				continue;
+			}
 			openSet.Remove(current);
 			closedSet.Add(current);
 

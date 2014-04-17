@@ -38,7 +38,7 @@ public class GameUnit :  TopLevelUnits{
 		set { buildTimeTemp = value; }
 	}
 	public Texture2D Icon;
-	public float MaximumDistance = 0f;
+	public float MaximumDistance;
 
 	public virtual void Awake() {
 		buildTimeTemp = BuildTimeAbsolute;
@@ -47,6 +47,8 @@ public class GameUnit :  TopLevelUnits{
 	private List<CalculationTile> tileList = null;
 	private CalculationTileThreadWrap wrap;
 	private Level l;
+	internal bool isCollidingTarget;
+	internal GameObject destinationObject;
 
 	// Use this for initialization
 	public virtual void Start() {
@@ -54,6 +56,8 @@ public class GameUnit :  TopLevelUnits{
 		isSelected = false;
 		movementSpeed = 2.0f;
 		moveOverload = false;
+		isCollidingTarget = false;
+		MaximumDistance = 0.2f;
 
 		Collider collider = GetComponent<Collider>();
 		halfBounds = new Vector3 (collider.bounds.size.x / 2, 0, collider.bounds.size.z / 2);
@@ -75,9 +79,9 @@ public class GameUnit :  TopLevelUnits{
 		}
 		// USE? - adapts the unit to the rotation of the terrain
 		RaycastHit hit;
-		if(Physics.Raycast(transform.position,-Vector3.up,out hit)) {
-			Vector3 forwd = Vector3.Cross(transform.right,hit.normal);
-			transform.rotation = Quaternion.Slerp(transform.rotation,Quaternion.LookRotation(forwd, hit.normal), 3*Time.deltaTime);
+		if (Physics.Raycast(transform.position, -Vector3.up, out hit)) {
+			Vector3 forwd = Vector3.Cross(transform.right, hit.normal);
+			transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(forwd, hit.normal), 3 * Time.deltaTime);
 		}
 	}
 	public void OnMouseDown(){
@@ -93,6 +97,11 @@ public class GameUnit :  TopLevelUnits{
 			}
 		} else {
 			IsSelected = false;
+		}
+	}
+	public void OnCollisionEnter(Collision collision) {
+		if (destinationObject != null && collision.collider.gameObject == destinationObject) {
+			isCollidingTarget = true;
 		}
 	}
 	/*public void OnCollisionEnter(Collision collision){
@@ -118,23 +127,29 @@ public class GameUnit :  TopLevelUnits{
 		}
 	}*/
 	public void FixedUpdate() {
+		
 		if (!IsAtTarget) {
-			/*for (int i = 0; i < Path.Count - 1; i++) {
+			
+			for (int i = 0; i < Path.Count - 1; i++) {
 				Vector3 dir = Path[i + 1] - Path[i];
 				Debug.DrawRay(Path[i], dir, Color.green);
 				Debug.DrawRay(Path[i] + halfBounds, dir, Color.green);
 				Debug.DrawRay(Path[i] - halfBounds, dir, Color.green);
 				Debug.DrawRay(Path[i] + halfBounds * 1.1f, dir, Color.blue);
 				Debug.DrawRay(Path[i] - halfBounds * 1.1f, dir, Color.blue);
-			}*/
+			}
 			//rigidbody.MovePosition(Vector3.MoveTowards (transform.position, destinationPoint, (float)(movementSpeed * Time.deltaTime)));
 			//rigidbody.velocity = movementSpeed * rigidbody.velocity.normalized;
 			if (!moveOverload) {
+				Debug.Log("And I'm still muffing!");
+				Debug.Log((DestinationPoint - transform.position).normalized);
+				Debug.Log(movementSpeed);
 				Vector3 dir = (DestinationPoint - transform.position).normalized * movementSpeed;
 				if ((DestinationPoint - transform.position - dir).magnitude < MaximumDistance) {
 					dir = DestinationPoint - transform.position;
 				}
 				dir.y = rigidbody.velocity.y;
+				Debug.Log(dir.magnitude);
 				rigidbody.velocity = dir; //Vector3.MoveTowards (transform.position, destinationPoint, (float)(movementSpeed * Time.deltaTime));
 			}
 		}
@@ -247,9 +262,7 @@ public class GameUnit :  TopLevelUnits{
 	}
 	public bool IsAtTarget {
 		get {
-			if (Path != null && Path.Count != 0) {
-			}
-			return Path == null || Path.Count == 0 || (transform.position - Path[Path.Count - 1]).magnitude < 1;
+			return Path == null || Path.Count == 0 || isCollidingTarget;
 		}
 	}
 	public virtual Vector3 DestinationPoint {
@@ -257,9 +270,26 @@ public class GameUnit :  TopLevelUnits{
 			return Path[0];
 		}
 		set {
-			finalDest = value;
-			RunPathfinding(value);
+			isCollidingTarget = false;
+			destinationObject = null;
+			Ray ray = Camera.main.ScreenPointToRay(value);
+			RaycastHit hit;
+			if (Physics.Raycast(ray, out hit, Mathf.Infinity)) {
+				if ((hit.collider.gameObject.GetComponent<Building>() != null) || (hit.collider.gameObject.GetComponent<Resource>() != null)) {
+					destinationObject = hit.collider.gameObject;
+				}
+			}
+			if (Physics.Raycast(ray, out hit, Mathf.Infinity, 1 << 8)) {
+				finalDest = hit.point;
+				RunPathfinding(hit.point);
+			}
 		}
+	}
+	public void SetDestinationPointDirect(Vector3 destinationPoint, GameObject targetObject) {
+		isCollidingTarget = false;
+		finalDest = destinationPoint;
+		RunPathfinding(destinationPoint);
+		this.destinationObject = targetObject;
 	}
 
 	public Tile Tile {

@@ -39,25 +39,25 @@ public class CameraControl : MonoBehaviour {
 			yRotation += Input.GetAxis ("Mouse X") * cameraSpeed *2 * Time.deltaTime;
 			transform.eulerAngles = new Vector3 (xRotation, yRotation, 0);
 		} else {
-			if(Input.mousePosition.x < boundary || Input.GetKey(KeyCode.LeftArrow)) {
-				if(!((transform.position.x - cameraSpeed*Time.deltaTime) < xMinBoundary)){
+			if (Input.mousePosition.x < boundary || Input.GetKey(KeyCode.LeftArrow)) {
+				if (!((transform.position.x - cameraSpeed * Time.deltaTime) < xMinBoundary)) {
 					transform.Translate(Vector3.left * cameraSpeed * Time.deltaTime);
 				}
 			}
-			if((Input.mousePosition.x > (Screen.width - boundary)) || Input.GetKey(KeyCode.RightArrow)) {
-				if(!((transform.position.x + cameraSpeed*Time.deltaTime) > xMaxBoundary)){
+			if ((Input.mousePosition.x > (Screen.width - boundary)) || Input.GetKey(KeyCode.RightArrow)) {
+				if (!((transform.position.x + cameraSpeed * Time.deltaTime) > xMaxBoundary)) {
 					transform.Translate(Vector3.right * cameraSpeed * Time.deltaTime);
 				}
 			}
-			if(Input.mousePosition.y < boundary || Input.GetKey(KeyCode.DownArrow)) {
-				if(!((transform.position.z - cameraSpeed*Time.deltaTime) < zMinBoundary)){
-					Vector3 normal = Vector3.Cross (Vector3.left, transform.worldToLocalMatrix * Vector3.up) * cameraSpeed;
+			if (Input.mousePosition.y < boundary || Input.GetKey(KeyCode.DownArrow)) {
+				if (!((transform.position.z - cameraSpeed * Time.deltaTime) < zMinBoundary)) {
+					Vector3 normal = Vector3.Cross(Vector3.left, transform.worldToLocalMatrix * Vector3.up) * cameraSpeed;
 					transform.Translate(normal * Time.deltaTime);
 				}
 			}
-			if((Input.mousePosition.y > (Screen.height - boundary)) || Input.GetKey(KeyCode.UpArrow)) {
-				if(!((transform.position.z + cameraSpeed*Time.deltaTime) > zMaxBoundary)){
-					Vector3 normal = Vector3.Cross (transform.worldToLocalMatrix * Vector3.up, Vector3.left) * cameraSpeed;
+			if ((Input.mousePosition.y > (Screen.height - boundary)) || Input.GetKey(KeyCode.UpArrow)) {
+				if (!((transform.position.z + cameraSpeed * Time.deltaTime) > zMaxBoundary)) {
+					Vector3 normal = Vector3.Cross(transform.worldToLocalMatrix * Vector3.up, Vector3.left) * cameraSpeed;
 					transform.Translate(normal * Time.deltaTime);
 				}
 			}

@@ -75,11 +75,11 @@ public class Controller : MonoBehaviour {
 				foreach(GameObject unit in units) {
 					if(unit.GetComponent<GameUnit>().IsSelected == true){
 						//hit.point = new Vector3(hit.point.x, 0 , hit.point.z);
-						if (unit.GetComponent<GameUnit>() is WorkerUnit) {
+						//if (unit.GetComponent<GameUnit>() is WorkerUnit) {
 							unit.GetComponent<GameUnit>().DestinationPoint = Input.mousePosition;
-						} else {
-							unit.GetComponent<GameUnit>().DestinationPoint = hit.point;
-						}
+						//} else {
+						//	unit.GetComponent<GameUnit>().DestinationPoint = hit.point;
+						//}
 						
 
 						Debug.Log (hit.point);
