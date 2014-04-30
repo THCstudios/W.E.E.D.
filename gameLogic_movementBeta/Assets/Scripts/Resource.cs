@@ -85,7 +85,7 @@ public class Resource : MonoBehaviour{
 		return tiles;
 	}
 	public void Update() {
-		if (capacityTemp == 0) {
+		if (capacityTemp <= 0) {
 			UnityEngine.Object.Destroy(this.gameObject, 0);
 		}
 	}
