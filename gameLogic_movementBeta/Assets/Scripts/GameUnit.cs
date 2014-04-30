@@ -90,10 +90,7 @@ public class GameUnit :  TopLevelUnits{
 			if (Input.GetKey(KeyCode.LeftControl)) {
 				IsSelected = true;
 			} else {
-				GameObject[] units = GameObject.FindGameObjectsWithTag("Unit");
-				foreach (GameObject go in units) {
-					go.GetComponent<GameUnit>().IsSelected = false;
-				}
+				Controller.RemoveAllSelections();
 				IsSelected = true;
 			}
 		} else {

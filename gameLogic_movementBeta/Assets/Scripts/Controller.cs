@@ -138,4 +138,24 @@ public class Controller : MonoBehaviour {
 			GUI.Box (fixRectForGui(selection), "", selectionStyle);
 		}
 	}
+	public static void RemoveAllSelections() {
+		GameObject[] buildings = GameObject.FindGameObjectsWithTag("Building");
+		foreach (GameObject go in buildings) {
+			if (go.GetComponent<Building>().IsSelected) {
+				go.GetComponent<Building>().IsSelected = false;
+			}
+		}
+		GameObject[] units = GameObject.FindGameObjectsWithTag("Unit");
+		foreach (GameObject go in units) {
+			if (go.GetComponent<GameUnit>().IsSelected) {
+				go.GetComponent<GameUnit>().IsSelected = false;
+			}
+		}
+		GameObject[] resouces = GameObject.FindGameObjectsWithTag("Resource");
+		foreach (GameObject go in resouces) {
+			if (go.GetComponent<Resource>().IsSelected) {
+				go.GetComponent<Resource>().IsSelected = false;
+			}
+		}
+	}
 }

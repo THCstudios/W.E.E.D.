@@ -25,10 +25,27 @@ public class Resource : MonoBehaviour{
 	public List<Tile> Tiles;
 	public List<Vector2> TileCoords;
 
+	private bool isSelected;
+	private GameObject controlling;
+
 	public int Width;
 	public int Height;
 
 	public ResourceType resourceType;
+
+	public bool IsSelected {
+		set {
+			isSelected = value;
+			if (isSelected) {
+				GetComponentInChildren<Projector>().enabled = true;
+			} else {
+				GetComponentInChildren<Projector>().enabled = false;
+			}
+		}
+		get {
+			return isSelected;
+		}
+	}
 
 	public Tile Root {
 		get {
@@ -40,7 +57,8 @@ public class Resource : MonoBehaviour{
 	}
 
 	public void Start() {
-		Level = GameObject.FindGameObjectWithTag("GameController").GetComponent<Level>();
+		controlling = GameObject.FindGameObjectWithTag("GameController");
+		Level = controlling.GetComponent<Level>();
 		Tiles = GetCurrentTiles();
 		capacityTemp = capacityAbsolute;
 		resourceType = ResourceType.Wood;
@@ -71,6 +89,15 @@ public class Resource : MonoBehaviour{
 			UnityEngine.Object.Destroy(this.gameObject, 0);
 		}
 	}
-
+	void OnMouseDown() {
+		if (IsSelected) {
+			IsSelected = false;
+			controlling.GetComponent<GUIControl>().selectedResource = null;
+		} else {
+			Controller.RemoveAllSelections();
+			IsSelected = true;
+			controlling.GetComponent<GUIControl>().selectedResource = this;
+		}
+	}
 }
 

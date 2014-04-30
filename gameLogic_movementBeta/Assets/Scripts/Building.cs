@@ -14,6 +14,7 @@ public class Building : MonoBehaviour {
 	public float ConstructionTimeAbsolute;
 	private float constructionTimeTemp;
 	public static Dictionary<ResourceType, int> ResourceCosts;
+	private GameObject controlling;
 
 	public float ConstructionTimeTemp {
 		get { return constructionTimeTemp; }
@@ -58,7 +59,8 @@ public class Building : MonoBehaviour {
 		}
 	}
 	void Awake () {
-		Level = GameObject.FindGameObjectWithTag("GameController").GetComponent<Level> ();
+		controlling = GameObject.FindGameObjectWithTag("GameController");
+		Level = controlling.GetComponent<Level> ();
 		IsPlaced = true;
 		IsSelected = false;
 		Tiles = new List<Tile> ();
@@ -83,7 +85,6 @@ public class Building : MonoBehaviour {
 
 		Tiles = GetCurrentTiles ();
 		renderer.enabled = false;
-
 	}
 	// Update is called once per frame
 	void Update () {
@@ -97,7 +98,7 @@ public class Building : MonoBehaviour {
 		}
 		UpdateQueue ();
 	}
-	void OnGUI() {
+	public void OnGUI() {
 		if (constructionTimeTemp > 0 && isPlaced) {
 
 			Vector3 screenPos = Camera.main.WorldToScreenPoint(transform.position);
@@ -138,21 +139,12 @@ public class Building : MonoBehaviour {
 	void OnMouseDown() {
 		if(IsSelected) {
 			IsSelected = false;
+			controlling.GetComponent<GUIControl>().selectedBuilding = null;
 		} else {
 			if (isPlaced) {
-				GameObject[] buildings = GameObject.FindGameObjectsWithTag("Building");
-				foreach (GameObject go in buildings) {
-					if (go.GetComponent<Building>().IsSelected) {
-						go.GetComponent<Building>().IsSelected = false;
-					}
-				}
-				GameObject[] units = GameObject.FindGameObjectsWithTag("Unit");
-				foreach (GameObject go in units) {
-					if (go.GetComponent<GameUnit>().IsSelected) {
-						go.GetComponent<GameUnit>().IsSelected = false;
-					}
-				}
+				Controller.RemoveAllSelections();
 				IsSelected = true;
+				controlling.GetComponent<GUIControl>().selectedBuilding = this;
 			}
 		}
 	}

@@ -10,6 +10,7 @@ public class GUIControl : MonoBehaviour {
 	private bool placeable;
 	private GameObject newBuilding;
 	public Building selectedBuilding;
+	public Resource selectedResource;
 	private GUIStyle progressBarStyle;
 	Player me;
 
@@ -28,20 +29,13 @@ public class GUIControl : MonoBehaviour {
 		}
 		Debug.Log(me);
 		selectedBuilding = null;
+		selectedResource = null;
 		newBuilding = null;
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
-		selectedBuilding = null;
-		GameObject[] buildings = GameObject.FindGameObjectsWithTag ("Building");
-		foreach(GameObject b in buildings) {
-			if(b.GetComponent<Building>().IsSelected) {
-				selectedBuilding = b.GetComponent<Building>();
-			}
-		}
 	
 		if (newBuilding != null) {
 			if (Input.GetKey(KeyCode.Escape)) {
@@ -96,9 +90,9 @@ public class GUIControl : MonoBehaviour {
 		GUILayout.BeginArea(new Rect(0, 0, Screen.width / 5, Screen.height / 16));
 		GUI.Box(new Rect(0,0,Screen.width / 5, Screen.height / 8), "");
 		GUILayout.BeginHorizontal();
-		GUILayout.Label((me.resources[ResourceType.Wood]).ToString(), GUILayout.Width(Screen.width / 15));
-		GUILayout.Label((me.resources[ResourceType.Food]).ToString(), GUILayout.Width(Screen.width / 15));
-		GUILayout.Label((me.resources[ResourceType.Gold]).ToString(), GUILayout.Width(Screen.width / 15));
+		GUILayout.Label("Wood: " +(me.resources[ResourceType.Wood]).ToString(), GUILayout.Width(Screen.width / 15));
+		GUILayout.Label("Food: " +(me.resources[ResourceType.Food]).ToString(), GUILayout.Width(Screen.width / 15));
+		GUILayout.Label("Gold: " +(me.resources[ResourceType.Gold]).ToString(), GUILayout.Width(Screen.width / 15));
 		GUILayout.EndHorizontal();
 		GUILayout.EndArea();
 
@@ -127,6 +121,7 @@ public class GUIControl : MonoBehaviour {
 		GUI.enabled = true;
 
 		if(selectedBuilding != null) {
+			//-----------------BEGIN OF BUILDING QUEUE AREA-------------------------
 			Rect groupRect = new Rect(Screen.width/5,Screen.height/5*4,Screen.width/5,Screen.height/5);
 			GUILayout.BeginArea(groupRect);
 			GUI.Box(new Rect(0,0,groupRect.width,groupRect.height),"");
@@ -143,8 +138,6 @@ public class GUIControl : MonoBehaviour {
 			style.margin = new RectOffset(4,4,4,4);
 			GUILayout.Label("",style, GUILayout.Width(groupRect.width));
 			if(selectedBuilding.BuildingQueue.Count != 0) {
-
-
 				GameUnit tempGU = selectedBuilding.BuildingQueue[0].GetComponent<GameUnit>();
 				GUI.Label(new Rect(GUILayoutUtility.GetLastRect().x,
 				                   GUILayoutUtility.GetLastRect().y,
@@ -155,7 +148,8 @@ public class GUIControl : MonoBehaviour {
 			GUILayout.EndHorizontal();
 			GUILayout.EndVertical();
 			GUILayout.EndArea();
-
+			//------------------END OF BUILDING QUEUE AREA-----------------
+			//------------------BEGIN OF BUILDING BUTTON AREA--------------
 			GUILayout.BeginArea(new Rect(Screen.width/5*2, Screen.height/5*4,Screen.width/5*2,Screen.height/5));
 			GUI.Box(new Rect(0,0,Screen.width/5*2,Screen.width/5),"");
 			GUILayout.BeginHorizontal();
@@ -166,6 +160,16 @@ public class GUIControl : MonoBehaviour {
 				}
 			}
 			GUILayout.EndHorizontal();
+			GUILayout.EndArea();
+			//------------------END OF BUILDING BUTTON AREA-----------------
+		}
+		if (selectedResource != null) {
+			GUILayout.BeginArea(new Rect(Screen.width / 5 * 2, Screen.height / 5 * 4, Screen.width / 5 * 2, Screen.height / 5));
+			GUI.Box(new Rect(0, 0, Screen.width / 5 * 2, Screen.width / 5), "");
+			GUILayout.BeginVertical();
+			GUILayout.Label("Resource Type: " + selectedResource.resourceType.ToString());
+			GUILayout.Label("Capacity: " + Mathf.Round(selectedResource.CapacityTemp) + " of " + selectedResource.CapacityAbsolute);
+			GUILayout.EndVertical();
 			GUILayout.EndArea();
 		}
 	}
