@@ -107,7 +107,7 @@ public class Controller : MonoBehaviour {
 				endPos = Input.mousePosition;
 				
 				GameObject[] units = GameObject.FindGameObjectsWithTag ("Unit");
-				
+				Debug.Log(units);
 				foreach (GameObject unit in units) {
 					Vector3 screenCoords = Camera.main.WorldToScreenPoint (unit.transform.position);
 					unit.GetComponent<GameUnit>().IsSelected = selection.Contains (screenCoords);

@@ -37,7 +37,6 @@ public class WorkerUnit : GameUnit {
 		if (IsAtTarget) {
 			if (!onWayBack && resourceNode != null) {
 				if (resourceLoad >= maxResourceLoad) {
-					Debug.Log(resourceLoad + ", " + maxResourceLoad);
 					resourceLoad -= (resourceLoad - maxResourceLoad);
 					onWayBack = true;
 					base.SetDestinationPointDirect(homeNode.transform.position, homeNode);

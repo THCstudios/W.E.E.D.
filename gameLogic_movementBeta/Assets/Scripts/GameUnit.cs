@@ -76,12 +76,13 @@ public class GameUnit :  TopLevelUnits{
 		}
 		if(!IsAtTarget) {
 			MoveUnit();
-		}
-		// USE? - adapts the unit to the rotation of the terrain
-		RaycastHit hit;
-		if (Physics.Raycast(transform.position, -Vector3.up, out hit)) {
-			Vector3 forwd = Vector3.Cross(transform.right, hit.normal);
-			transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(forwd, hit.normal), 3 * Time.deltaTime);
+
+			// USE? - adapts the unit to the rotation of the terrain
+			RaycastHit hit;
+			if (Physics.Raycast(transform.position, -Vector3.up, out hit)) {
+				Vector3 forwd = Vector3.Cross(transform.right, hit.normal);
+				transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(forwd, hit.normal), 3 * Time.deltaTime);
+			}
 		}
 	}
 	public void OnMouseDown(){
@@ -141,15 +142,11 @@ public class GameUnit :  TopLevelUnits{
 			//rigidbody.MovePosition(Vector3.MoveTowards (transform.position, destinationPoint, (float)(movementSpeed * Time.deltaTime)));
 			//rigidbody.velocity = movementSpeed * rigidbody.velocity.normalized;
 			if (!moveOverload) {
-				Debug.Log("And I'm still muffing!");
-				Debug.Log((DestinationPoint - transform.position).normalized);
-				Debug.Log(movementSpeed);
 				Vector3 dir = (DestinationPoint - transform.position).normalized * movementSpeed;
 				if ((DestinationPoint - transform.position - dir).magnitude < MaximumDistance) {
 					dir = DestinationPoint - transform.position;
 				}
 				dir.y = rigidbody.velocity.y;
-				Debug.Log(dir.magnitude);
 				rigidbody.velocity = dir; //Vector3.MoveTowards (transform.position, destinationPoint, (float)(movementSpeed * Time.deltaTime));
 			}
 		}
