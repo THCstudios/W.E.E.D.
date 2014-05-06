@@ -9,7 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 400000}
   - 119: {fileID: 11900000}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Blob Light Projector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ GameObject:
   - 136: {fileID: 13600000}
   - 23: {fileID: 2300000}
   - 114: {fileID: 11400000}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Resource_Wood
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -118,7 +118,7 @@ Projector:
   m_Material: {fileID: 2100000, guid: a9cdb98423c19412bbac43b1fb623c48, type: 2}
   m_IgnoreLayers:
     serializedVersion: 2
-    m_Bits: 1536
+    m_Bits: 3584
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 1
