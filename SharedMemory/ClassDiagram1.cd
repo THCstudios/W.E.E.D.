@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SharedMemory.CommandHandler">
+    <Position X="12.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAAAAABAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>CommandHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SharedMemory.ConnectionHandle">
+    <Position X="25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAQAAAAIACAABAAAAEACIIAAAQggAAgQAIEAEACEAAA=</HashCode>
+      <FileName>ConnectionHandle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SharedMemory.ConsoleFormatter">
+    <Position X="7.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAEAAEDAAAAAAAAAAAAAACAACAAAAACAAAAAA=</HashCode>
+      <FileName>ConsoleFormatter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SharedMemory.DownloadJob">
+    <Position X="8.5" Y="13" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAAAAAAAICAAAAAAAAAAABAA=</HashCode>
+      <FileName>DownloadJob.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SharedMemory.FeMoCreator">
+    <Position X="23.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAALIAAAAAAAEAAAABAAAEAAAABAAAAABAAAAAAAA=</HashCode>
+      <FileName>FeMoCreator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SharedMemory.FeMoEntry" BaseTypeListCollapsed="true">
+    <Position X="14.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAhAAAAARAAgAFACAAAQAgAAAAAAA=</HashCode>
+      <FileName>FeMoEntry.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="SharedMemory.FeMoList">
+    <Position X="25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAECAAAAAAAAAQAAAAAAQABAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>FeMoList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SharedMemory.FeMoManager">
+    <Position X="16" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ADIAIAgcAIAoDUBAAAAIgCEAABBQAAAEEAAAAgiEAAA=</HashCode>
+      <FileName>FeMoManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SharedMemory.FeMoObject">
+    <Position X="0.5" Y="9.5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="SharedMemory.FeMoObject.FeMoInserState" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>FeMoObject.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="SharedMemory.FeMoObject.FeMoRemoveState" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>FeMoObject.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AASSgAiEBAAIoAAMYkGBBAREhgEUBQAAkBAABACEIgQ=</HashCode>
+      <FileName>FeMoObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SharedMemory.FeMoPeer">
+    <Position X="21.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAACAAAIAAAAAQAAAAAAAIAAAAAAAIACwACAACAAAA=</HashCode>
+      <FileName>FeMoPeer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SharedMemory.FeMoUpdateStringFormatter">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAgAAAAEAAEDAAAAAAAgCCAAIgCAgCAAAAACAAAAAA=</HashCode>
+      <FileName>FeMoUpdateStringFormatter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SharedMemory.Global">
+    <Position X="26.75" Y="0.75" Width="1.5" />
+    <NestedTypes>
+      <Class Name="SharedMemory.Global.CommandJob" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Global.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AEAAAEAIhAIAgIAAEACACABAACAIAAIAABABQIAAEUA=</HashCode>
+      <FileName>Global.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SharedMemory.JSONFormatter">
+    <Position X="0.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAiAAIAEAAEDAAAAAAEAAAAAAACAACAAAAACAAAAAA=</HashCode>
+      <FileName>JSONFormatter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SharedMemory.MemorySpan">
+    <Position X="23.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAgBAAAAAACAgEgAgIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MemorySpan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SharedMemory.MySQLFormatter">
+    <Position X="3" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MySQLFormatter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SharedMemory.QueryParser">
+    <Position X="19.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>QueryParser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SharedMemory.ConnectionInformation">
+    <Position X="17.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAgAAAIAAAgAAAAAAgAAAAA=</HashCode>
+      <FileName>SharedMemory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SharedMemory.SharedMemoryControl">
+    <Position X="14.25" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="SharedMemory.SharedMemoryControl.ServerClientState" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>SharedMemory.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAA0BAACAEACAAAAAAAAAQEAAABAAEQAAABECAAAA=</HashCode>
+      <FileName>SharedMemory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SharedMemory.SQLExporter">
+    <Position X="4.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAEAAEDAAAAAAAAAAQAAACEACBAAAECQAAAAA=</HashCode>
+      <FileName>SQLExporter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SharedMemory.SQLiteFormatter">
+    <Position X="5.25" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SQLiteFormatter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SharedMemory.Target">
+    <Position X="8.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAgAAAAAAAAAAAAAAAAQAAgAEAAAAAAABAAAAAgA=</HashCode>
+      <FileName>Target.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SharedMemory.TaskManager">
+    <Position X="21.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAABgAAAAAAAAAIAAAACAAAAAAAEBABAAAAAAAA=</HashCode>
+      <FileName>TaskManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SharedMemory.TypenAPI">
+    <Position X="0.5" Y="21.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TypenAPI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SharedMemory.UserServices">
+    <Position X="17.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAABCYgAAAAAQAAAAABAAAAwQAAIAEAEAAAAAAAA=</HashCode>
+      <FileName>UserServices.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SharedMemory.XMLFormatter">
+    <Position X="9.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAgAAAAEAAEDAAAAAAAAAAAAAACAACAAAAACAAAAAA=</HashCode>
+      <FileName>XMLFormatter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="SharedMemory.ConnectionType">
+    <Position X="12.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ConnectionHandle.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SharedMemory.Type">
+    <Position X="19.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAABAgAAAAIAAAIAAAAIAAAAAA=</HashCode>
+      <FileName>FeMoEntry.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SharedMemory.TargetState">
+    <Position X="19.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAQABAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>Target.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Delegate Name="SharedMemory.RemoteExecutable">
+    <Position X="19.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CommandHandler.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="SharedMemory.ReceivedMessageHandler">
+    <Position X="17.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ConnectionHandle.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="SharedMemory.ReadObjectHandler">
+    <Position X="19.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FeMoCreator.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="SharedMemory.ElementRemovingHandler">
+    <Position X="19.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FeMoObject.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="SharedMemory.ElementRemovedHandler">
+    <Position X="16" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FeMoObject.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="SharedMemory.ReceivedObjectHandler">
+    <Position X="19.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FeMoPeer.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="SharedMemory.ReceivedCommandHandler">
+    <Position X="19.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>FeMoPeer.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
